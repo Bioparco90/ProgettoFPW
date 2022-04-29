@@ -7,6 +7,37 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : stef0
 */
 
-h1{
-    color:red;
+
+/* Colore ovviamente provvisorio. Il margin a 0 è per eliminare il margine di default del body */
+body {
+    background-color: darkgrey; 
+    margin: 0;
 }
+
+/* L'utilizzo della flexbox ci permette di allineare senza sforzo gli elementi. Vi consiglio di buttarci un 
+ * occhio su w3school. 
+ * align-items: center allinea il centro degli elementi sulla stessa riga senza che ci stressiamo
+ * con posizioni e quant'altro. */
+header {
+    display: flex;
+    align-items: center;
+}
+
+nav > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav > ul a {
+    text-decoration: none;
+    color: green; /* provvisorio */
+}
+
+nav > ul a:hover{
+    color: red; /* provvisorio */
+}
+
+
+
+
