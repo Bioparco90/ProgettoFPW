@@ -12,6 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 body {
     background-color: darkgrey; 
     margin: 0;
+    font-family: sans-serif; /* provvisorio */
 }
 
 /* L'utilizzo della flexbox ci permette di allineare senza sforzo gli elementi. Vi consiglio di buttarci un 
