@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 
-<html lang="it">
-    <head>
-        <title>Home-Fakeflix</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="EaSbronz">
-        <meta name="description" content="Home page fakeFlix">
-        <meta name="keywords" content="home page,info,movies,blockbuster">
-        <link rel="stylesheet" type="text/css" href="css/styleIndex.css" media="screen">
-        <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-    </head>
+<jsp:include page="header.jsp"/>
+
     <body>
         <header>
             <!-- Logo forse da cambiare per evitare questa fastisiosa ripetizione dovuta alle specifiche 
@@ -21,11 +12,11 @@
        
         <nav>
             <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="catalogo.html">Catalogo</a></li>  
-                <li><a href="nuovoProdotto.html">Inserimento nuovo prodotto</a></li> 
-                <li><a href="login.html">Login</a></li>
+                <li class="active"><a href="index.jsp">Home</a></li>
+                <li><a href="about.jsp">About</a></li>
+                <li><a href="catalogo.jsp">Catalogo</a></li>  
+                <li><a href="nuovoProdotto.jsp">Inserimento nuovo prodotto</a></li> 
+                <li><a href="login.jsp">Login</a></li>
             </ul>
         </nav>
 
