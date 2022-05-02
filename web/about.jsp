@@ -20,6 +20,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <li><a href="nuovoProdotto.jsp">Inserimento nuovo prodotto</a></li> 
             </ul>
         </nav>
+        
         <br>
         <br>
         <br>

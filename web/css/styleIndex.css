@@ -1,5 +1,5 @@
 /* Colore ovviamente provvisorio. Il margin a 0 è per eliminare il margine di default del body */
-body {
+body{
     background-color: darkgrey; 
     margin: 0;
     font-family: sans-serif; /* provvisorio */
@@ -9,7 +9,7 @@ body {
  * occhio su w3school. 
  * align-items: center allinea il centro degli elementi sulla stessa riga senza che ci stressiamo
  * con posizioni e quant'altro. */
-header {
+header{
     display: flex;
     align-items: center;
 }
@@ -27,6 +27,23 @@ nav > ul a {
 
 nav > ul a:hover{
     color: red; /* provvisorio */
+}
+
+/*nav li{
+    border-right: 2px solid #111111;    
+}
+
+nav li:last-child{
+    border-right: 0px solid; /*l'ultimo elemento della navbar non ha la barra a destra'*/
+/*}*/
+
+nav {
+    width:100%;
+    height: 25%;
+    background-color:red; /*provvisorio*/
+    text-align: center;
+    box-shadow: 0 0 10px rgba (0,0,0,.2); 
+    margin: 5px;
 }
 
 
