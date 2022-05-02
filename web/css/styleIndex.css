@@ -22,11 +22,11 @@ nav > ul {
 
 nav > ul a {
     text-decoration: none;
-    color: green; /* provvisorio */
+    color: white; /* provvisorio */
 }
 
 nav > ul a:hover{
-    color: red; /* provvisorio */
+    color: black; /* provvisorio */
 }
 
 /*nav li{
@@ -38,14 +38,8 @@ nav li:last-child{
 /*}*/
 
 nav {
+    display: inline-block;
     width:100%;
-    height: 25%;
-    background-color:red; /*provvisorio*/
-    text-align: center;
-    box-shadow: 0 0 10px rgba (0,0,0,.2); 
-    margin: 5px;
+    height: 3em;
+    background-color: red; /*provvisorio*/
 }
-
-
-
-
