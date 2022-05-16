@@ -21,8 +21,8 @@
         </nav>
 
         <h2>Film in evidenza</h2>
-        <main>
-            <article class="card col-3">
+        <main class="col-12">
+            <article class="card col-2">
                 <img src="img/pulp-fiction.jpg" alt="locandina">
                 <h2>Pulp Fiction</h2>
                 <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
