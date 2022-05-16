@@ -7,20 +7,20 @@
             <!-- Logo forse da cambiare per evitare questa fastisiosa ripetizione dovuta alle specifiche 
                 del progetto. Suggerirei un logo tipo il favicon che ho messo qualche settimana fa. -->
             <img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="400" height="200">
-            <h1>FakeFlix</h1>
+            <!-- <h1>FakeFlix</h1> -->
         </header>
        
-        <nav>
+        <nav class="col-12">
             <ul>
-                <li class="active"><a href="index.jsp">Home</a></li>
-                <li><a href="about.jsp">About</a></li>
-                <li><a href="catalogo.jsp">Catalogo</a></li>  
-                <li><a href="nuovoProdotto.jsp">Inserimento nuovo prodotto</a></li> 
-                <li><a href="login.jsp">Login</a></li>
+                <li class="active col-2"><a href="index.jsp">Home</a></li>
+                <li class="col-2"><a href="about.jsp">About</a></li>
+                <li class="col-2"><a href="catalogo.jsp">Catalogo</a></li>  
+                <li class="col-2"><a href="nuovoProdotto.jsp">Nuovo prodotto</a></li> 
+                <li class="col-2"><a href="login.jsp">Login</a></li>
             </ul>
         </nav>
 
-        <h2>Carosello, serve Javascript</h2>
+        <h2>Film in evidenza</h2>
         <main>
             <article>
                 contenuto vario 1
