@@ -22,9 +22,13 @@
 
         <h2>Film in evidenza</h2>
         <main>
-            <article>
-                contenuto vario 1
+            <article class="card col-3">
+                <img src="img/pulp-fiction.jpg" alt="locandina">
+                <h2>Pulp Fiction</h2>
+                <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
+                <p>$ 9,99</p>
             </article>
+            
             <article>
                 contenuto vario 2
             </article>

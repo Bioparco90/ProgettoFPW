@@ -78,3 +78,12 @@ nav {
     height: fit-content;
     background-color: red; /*provvisorio*/
 }
+
+.card {
+    border-radius: 1em;
+    background-color: chocolate;
+    text-align: center;
+    padding: 1em;
+    max-width: fit-content;
+    margin: 0.5em;
+}
