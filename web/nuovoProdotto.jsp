@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <jsp:include page="header.jsp"/>
 
     <body>
         <header>
-            <a href="index.jsp">Mettere immagine</a>
             <h1><img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="400" height="200"></h1>
-            <a href="login.html">Login</a>
         </header>
        
-        <nav>
+        <nav class="col-12">
             <ul>
-                <li><a href="index.jsp">Home</a></li>
-                <li><a href="about.jsp">About</a></li>
-                <li><a href="catalogo.jsp">Catalogo</a></li>  
-                <li class="active"><a href="nuovoProdotto.html">Inserimento nuovo prodotto</a></li> 
+                <li class="col-2"><a href="index.jsp">Home</a></li>
+                <li class="col-2"><a href="about.jsp">About</a></li>
+                <li class="col-2"><a href="catalogo.jsp">Catalogo</a></li>  
+                <li class="active col-12"><a href="nuovoProdotto.jsp">Nuovo prodotto</a></li> 
+                <li class="col-2"><a href="login.jsp">Login</a></li>
             </ul>
         </nav>
         <br>

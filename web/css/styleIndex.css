@@ -47,6 +47,10 @@ header{
     align-items: center;
 }
 
+.active{
+    font-style: italic;
+    font-weight: bold;
+}
 nav > ul {
     list-style-type: none;
     display: flow-root;
@@ -72,14 +76,15 @@ nav li:last-child{
 /*}*/
 
 nav {
-    /* display: inline-block; */
-    /* width:100%; */
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    margin-top:5px;
     justify-content: center;
     height: fit-content;
     background-color: red; /*provvisorio*/
 }
 
-.card {
+.card{
     border-radius: 1em;
     background-color: chocolate;
     text-align: center;

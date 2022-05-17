@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <jsp:include page="header.jsp"/>
 
     <body>
@@ -24,12 +23,12 @@
         <main class="col-12">
             <article class="card col-2">
                 <img src="img/pulp-fiction.jpg" alt="locandina">
-                <h2>Pulp Fiction</h2>
+                <h2 class="movieTitle">Pulp Fiction</h2>
                 <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
                 <p>$ 9,99</p>
             </article>
             
-            <article>
+            <article class="col-2">
                 contenuto vario 2
             </article>
             <article>
