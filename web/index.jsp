@@ -25,7 +25,9 @@
                 <img src="img/pulp-fiction.jpg" alt="locandina">
                 <h2 class="movieTitle">Pulp Fiction</h2>
                 <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
+                <p> Rating: * * * * *</p>
                 <p>$ 9,99</p>
+                <input type="button"value="Acquista">
             </article>
             
             <article class="col-2">
