@@ -12,7 +12,13 @@
                 <li class="col-2"><a href="about.jsp">About</a></li>
                 <li class="col-2"><a href="catalogo.jsp">Catalogo</a></li>  
                 <li class="active col-2"><a href="nuovoProdotto.jsp">Nuovo prodotto</a></li> 
-                <li class="col-2"><a href="login.jsp">Login</a></li>
+                <li class="col-2">
+                    <form>
+                        <a href="login.jsp">
+                            <input type="button" value="Login" class="loginButton">
+                        </a>
+                    </form>
+                </li>
             </ul>
         </nav>
         <br>
