@@ -27,7 +27,7 @@
                 <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
                 <p> Rating: * * * * *</p>
                 <p>$ 9,99</p>
-                <input type="button"value="Acquista">
+                <input type="button"value="Acquista" class="myButton">
             </article>
             
             <article class="col-2">

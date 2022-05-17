@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<footer>
+<footer class="footer">
     <div class="info">
         <p>EaSbronz</p>
         <p>Membro 1</p>
