@@ -78,17 +78,29 @@ nav li:last-child{
 nav {
     text-align: center;
     box-shadow: 0 0 10px rgba(0,0,0,.2);
-    margin-top:5px;
-    justify-content: center;
-    height: fit-content;
+    /* margin-top:5px; */
+    /* justify-content: center; */
+    /* height: fit-content; */
     background-color: red; /*provvisorio*/
 }
 
 .card{
-    border-radius: 1em;
-    background-color: chocolate;
+    /* border-radius: 1em; */
+    background-color: black;
     text-align: center;
-    padding: 1em;
-    max-width: fit-content;
+    /* padding: 1em; */
+    /* max-width: fit-content; */
     margin: 0.5em;
+    min-width: max-content;
+    color: darkgoldenrod;
+}
+
+.card > img {
+    float: left;
+    margin-right: 0.3em;
+}
+
+.card > p {
+    text-align: justify;
+    margin-right: 0.3em;
 }
