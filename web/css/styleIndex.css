@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 html{
-    /*overflow-x:hidden;*/ //Nasconde la scrollbar laterale ma è una merda così
+    /*overflow-x:hidden;*/ /*Nasconde la scrollbar laterale ma è una merda così*/
 }
 
 [class*="col-"]{
@@ -116,9 +116,44 @@ nav {
 }
 
 footer{
-    background-color: #000000;
     display:flex;
-    height:220px;
+    position:absolute;
+    bottom:0;
+    text-align:center;
+    background-color:#950101;
+    align-content:center; 
+    
+}
+
+.names li {
+    list-style-type:none;
+    float:left;
+    padding:0 10px;
+    padding-bottom:1%;
+}
+.names ul{
+    padding:0;
+    list-style:none;
+    text-align:center;
+    line-height:1.6;
+    margin-bottom:0;
+}
+
+.names a{
+    color:white;
+    text-decoration:none;
+    font-weight: bold;
+    
+}
+
+.names{
+    margin:0 auto;
+}
+
+.contacts{
+    margin:0 auto;
+    position:relative;
+    left:15%;
 }
 
 input.myButton{
@@ -134,7 +169,7 @@ input.myButton{
     font-size:17px;
     padding:7px 25px;
     text-decoration:none;
-    text-shadow:0px 1px 0px #810e05,
+    text-shadow:0px 1px 0px #810e05;
 }
  
 input.myButton:hover {
@@ -142,7 +177,7 @@ input.myButton:hover {
     background-color:#f24437;
 }
 input.myButton:active { 
-    position:relative;
+    /* position:relative; */
     top:1px;
     right:50px;
 }
