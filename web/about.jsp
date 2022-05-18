@@ -22,13 +22,7 @@
             </ul>
         </nav>
         
-        <br>
-        <br>
-        <br>
+       
         <h2>Contenuto</h2>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>     
+           
 <jsp:include page="footer.jsp"/> 
