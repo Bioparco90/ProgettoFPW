@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <jsp:include page="header.jsp"/>
 
     <body>
@@ -16,16 +15,29 @@
                 <li class="col-2"><a href="about.jsp">About</a></li>
                 <li class="col-2"><a href="catalogo.jsp">Catalogo</a></li>  
                 <li class="col-2"><a href="nuovoProdotto.jsp">Nuovo prodotto</a></li> 
-                <li class="col-2"><a href="login.jsp">Login</a></li>
+                <!--<li class="col-2"> <input type="button" value="Login" class="loginButton"> </li>-->
+                <li class="col-2">
+                    <form>
+                        <a href="login.jsp">
+                            <input type="button" value="Login" class="loginButton">
+                        </a>
+                    </form>
+                </li>
             </ul>
         </nav>
 
         <h2>Film in evidenza</h2>
-        <main>
-            <article>
-                contenuto vario 1
+        <main class="col-12">
+            <article class="card col-2">
+                <img src="img/pulp-fiction.jpg" alt="locandina">
+                <h2 class="movieTitle">Pulp Fiction</h2>
+                <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
+                <p> Rating: * * * * *</p>
+                <p>$ 9,99</p>
+                <input type="button"value="Acquista" class="myButton">
             </article>
-            <article>
+            
+            <article class="col-2">
                 contenuto vario 2
             </article>
             <article>
