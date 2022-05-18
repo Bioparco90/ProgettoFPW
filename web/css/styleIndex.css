@@ -177,7 +177,7 @@ input.myButton:hover {
     background-color:#f24437;
 }
 input.myButton:active { 
-    position:relative;
+    /* position:relative; */
     top:1px;
     right:50px;
 }
