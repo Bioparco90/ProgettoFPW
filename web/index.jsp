@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <jsp:include page="header.jsp"/>
 
     <body>
@@ -7,25 +6,38 @@
             <!-- Logo forse da cambiare per evitare questa fastisiosa ripetizione dovuta alle specifiche 
                 del progetto. Suggerirei un logo tipo il favicon che ho messo qualche settimana fa. -->
             <img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="400" height="200">
-            <h1>FakeFlix</h1>
+            <!-- <h1>FakeFlix</h1> -->
         </header>
        
-        <nav>
+        <nav class="col-12">
             <ul>
-                <li class="active"><a href="index.jsp">Home</a></li>
-                <li><a href="about.jsp">About</a></li>
-                <li><a href="catalogo.jsp">Catalogo</a></li>  
-                <li><a href="nuovoProdotto.jsp">Inserimento nuovo prodotto</a></li> 
-                <li><a href="login.jsp">Login</a></li>
+                <li class="active col-2"><a href="index.jsp">Home</a></li>
+                <li class="col-2"><a href="about.jsp">About</a></li>
+                <li class="col-2"><a href="catalogo.jsp">Catalogo</a></li>  
+                <li class="col-2"><a href="nuovoProdotto.jsp">Nuovo prodotto</a></li> 
+                <!--<li class="col-2"> <input type="button" value="Login" class="loginButton"> </li>-->
+                <li class="col-2">
+                    <form>
+                        <a href="login.jsp">
+                            <input type="button" value="Login" class="loginButton">
+                        </a>
+                    </form>
+                </li>
             </ul>
         </nav>
 
-        <h2>Carosello, serve Javascript</h2>
-        <main>
-            <article>
-                contenuto vario 1
+        <h2>Film in evidenza</h2>
+        <main class="col-12">
+            <article class="card col-2">
+                <img src="img/pulp-fiction.jpg" alt="locandina">
+                <h2 class="movieTitle">Pulp Fiction</h2>
+                <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
+                <p> Rating: * * * * *</p>
+                <p>$ 9,99</p>
+                <input type="button"value="Acquista" class="myButton">
             </article>
-            <article>
+            
+            <article class="col-2">
                 contenuto vario 2
             </article>
             <article>

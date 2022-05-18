@@ -1,14 +1,21 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<footer>
-    <div class="info">
-        <p>EaSbronz</p>
-        <p>Membro 1</p>
-        <p>Membro 2</p>
-        <p>Membro 3</p>
-        <p>Membro 4</p>
-        <p>indirizzo@easbronz.it</p>
+<footer class="footer col-12">
+    <div class="names">
+        <ul>
+            <li><a href="about.jsp">Mirko Contini</a></li>
+            <li><a href="about.jsp">Marco Monni</a></li>
+            <li><a href="about.jsp">Stefano Rocca</a></li>
+            <li><a href="about.jsp">Pietro Musiu</a></li>
+        </ul>
+        <div class="contacts">
+            <ul>
+                <li><a href="about.jsp">Ea Sbronz</a></li>
+                <li><a href="about.jsp">easbronz@gmail.com</a></li>
+            </ul>
+        </div>
     </div>
+    
 </footer>
 
 </body>
