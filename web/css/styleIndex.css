@@ -46,13 +46,17 @@
     width: 10%;
     height: 10%;
     }
+    
+    .aboutSection p {
+        overflow: auto;
+    }
 }
 
-@media only screen and(min-width: 400px){
+@media only screen and (min-width: 400px){
     nav{
         display:flex;
         border-radius: 10px 10px 10px 10px; 
-        flex-direction: row;
+        /* flex-direction: row; */
         box-shadow: 0 0 10px rgba(0,0,0,.2);
         background-color: #950101;
     }
