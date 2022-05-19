@@ -31,8 +31,10 @@
                 <img src="img/pulp-fiction.jpg" alt="locandina">
                 <h2 class="movieTitle">Pulp Fiction</h2>
                 <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
+                <p>Durata: 190'</p> 
+                <p>Genere: Cult</p>
                 <p> Rating: * * * * *</p>
-                <p>$ 9,99</p>
+                <p>Prezzo: $ 9,99</p>
                 <input type="button"value="Acquista" class="myButton">
             </article>
             
