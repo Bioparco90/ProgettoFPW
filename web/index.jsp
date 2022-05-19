@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <jsp:include page="header.jsp"/>
-
     <body>
         <header>
             <!-- Logo forse da cambiare per evitare questa fastisiosa ripetizione dovuta alle specifiche 

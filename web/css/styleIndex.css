@@ -2,10 +2,6 @@
 * {
     box-sizing: border-box;
 }
-html{
-    /*overflow-x:hidden;*/ /*Nasconde la scrollbar laterale ma è una merda così*/
-}
-
 
 
 /* For desktop: */
@@ -25,33 +21,66 @@ html{
     
     [class*="col-"]{
     float: left;
-}
-
-    /*
-    .pippo{
-        background-color: blue;
-    }
-    */
-}
-
-@media only screen and(min-width: 400px){  
-    .about{
-        flex-direction:row;
-        background-color:blue;
     }
     
+    nav{
+        display:flex;
+        border-radius: 10px 10px 10px 10px; 
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        background-color: #950101;
+    }
+    
+    nav li:last-child{
+        border-right:0px solid #111111;
+        float:right;
+    }
+    .card > img {
+        float: left;
+        border-radius: 10px 10px 10px 10px; 
+        margin-right: 0.3em;
+    }
+    
+    .about_img{
+    float:left;
+    width: 10%;
+    height: 10%;
+    }
 }
 
-
+@media only screen and(min-width: 400px){
+    nav{
+        display:flex;
+        border-radius: 10px 10px 10px 10px; 
+        flex-direction: row;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        background-color: #950101;
+    }
+    
+    nav li:last-child{
+        border-right:0px solid #111111;
+    }
+    .card > img {
+        float: top;
+        border-radius: 10px 10px 10px 10px; 
+        margin-right: 0.3em;
+    }
+    
+    .about_img{
+    float:top;
+    width: 10%;
+    height: 10%;
+    }
+}
 /*----------------------------------------------------------------------*/
 
-/* Colore ovviamente provvisorio. Il margin a 0 è per eliminare il margine di default del body */
 body{
     background-color: #000000; 
     margin: 0;
     font-family: sans-serif; /* provvisorio */
     color:white;
 }
+
 
 /* L'utilizzo della flexbox ci permette di allineare senza sforzo gli elementi. Vi consiglio di buttarci un 
  * occhio su w3school. 
@@ -71,14 +100,13 @@ header{
     font-weight: bold;
     
 }
+
+
 nav li{
    list-style-type:none;
    padding-top: 3px;
 }
-nav li:last-child{
-    border-right:0px solid #111111;
-    float:right;
-}
+
 nav > ul {
     list-style-type: none;
     display: flow-root;
@@ -94,17 +122,6 @@ nav > ul a:hover{
     color: black; /* provvisorio */
 }
 
-nav {
-    display:flex;
-    border-radius: 10px 10px 10px 10px; 
-    flex-direction: column;
-    align-items: left;
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
-    background-color: #950101;
-    /*position:sticky;*/ /*Sta merda non funziona non capisco perchè, divertitevi a scoprirlo!*/
-    
-}
-
 .card{
     border-radius: 10px 10px 10px 10px; 
     background-color: #950101;
@@ -113,12 +130,6 @@ nav {
     min-width: max-content;
     color: white;
     margin-bottom:10%;
-}
-
-.card > img {
-    float: left;
-    border-radius: 10px 10px 10px 10px; 
-    margin-right: 0.3em;
 }
 
 .card > p {
@@ -255,11 +266,7 @@ input.loginButton:hover {
     margin-bottom:50px;  
 }
 
-.about_img{
-    float:left;
-    width: 10%;
-    height: 10%;
-}
+
 
 .nuovoProdottoBox{
    box-shadow: 3px 4px 0px 0px #8a2a21;
