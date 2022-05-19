@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <jsp:include page="header.jsp"/>
-
     <body>
         <header>
             <!-- Logo forse da cambiare per evitare questa fastisiosa ripetizione dovuta alle specifiche 
                 del progetto. Suggerirei un logo tipo il favicon che ho messo qualche settimana fa. -->
-            <img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="400" height="200">
+            <img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="350" height="150">
             <!-- <h1>FakeFlix</h1> -->
         </header>
        
@@ -45,7 +44,4 @@
             </article>
         </main>
 
-        <aside>
-            contenuto secondario
-        </aside>
 <jsp:include page="footer.jsp"/> 

@@ -2,17 +2,10 @@
 * {
     box-sizing: border-box;
 }
-html{
-    /*overflow-x:hidden;*/ /*Nasconde la scrollbar laterale ma è una merda così*/
-}
 
-[class*="col-"]{
-    float: left;
-    width: 100%;
-}
 
 /* For desktop: */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 576px) {
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -25,16 +18,66 @@ html{
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
-
-    /*
-    .pippo{
-        background-color: blue;
+    
+    [class*="col-"]{
+    float: left;
     }
-    */
+    
+    nav{
+        display:flex;
+        border-radius: 10px 10px 10px 10px; 
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        background-color: #950101;
+    }
+    
+    nav li:last-child{
+        border-right:0px solid #111111;
+        float:right;
+    }
+    .card > img {
+        float: left;
+        border-radius: 10px 10px 10px 10px; 
+        margin-right: 0.3em;
+    }
+    
+    .about_img{
+    float:left;
+    width: 10%;
+    height: 10%;
+    }
+    
+    .aboutSection p {
+        overflow: auto;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    nav{
+        display:flex;
+        border-radius: 10px 10px 10px 10px; 
+        /* flex-direction: row; */
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        background-color: #950101;
+    }
+    
+    nav li:last-child{
+        border-right:0px solid #111111;
+    }
+    .card > img {
+        float: top;
+        border-radius: 10px 10px 10px 10px; 
+        margin-right: 0.3em;
+    }
+    
+    .about_img{
+    float:top;
+    width: 10%;
+    height: 10%;
+    }
 }
 /*----------------------------------------------------------------------*/
 
-/* Colore ovviamente provvisorio. Il margin a 0 è per eliminare il margine di default del body */
 body{
     background-color: #000000; 
     margin: 0;
@@ -42,14 +85,18 @@ body{
     color:white;
 }
 
+
 /* L'utilizzo della flexbox ci permette di allineare senza sforzo gli elementi. Vi consiglio di buttarci un 
  * occhio su w3school. 
  * align-items: center allinea il centro degli elementi sulla stessa riga senza che ci stressiamo
  * con posizioni e quant'altro. */
 header{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     background-color: #000000;
+    align-items: center;
+    margin:0;
+    padding:0;
 }
 
 .active{
@@ -57,19 +104,16 @@ header{
     font-weight: bold;
     
 }
+
+
 nav li{
    list-style-type:none;
-   border-right:2px solid #111111;
    padding-top: 3px;
 }
-nav li:last-child{
-    border-right:0px solid #111111;
-    float:right;
-}
+
 nav > ul {
     list-style-type: none;
     display: flow-root;
-    /*justify-content: space-evenly;*/
 }
 
 nav > ul a {
@@ -82,31 +126,14 @@ nav > ul a:hover{
     color: black; /* provvisorio */
 }
 
-nav {
-    diplay:flex;
-    border-radius: 10px 10px 10px 10px; 
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
-    background-color: #950101; /*provvisorio*/
-  
-}
-
 .card{
-    /* border-radius: 1em; */
     border-radius: 10px 10px 10px 10px; 
     background-color: #950101;
     text-align: center;
-    /* padding: 1em; */
-    /* max-width: fit-content; */
     margin: 0.5em;
     min-width: max-content;
     color: white;
-}
-
-.card > img {
-    float: left;
-    border-radius: 10px 10px 10px 10px; 
-    margin-right: 0.3em;
+    margin-bottom:10%;
 }
 
 .card > p {
@@ -117,20 +144,19 @@ nav {
 
 footer{
     display:flex;
-    position:absolute;
-    bottom:0;
     text-align:center;
     background-color:#950101;
-    align-content:center; 
-    
+    align-content:center;
+    bottom:0;
 }
 
-.names li {
+.names li{
     list-style-type:none;
     float:left;
     padding:0 10px;
     padding-bottom:1%;
 }
+
 .names ul{
     padding:0;
     list-style:none;
@@ -203,4 +229,75 @@ input.loginButton:hover {
     background-color:#f24437;
 }
 
+.login{
+   box-shadow: 3px 4px 0px 0px #8a2a21;
+   padding:20px;
+   margin:0;
+   margin-left: 40%;
+   margin-top:5%;
+   margin-bottom:5%;
+   height: auto;
+   background-color: white;
+   color:red;
+   border-radius: 10px 10px 10px 10px;
+   width:20%;
+}
 
+.login form{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height:25%;
+   /*padding: 20px;*/
+
+}
+
+.login input{;
+    margin:20px;
+}
+
+.registrazione{
+    display:none; /*Temporanemanete lo nascondo perchè mi disturba*/
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top:20px;
+    margin-bottom:50px;  
+}
+
+
+
+.nuovoProdottoBox{
+   box-shadow: 3px 4px 0px 0px #8a2a21;
+   padding:20px;
+   margin:0;
+   margin-left: 20%;
+   margin-top:5%;
+   margin-bottom:5%;
+   height: auto;
+   background-color: white;
+   color:red;
+   border-radius: 10px 10px 10px 10px;
+   width:30%;
+}
+
+.nuovoProdottoBox form{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height:25%;
+}
+
+.nuovoProdottoBox input{;
+    margin:20px;
+}
+
+.nuovoProdottoBox label{
+        float:left;
+}

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <jsp:include page="header.jsp"/>
-
     <body>
         <header>
-            <h1><img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="400" height="200"></h1>
+            <img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="350" height="150">
         </header>
        
         <nav class="col-12">
@@ -21,19 +20,24 @@
                 </li>
             </ul>
         </nav>
-        <br>
-        <br>
-        <br>
-        <div>
+        
+        <div class="login col-9">
             <form action="catalogo.jsp" method="post">
-                <label for="user">Username</label>
-                <input type="text" name="user" id="user" required placeholder="Username">
-                <label for="psw">Password</label>
-                <input type="password" name="psw" id="psw" required placeholder="Password">
-                <input type="submit" value="Accedi">
-                <p>Non hai ancora un account? Registrati qui sotto</p>
+                <div id="username">
+                    <label for="user">Username</label>
+                    <input type="text" name="user" id="user" required placeholder="Username">
+                </div>
+                
+                <div id="password">
+                    <label for="psw">Password</label>
+                    <input type="password" name="psw" id="psw" required placeholder="Password">
+                    <input type="submit" value="Accedi">
+                    <p>Non hai ancora un account? Registrati qui sotto</p>
+                </div>
             </form>
-            
+        </div> 
+        
+        <div class="registrazione">
             <form action="login.jsp" method="post">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" required placeholder="Nome">
@@ -48,9 +52,4 @@
                 <input type="submit" value="Registrati">               
             </form>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>     
 <jsp:include page="footer.jsp"/> 
