@@ -6,10 +6,7 @@ html{
     /*overflow-x:hidden;*/ /*Nasconde la scrollbar laterale ma è una merda così*/
 }
 
-[class*="col-"]{
-    float: left;
-    width: 100%;
-}
+
 
 /* For desktop: */
 @media only screen and (min-width: 768px) {
@@ -25,6 +22,10 @@ html{
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+    
+    [class*="col-"]{
+    float: left;
+}
 
     /*
     .pippo{
@@ -32,6 +33,16 @@ html{
     }
     */
 }
+
+@media only screen and(min-width: 400px){  
+    .about{
+        flex-direction:row;
+        background-color:blue;
+    }
+    
+}
+
+
 /*----------------------------------------------------------------------*/
 
 /* Colore ovviamente provvisorio. Il margin a 0 è per eliminare il margine di default del body */
@@ -241,12 +252,41 @@ input.loginButton:hover {
     flex-wrap: wrap;
     width: 100%;
     margin-top:20px;
-    margin-bottom:50px;
-    
+    margin-bottom:50px;  
 }
 
 .about_img{
     float:left;
     width: 10%;
     height: 10%;
+}
+
+.nuovoProdottoBox{
+   box-shadow: 3px 4px 0px 0px #8a2a21;
+   padding:20px;
+   margin:0;
+   margin-left: 20%;
+   margin-top:5%;
+   margin-bottom:5%;
+   height: auto;
+   background-color: white;
+   color:red;
+   border-radius: 10px 10px 10px 10px;
+   width:30%;
+}
+
+.nuovoProdottoBox form{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height:25%;
+}
+
+.nuovoProdottoBox input{;
+    margin:20px;
+}
+
+.nuovoProdottoBox label{
+        float:left;
 }

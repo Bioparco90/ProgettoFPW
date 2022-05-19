@@ -23,8 +23,8 @@
 
 
         <h2>ABOUT US</h2><!<!-- creazione di 4 div di equa dimensione, uno per ogni componente del gruppo -->
-        <div class="about col-9">
-            <div class="col-9">
+        <div class="about col-9 cols-12">
+            <div class="col-9 cols-12">
                 <img  class="about_img" title="Ceppitelli" src="img/ceppitelli.png">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
@@ -34,7 +34,7 @@
                 </p>
             </div>
             
-            <div class="col-9">
+            <div class="col-9 cols-12">
                 <img class="about_img" title="Deiola" src="img/deiola.png">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
@@ -44,7 +44,7 @@
                 </p>
             </div>
             
-            <div class="col-9">
+            <div class="col-9 cols-12">
                 <img  class="about_img" title="Lyko" src="img/lyko.png">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
@@ -54,7 +54,7 @@
                 </p>
             </div>
             
-            <div class="col-9">
+            <div class="col-9 cols-12">
                 <img class="about_img" title="Dalbert" src="img/dalbert.png">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
