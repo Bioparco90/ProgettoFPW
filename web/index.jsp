@@ -45,7 +45,4 @@
             </article>
         </main>
 
-        <aside>
-            contenuto secondario
-        </aside>
 <jsp:include page="footer.jsp"/> 

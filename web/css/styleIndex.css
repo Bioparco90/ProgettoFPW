@@ -69,7 +69,6 @@ nav li:last-child{
 nav > ul {
     list-style-type: none;
     display: flow-root;
-    /*justify-content: space-evenly;*/
 }
 
 nav > ul a {
@@ -87,17 +86,15 @@ nav {
     border-radius: 10px 10px 10px 10px; 
     text-align: center;
     box-shadow: 0 0 10px rgba(0,0,0,.2);
-    background-color: #950101; /*provvisorio*/
-  
+    background-color: #950101;
+    /*position:sticky;*/ /*Sta merda non funziona non capisco perchè, divertitevi a scoprirlo!*/
+    
 }
 
 .card{
-    /* border-radius: 1em; */
     border-radius: 10px 10px 10px 10px; 
     background-color: #950101;
     text-align: center;
-    /* padding: 1em; */
-    /* max-width: fit-content; */
     margin: 0.5em;
     min-width: max-content;
     color: white;
@@ -118,11 +115,10 @@ nav {
 footer{
     display:flex;
     position:absolute;
-    bottom:0;
     text-align:center;
     background-color:#950101;
-    align-content:center; 
-    
+    align-content:center;
+    margin-top:50%;
 }
 
 .names li {
@@ -203,4 +199,34 @@ input.loginButton:hover {
     background-color:#f24437;
 }
 
+.login{
+   box-shadow: 3px 4px 0px 0px #8a2a21;
+   padding 20px;
+   margin:0;
+   margin-left: 40%;
+   margin-top:10%;
+   height: auto;
+   background-color: white;
+   color:red;
+   border-radius: 10px 10px 10px 10px;
+   width:20%;
+  
+}
 
+.login form{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height:25%;
+   padding: 20px;
+
+}
+
+.login input{;
+    margin:20px;
+}
+
+.registrazione{
+    display:none; /*Temporanemanete lo nascondo perchè mi disturba*/
+}
