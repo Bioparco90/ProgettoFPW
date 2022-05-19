@@ -82,7 +82,7 @@ nav > ul a:hover{
 }
 
 nav {
-    diplay:flex;
+    display:flex;
     border-radius: 10px 10px 10px 10px; 
     text-align: center;
     box-shadow: 0 0 10px rgba(0,0,0,.2);
@@ -201,7 +201,7 @@ input.loginButton:hover {
 
 .login{
    box-shadow: 3px 4px 0px 0px #8a2a21;
-   padding 20px;
+   padding:20px;
    margin:0;
    margin-left: 40%;
    margin-top:10%;
@@ -229,4 +229,15 @@ input.loginButton:hover {
 
 .registrazione{
     display:none; /*Temporanemanete lo nascondo perchè mi disturba*/
+}
+
+.about{
+    height: 15%;
+    width: 100%;
+
+}
+
+.about_img{
+    width: 10%;
+    height: 10%;
 }
