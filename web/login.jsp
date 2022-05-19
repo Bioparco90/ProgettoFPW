@@ -7,22 +7,20 @@
        
         <nav class="col-12">
             <ul>
-                <li class="col-2"><a href="index.jsp">Home</a></li>
-                <li class="col-2"><a href="about.jsp">About</a></li>
-                <li class="col-2"><a href="catalogo.jsp">Catalogo</a></li>  
-                <li class="col-2"><a href="nuovoProdotto.jsp">Nuovo prodotto</a></li> 
+                <li class="col-2"><a href="index">Home</a></li>
+                <li class="col-2"><a href="about">About</a></li>
+                <li class="col-2"><a href="catalogo">Catalogo</a></li>  
+                <li class="col-2"><a href="nuovoProdotto">Nuovo prodotto</a></li> 
                 <li class="col-2">
-                    <form>
-                        <a href="login.jsp">
-                            <input type="button" value="Login" class="loginButton">
-                        </a>
-                    </form>
+                    <a href="login">
+                        <input type="button" value="Login" class="loginButton">
+                    </a>
                 </li>
             </ul>
         </nav>
         
         <div class="login col-9">
-            <form action="catalogo.jsp" method="post">
+            <form action="login" method="post">
                 <div id="username">
                     <label for="user">Username</label>
                     <input type="text" name="user" id="user" required placeholder="Username">
@@ -38,7 +36,7 @@
         </div> 
         
         <div class="registrazione">
-            <form action="login.jsp" method="post">
+            <form action="registrazione" method="post">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" required placeholder="Nome">
                 <label for="cognome">Cognome</label>

@@ -7,22 +7,20 @@
        
         <nav class="col-12">
             <ul>
-                <li class="col-2"><a href="index.jsp">Home</a></li>
-                <li class="col-2"><a href="about.jsp">About</a></li>
-                <li class="col-2"><a href="catalogo.jsp">Catalogo</a></li>  
-                <li class="active col-2"><a href="nuovoProdotto.jsp">Nuovo prodotto</a></li> 
+                <li class="col-2"><a href="index">Home</a></li>
+                <li class="col-2"><a href="about">About</a></li>
+                <li class="col-2"><a href="catalogo">Catalogo</a></li>  
+                <li class="active col-2"><a href="nuovoProdotto">Nuovo prodotto</a></li> 
                 <li class="col-2">
-                    <form>
-                        <a href="login.jsp">
-                            <input type="button" value="Login" class="loginButton">
-                        </a>
-                    </form>
+                    <a href="login">
+                        <input type="button" value="Login" class="loginButton">
+                    </a>
                 </li>
             </ul>
         </nav>
       
       <div class="nuovoProdottoBox col-9">
-            <form action="index.jsp" method="post" >
+            <form action="nuovoProdotto" method="post" >
                 <div class="thumbnail">
                     <label for ="thumbnail">Aggiungi foto</label>
                     <input type="file" id="thumbnail">
