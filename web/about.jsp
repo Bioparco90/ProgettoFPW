@@ -2,8 +2,7 @@
 <jsp:include page="header.jsp"/>
     <body>
         <header>
-            <img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="400" height="200">
-
+            <img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="350" height="150">
         </header>
 
         <nav class="col-12">
@@ -24,25 +23,45 @@
 
 
         <h2>ABOUT US</h2><!<!-- creazione di 4 div di equa dimensione, uno per ogni componente del gruppo -->
-        <a class="about">Siamo quattro laureandi all'università di cagliari indirizzo informatico</a>
-        <div class="about">
-            <img  class="about_img" title="Ceppitelli" src="img/ceppitelli.png">
-           Marco Monni programmatore nell'ambito dello sviluppo web che si diletta da auto didatta nello sviluppo di web app
-            <br>
-        </div> 
-        <div class="about">
-            <img class="about_img" title="Deiola" src="img/deiola.png">
-            Mirko Contini programmatore 
-            <br>
-        </div>
-        <div class="about">
-            <img  class="about_img" title="Lyko" src="img/lyko.png">
-            Pietro Musiu
-            <br>
-        </div>
-        <div class="about">
-            <img class="about_img" title="Dalbert" src="img/dalbert.png">
-            Stefano Rocca
-            <br>
+        <div class="about col-9">
+            <div class="col-9">
+                <img  class="about_img" title="Ceppitelli" src="img/ceppitelli.png">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                    nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu 
+                    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum.
+                </p>
+            </div>
+            
+            <div class="col-9">
+                <img class="about_img" title="Deiola" src="img/deiola.png">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                    nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu 
+                    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum.
+                </p>
+            </div>
+            
+            <div class="col-9">
+                <img  class="about_img" title="Lyko" src="img/lyko.png">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                    nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu 
+                    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum.
+                </p>
+            </div>
+            
+            <div class="col-9">
+                <img class="about_img" title="Dalbert" src="img/dalbert.png">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                    nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu 
+                    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum.
+                </p>
+            </div>
         </div>
 <jsp:include page="footer.jsp"/>

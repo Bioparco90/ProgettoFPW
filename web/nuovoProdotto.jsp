@@ -2,7 +2,7 @@
 <jsp:include page="header.jsp"/>
   <body>
         <header>
-            <h1><img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="400" height="200"></h1>
+           <img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="350" height="150">
         </header>
        
         <nav class="col-12">
@@ -20,9 +20,6 @@
                 </li>
             </ul>
         </nav>
-        <br>
-        <br>
-        <br>
             <form action="index.jsp" method="post">
                 <label for ="thumbnail">Aggiungi foto</label>
                 <input type="file" id="thumbnail">
@@ -43,9 +40,5 @@
                 </select>
                 <input type="submit" value="Accedi">
             
-            </form>      
-        <br>
-        <br>
-        <br>
-        <br>     
+            </form>         
 <jsp:include page="footer.jsp"/> 

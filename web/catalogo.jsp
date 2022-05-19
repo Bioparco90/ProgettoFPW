@@ -2,7 +2,7 @@
 <jsp:include page="header.jsp"/>
     <body>
         <header>
-            <h1><img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="400" height="200"></h1>
+            <img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="350" height="150">
         </header>
        
         <nav class="col-12">
@@ -20,13 +20,7 @@
                 </li>
             </ul>
         </nav>
-        <br>
-        <br>
-        <br>
+     
         <h2>Contenuto</h2>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>     
+    
 <jsp:include page="footer.jsp"/> 

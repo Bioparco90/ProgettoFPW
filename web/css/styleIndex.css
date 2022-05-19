@@ -48,8 +48,11 @@ body{
  * con posizioni e quant'altro. */
 header{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     background-color: #000000;
+    align-items: center;
+    margin:0;
+    padding:0;
 }
 
 .active{
@@ -59,7 +62,6 @@ header{
 }
 nav li{
    list-style-type:none;
-   border-right:2px solid #111111;
    padding-top: 3px;
 }
 nav li:last-child{
@@ -84,7 +86,8 @@ nav > ul a:hover{
 nav {
     display:flex;
     border-radius: 10px 10px 10px 10px; 
-    text-align: center;
+    flex-direction: column;
+    align-items: left;
     box-shadow: 0 0 10px rgba(0,0,0,.2);
     background-color: #950101;
     /*position:sticky;*/ /*Sta merda non funziona non capisco perchè, divertitevi a scoprirlo!*/
@@ -98,6 +101,7 @@ nav {
     margin: 0.5em;
     min-width: max-content;
     color: white;
+    margin-bottom:10%;
 }
 
 .card > img {
@@ -114,19 +118,19 @@ nav {
 
 footer{
     display:flex;
-    position:absolute;
     text-align:center;
     background-color:#950101;
     align-content:center;
-    margin-top:50%;
+    bottom:0;
 }
 
-.names li {
+.names li{
     list-style-type:none;
     float:left;
     padding:0 10px;
     padding-bottom:1%;
 }
+
 .names ul{
     padding:0;
     list-style:none;
@@ -204,13 +208,13 @@ input.loginButton:hover {
    padding:20px;
    margin:0;
    margin-left: 40%;
-   margin-top:10%;
+   margin-top:5%;
+   margin-bottom:5%;
    height: auto;
    background-color: white;
    color:red;
    border-radius: 10px 10px 10px 10px;
    width:20%;
-  
 }
 
 .login form{
@@ -219,7 +223,7 @@ input.loginButton:hover {
    align-items: center;
    flex-direction: column;
    height:25%;
-   padding: 20px;
+   /*padding: 20px;*/
 
 }
 
@@ -232,12 +236,17 @@ input.loginButton:hover {
 }
 
 .about{
-    height: 15%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
-
+    margin-top:20px;
+    margin-bottom:50px;
+    
 }
 
 .about_img{
+    float:left;
     width: 10%;
     height: 10%;
 }
