@@ -3,7 +3,6 @@
     box-sizing: border-box;
 }
 
-
 /* For desktop: */
 @media only screen and (min-width: 576px) {
     .col-1 {width: 8.33%;}
@@ -23,7 +22,7 @@
         float: left;
     }
     
-    .nav{
+    nav{
         display: flex;
         flex-direction: column;
     }
@@ -74,15 +73,23 @@
 
 /*For smartphone*/
 @media only screen and (max-width: 576px){
-
+    body {
+        width:100%;
+        overflow-x: hidden;
+        
+    }
     nav{
         display: flex;
         flex-direction: row;
         align-content: center;
         align-items: center;
         text-align: center;
+        width: 100%;
     }
     
+    nav ul{
+        margin-left: 25%;
+    }
     nav li:last-child{
         border-right:0px solid #111111;
     }
@@ -164,6 +171,9 @@ nav li{
    padding-top: 3px;
 }
 
+nav li:hover{
+    color:gold;
+}
 nav > ul {
     list-style-type: none;
     display: flow-root;
@@ -226,11 +236,12 @@ footer{
     color:white;
     text-decoration:none;
     font-weight: bold;
-    
 }
 
 .names{
     margin:0 auto;
+    width:100%;
+    overflow-x: hidden;
 }
 
 .contacts{
