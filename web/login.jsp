@@ -2,7 +2,7 @@
 <jsp:include page="header.jsp"/>
     <body>
         <header>
-            <img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="350" height="150">
+            <a href="index"><img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="350" height="150"></a>
         </header>
        
         <nav class="col-12">

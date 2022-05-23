@@ -20,9 +20,13 @@
     .col-12 {width: 100%;}
     
     [class*="col-"]{
-    float: left;
+        float: left;
     }
     
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
     nav li:last-child{
         border-right:0px solid #111111;
         float:right;
@@ -31,6 +35,7 @@
     .card{
         width:40%;
     }
+    
     .card > img {
         float: left;
         border-radius: 10px 10px 10px 10px; 
@@ -61,12 +66,21 @@
         margin-bottom:5%;
         width:30%;
     }
+    
+    input.loginButton{
+        margin-right:126px;
+    }
 }
 
+/*For smartphone*/
 @media only screen and (max-width: 576px){
-    
+
     nav{
+        display: flex;
         flex-direction: row;
+        align-content: center;
+        align-items: center;
+        text-align: center;
     }
     
     nav li:last-child{
@@ -96,7 +110,6 @@
     .login{
         width:60%;
         margin-left:20%;
-        
     }
     
     .nuovoProdottoBox{
@@ -105,6 +118,10 @@
         margin-top:5%;
         margin-bottom:5%;
         width:60%;
+    }
+    
+    input.loginButton{
+        margin-right:0;
     }
 }
 /*----------------------------------------------------------------------*/
@@ -137,12 +154,10 @@ header{
 }
 
 nav{
-        display:flex;
-        border-radius: 10px 10px 10px 10px; 
-        flex-direction: column;
-        box-shadow: 0 0 10px rgba(0,0,0,.2);
-        background-color: #950101;
-    }
+    border-radius: 10px 10px 10px 10px; 
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    background-color: #950101;
+}
 
 nav li{
    list-style-type:none;
@@ -172,7 +187,7 @@ nav > ul a:hover{
     border-radius: 10px 10px 10px 10px; 
     background-color: #950101;
     text-align: center;
-    margin: 0.5em;
+   /* margin: 0.5em;*/
     min-width: max-content;
     color: white;
     margin-bottom:10%;
@@ -262,8 +277,7 @@ input.loginButton{
     font-family:Arial;
     font-size:17px;
     text-decoration:none;
-    text-shadow:0px 1px 0px #810e05;   
-    margin-right:126px;
+    text-shadow:0px 1px 0px #810e05;
 }
  
 input.loginButton:hover {
