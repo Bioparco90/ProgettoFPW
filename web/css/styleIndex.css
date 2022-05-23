@@ -188,7 +188,7 @@ nav > ul a:hover{
     background-color: #950101;
     text-align: center;
    /* margin: 0.5em;*/
-    min-width: max-content;
+    min-width: fit-content;
     color: white;
     margin-bottom:10%;
 }
