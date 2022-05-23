@@ -25,8 +25,8 @@
         <h2>Film in evidenza</h2>
         <main class="col-12">
             <article class="card col-2">
-                <img src="img/pulp-fiction.jpg" alt="locandina">
-                <h2 class="movieTitle">Pulp Fiction</h2>
+                <img src="img/pulp-fiction1.jpg" alt="locandina">
+                <h2 id="movieTitle">Pulp Fiction</h2>
                 <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
                 <p>Durata: 190'</p> 
                 <p>Genere: Cult</p>

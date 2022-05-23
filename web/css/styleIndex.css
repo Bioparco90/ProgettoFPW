@@ -23,17 +23,13 @@
     float: left;
     }
     
-    nav{
-        display:flex;
-        border-radius: 10px 10px 10px 10px; 
-        flex-direction: column;
-        box-shadow: 0 0 10px rgba(0,0,0,.2);
-        background-color: #950101;
-    }
-    
     nav li:last-child{
         border-right:0px solid #111111;
         float:right;
+    }
+    
+    .card{
+        width:40%;
     }
     .card > img {
         float: left;
@@ -42,38 +38,73 @@
     }
     
     .about_img{
-    float:left;
-    width: 10%;
-    height: 10%;
+        float:left;
+        width: 10%;
+        height: 10%;
     }
     
     .aboutSection p {
         overflow: auto;
     }
+    
+    .login{
+        width:20%;
+        margin-left: 40%;
+        margin-top:5%;
+        margin-bottom:5%;
+    }
+    
+    .nuovoProdottoBox{
+        margin:0;
+        margin-left: 20%;
+        margin-top:5%;
+        margin-bottom:5%;
+        width:30%;
+    }
 }
 
 @media only screen and (max-width: 576px){
+    
     nav{
-        display:flex;
-        border-radius: 10px 10px 10px 10px; 
-        /* flex-direction: row; */
-        box-shadow: 0 0 10px rgba(0,0,0,.2);
-        background-color: #950101;
+        flex-direction: row;
     }
     
     nav li:last-child{
         border-right:0px solid #111111;
     }
+    
+    .card{
+        width:100%;
+    }
+    
     .card > img {
-        float: top;
         border-radius: 10px 10px 10px 10px; 
         margin-right: 0.3em;
+        width:100%;
     }
     
     .about_img{
-    float:top;
-    width: 10%;
-    height: 10%;
+        float:top;
+        width: 10%;
+        height: 10%;
+    }
+    
+    input.myButton{
+        margin-bottom:20px;
+    }
+ 
+    .login{
+        width:60%;
+        margin-left:20%;
+        
+    }
+    
+    .nuovoProdottoBox{
+        margin:0;
+        margin-left: 20%;
+        margin-top:5%;
+        margin-bottom:5%;
+        width:60%;
     }
 }
 /*----------------------------------------------------------------------*/
@@ -105,6 +136,13 @@ header{
     
 }
 
+nav{
+        display:flex;
+        border-radius: 10px 10px 10px 10px; 
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        background-color: #950101;
+    }
 
 nav li{
    list-style-type:none;
@@ -124,6 +162,10 @@ nav > ul a {
 
 nav > ul a:hover{
     color: black; /* provvisorio */
+}
+
+#movieTitle{
+    color:gold;
 }
 
 .card{
@@ -232,15 +274,10 @@ input.loginButton:hover {
 .login{
    box-shadow: 3px 4px 0px 0px #8a2a21;
    padding:20px;
-   margin:0;
-   margin-left: 40%;
-   margin-top:5%;
-   margin-bottom:5%;
    height: auto;
    background-color: white;
    color:red;
    border-radius: 10px 10px 10px 10px;
-   width:20%;
 }
 
 .login form{
@@ -249,8 +286,6 @@ input.loginButton:hover {
    align-items: center;
    flex-direction: column;
    height:25%;
-   /*padding: 20px;*/
-
 }
 
 .login input{;
@@ -271,19 +306,13 @@ input.loginButton:hover {
 }
 
 
-
 .nuovoProdottoBox{
    box-shadow: 3px 4px 0px 0px #8a2a21;
    padding:20px;
-   margin:0;
-   margin-left: 20%;
-   margin-top:5%;
-   margin-bottom:5%;
    height: auto;
    background-color: white;
    color:red;
    border-radius: 10px 10px 10px 10px;
-   width:30%;
 }
 
 .nuovoProdottoBox form{
