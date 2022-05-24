@@ -70,6 +70,13 @@
         margin-right:10%;
         float: right;
     }
+    
+    .adv_img
+    {
+        float: right;
+        width: 80%;
+        height: 80%;
+    }
 }
 
 /*For smartphone*/

@@ -36,13 +36,21 @@
                 <p>Prezzo: $ 9,99</p>
                 <input type="button"value="Acquista" class="myButton">
             </article>
+            <article class="card col-2">
+                <img src="img/pulp-fiction1.jpg" alt="locandina">
+                <h2 id="movieTitle">Pulp Fiction</h2>
+                <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
+                <p>Durata: 190'</p> 
+                <p>Genere: Cult</p>
+                <p> Rating: * * * * *</p>
+                <p>Prezzo: $ 9,99</p>
+                <input type="button"value="Acquista" class="myButton">
+            </article>
             
             <article class="col-2">
-                contenuto vario 2
+                <img src="img/fakecola.gif" class="adv_img">
             </article>
-            <article>
-                eccetera
-            </article>
+
         </main>
 
 <jsp:include page="footer.jsp"/> 

@@ -24,41 +24,33 @@
         <div class="about col-9 cols-12 aboutSection">
             <div class="col-9 cols-12">
                 <img  class="about_img" title="Ceppitelli" src="img/ceppitelli.png">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                    nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu 
-                    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.
+                <p>Mirko Contini<br>
+                Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
+                programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
                 </p>
             </div>
             
             <div class="col-9 cols-12">
                 <img class="about_img" title="Deiola" src="img/deiola.png">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                    nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu 
-                    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.
+                <p>Marco Monni<br>
+                Studente di informatica al secondo anno presso l'università di Cagliari,
+                programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
                 </p>
             </div>
             
             <div class="col-9 cols-12">
                 <img  class="about_img" title="Lyko" src="img/lyko.png">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                    nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu 
-                    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.
+                <p>Pietro Musiu<br>
+                Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
+                programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
                 </p>
             </div>
             
             <div class="col-9 cols-12">
                 <img class="about_img" title="Dalbert" src="img/dalbert.png">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et 
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                    nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu 
-                    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.
+                <p>Stefano Rocca<br>
+                Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
+                programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
                 </p>
             </div>
         </div>
