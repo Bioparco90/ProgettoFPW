@@ -13,12 +13,14 @@
                 <li class="active col-2"><a href="index">Home</a></li>
                 <li class="col-2"><a href="about">About</a></li>
                 <li class="col-2"><a href="catalogo">Catalogo</a></li>  
-                <li class="col-2"><a href="nuovoProdotto">Nuovo prodotto</a></li> 
+                <li class="col-2"><a href="nuovoProdotto">Nuovo prodotto</a></li>
+                <li class="col-2 invisible">.---------</li>
                 <li class="col-2">
                     <a href="login">
                         <input type="button" value="Login" class="loginButton">
                     </a>
                 </li>
+                
             </ul>
         </nav>
 

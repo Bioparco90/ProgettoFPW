@@ -67,7 +67,8 @@
     }
     
     input.loginButton{
-        margin-right:126px;
+        margin-right:10%;
+        float: right;
     }
 }
 
@@ -354,4 +355,8 @@ input.loginButton:hover {
 
 .nuovoProdottoBox label{
         float:left;
+}
+
+.invisible{
+    visibility: hidden;
 }
