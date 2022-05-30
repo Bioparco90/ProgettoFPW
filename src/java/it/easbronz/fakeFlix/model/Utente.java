@@ -95,7 +95,7 @@ public class Utente{
     bisogna controllare*/
     @Override
     public int hashCode(){
-        return getIdUtente()+100;
+        return getIdUtente()+ 100;
     }
 }
 

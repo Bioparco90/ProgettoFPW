@@ -18,7 +18,7 @@ public class UtenteFactory {
         return instance;
     }
     
-    public Utente getUtenteByUsernamePassword(String Username, String Password){
+    public Utente getUtenteByUsernamePassword(String username, String password){
        Connection conn=null;
        PreparedStatement stmnt=null;
        ResultSet set=null;
@@ -27,7 +27,7 @@ public class UtenteFactory {
            conn=DatabaseManager.getInstance().getDbConnection();
            
            String query ="SELECT * FROM utente WHERE username = ? AND password = ?";
-           stmnt=conn.preparedStatement(query);
+           stmnt=conn.prepareStatement(query);
            stmnt.setString(1,username);
            stmnt.setString(2,password);
            
