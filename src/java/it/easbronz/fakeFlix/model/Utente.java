@@ -71,6 +71,7 @@ public class Utente{
     
     
     /*Override metodo equals della classe object*/
+    @Override
     public boolean equals(Object o){
         /*Se stiamo passando l'oggetto stesso allora returno true*/
         if (o==this)
@@ -90,6 +91,11 @@ public class Utente{
         else return false;
     }
     
-    /*Mancano metodi  hashCode che non so cosa siano*/
+    /*Credo che questa roba sia giusta ma non ne sono certo
+    bisogna controllare*/
+    @Override
+    public int hashCode(){
+        return getIdUtente()+100;
+    }
 }
 
