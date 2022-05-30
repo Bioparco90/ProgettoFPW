@@ -11,61 +11,61 @@ public class Utente{
     private int dataNascita; //BISOGNA CAPIRE DI CHE TIPO FARE QUESTO ATTRIBUTO
     
     /*Metodi getter*/
-    private int getIdUtente(){
+    public int getIdUtente(){
         return this.idUtente;
     }
-    private String getUsername(){
+    public String getUsername(){
         return this.username;
     }
     
-    private String getNome(){
+    public String getNome(){
         return this.nome;
     }
     
-    private String getCognome(){
+    public String getCognome(){
         return this.cognome;
     }
     
-    private String getEmail(){
+    public String getEmail(){
         return this.email;
     }
     
-    private String getPassword(){
+    public String getPassword(){
         return this.password;
     }
     
-    private int getDataNascita(){
+    public int getDataNascita(){
         return this.dataNascita;
     }
     
     /*----------------------------------------------------------*/
     
     /*Metodi setter*/
-    private void setIdUtente(int idUtente){
+    public void setIdUtente(int idUtente){
         this.idUtente=idUtente;
     }
-    private void setUsername(String username){
+    public void setUsername(String username){
         this.username=username;
     }
     
-    private void setNome(String nome){
+    public void setNome(String nome){
         
         this.nome=nome;
     }
     
-    private void setCognome(String cognome){
+    public void setCognome(String cognome){
        this.cognome=cognome;
     }
     
-    private void setEmail(String email){
+    public void setEmail(String email){
          this.email=email;
     }
     
-    private void setPassword(String password){
+    public void setPassword(String password){
         this.password=password;
     }
     
-    private void setDataNascita(int dataNascita){
+    public void setDataNascita(int dataNascita){
         this.dataNascita=dataNascita;
     }
     
