@@ -10,51 +10,58 @@ import java.util.logging.Logger;
 
 public class UtenteFactory {
     private static UtenteFactory instance;
-    private UtenteFactory(){}
-    
-    public static UtenteFactory getInstance(){
-        if(instance==null)
-            instance=new UtenteFactory();
-        return instance;
-    }
-    
-    public Utente getUtenteByUsernamePassword(String username, String password){
-       Connection conn=null;
-       PreparedStatement stmnt=null;
-       ResultSet set=null;
-       
-       try{
-           conn=DatabaseManager.getInstance().getDbConnection();
-           
-           String query ="SELECT * FROM utente WHERE username = ? AND password = ?";
-           stmnt=conn.prepareStatement(query);
-           stmnt.setString(1,username);
-           stmnt.setString(2,password);
-           
-           set=stmnt.executeQuery();
-           
-           if(set.next()){
-               Utente utente=new Utente();
-               utente.setIdUtente(set.getInt("idUtente"));
-               utente.setUsername(set.getString("username"));
-               utente.setNome(set.getString("nome"));
-               utente.setCognome(set.getString("cognome"));
-               utente.setEmail(set.getString("email"));
-               utente.setPassword(set.getString("password"));
-               utente.setDataNascita(set.getInt("dataNascita"));
-           }
-           else return null;
-           
-       }catch(SQLException e){
-           Logger.getLogger(UtenteFactory.class.getName())
-                   .log(Level.SEVERE, null, e);
-       }
-       finally{
-           try{set.close();}catch(Exception e){}
-           try{stmnt.close();}catch(Exception e){}
-           try{conn.close();}catch(Exception e){}
-       }
-       return null;
+
+    private UtenteFactory() {
     }
 
+    public static UtenteFactory getInstance() {
+        if (instance == null)
+            instance = new UtenteFactory();
+        return instance;
+    }
+
+    public Utente getUtenteByUsernamePassword(String username, String password) {
+        Connection conn = null;
+        PreparedStatement stmnt = null;
+        ResultSet set = null;
+
+        try {
+            conn = DatabaseManager.getInstance().getDbConnection();
+
+            String query = "SELECT * FROM utente WHERE username = ? AND password = ?";
+            stmnt = conn.prepareStatement(query);
+            stmnt.setString(1, username);
+            stmnt.setString(2, password);
+
+            set = stmnt.executeQuery();
+
+            if (set.next()) {
+                Utente utente = new Utente();
+                utente.setUsername(set.getString("username"));
+                utente.setNome(set.getString("nome"));
+                utente.setCognome(set.getString("cognome"));
+                utente.setEmail(set.getString("email"));
+                utente.setPassword(set.getString("password"));
+            } else
+                return null;
+
+        } catch (SQLException e) {
+            Logger.getLogger(UtenteFactory.class.getName())
+                    .log(Level.SEVERE, null, e);
+        } finally {
+            try {
+                set.close();
+            } catch (Exception e) {
+            }
+            try {
+                stmnt.close();
+            } catch (Exception e) {
+            }
+            try {
+                conn.close();
+            } catch (Exception e) {
+            }
+        }
+        return null;
+    }
 }
