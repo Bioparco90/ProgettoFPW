@@ -26,7 +26,7 @@ public class DatabaseManager {
 
     public Connection getDbConnection() {
         String db = "jdbc:postgresql://localhost:5432/fakeflix";
-        String user = "postgres"; // devo verificare che questo sia l'useranme giusto
+        String user = "postgres";
         String pass = "fondamenti";
 
         try {
