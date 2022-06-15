@@ -1,12 +1,12 @@
 package it.easbronz.fakeFlix.model;
 
-public class Utente{
+public class Utente {
     private String username;
     private String nome;
     private String cognome;
     private String email;
     private String password;
-    
+
     public Utente() {
     }
 
@@ -75,4 +75,3 @@ public class Utente{
         return true;
     }
 }
-

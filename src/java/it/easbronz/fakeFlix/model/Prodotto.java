@@ -10,7 +10,7 @@ public class Prodotto {
     private String regista;
     private String pathLocandina;
     private float prezzo;
-    
+
     public Prodotto() {
     }
 
