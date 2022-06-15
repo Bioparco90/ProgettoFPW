@@ -42,6 +42,7 @@ public class UtenteFactory {
                 utente.setCognome(set.getString("cognome"));
                 utente.setEmail(set.getString("email"));
                 utente.setPassword(set.getString("password"));
+                return utente;
             } else
                 return null;
 
