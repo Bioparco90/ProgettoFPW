@@ -35,3 +35,4 @@ nbdist/
 
 # visual studio code
 .vscode
+servlet-api.jar
