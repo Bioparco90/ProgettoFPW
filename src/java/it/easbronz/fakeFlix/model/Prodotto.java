@@ -2,7 +2,6 @@
 package it.easbronz.fakeFlix.model;
 
 public class Prodotto {
-    private int id;
     private String titolo;
     private String trama;
     private String genere;
@@ -12,14 +11,6 @@ public class Prodotto {
     private float prezzo;
 
     public Prodotto() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getTitolo() {

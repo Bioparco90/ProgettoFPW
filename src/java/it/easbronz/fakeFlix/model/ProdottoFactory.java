@@ -37,7 +37,6 @@ public class ProdottoFactory {
 
             while (set.next()) {
                 Prodotto prodotto = new Prodotto();
-                prodotto.setId(set.getInt("id"));
                 prodotto.setTitolo(set.getString("titolo"));
                 prodotto.setTrama(set.getString("trama"));
                 prodotto.setGenere(set.getString("genere"));
