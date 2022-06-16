@@ -39,6 +39,21 @@ public class Utils {
         }
     }
 
+    public static void checkFloat(String name, String param)
+            throws InvalidParamException {
+
+        checkNull(name, param);
+        try {
+            float valore = Float.valueOf(param);
+            if (valore < 0)
+                throw new InvalidParamException("Il campo " + name +
+                        " deve avere un valore maggiore di zero");
+        } catch (NumberFormatException e) {
+            throw new InvalidParamException("Il campo " + name + " deve "
+                    + "contenere un numero decimale");
+        }
+    }
+
     private static String getSubmittedFileName(Part part) {
         for (String cd : part.getHeader("content-disposition").split(";")) {
             if (cd.trim().startsWith("filename")) {
