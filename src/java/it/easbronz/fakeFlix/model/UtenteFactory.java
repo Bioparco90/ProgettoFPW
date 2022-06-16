@@ -43,6 +43,7 @@ public class UtenteFactory {
                 utente.setEmail(set.getString("email"));
                 utente.setPassword(set.getString("password"));
                 utente.setCitta(set.getString("citta"));
+                utente.setFoto(set.getString("foto"));
                 return utente;
             } else
                 return null;

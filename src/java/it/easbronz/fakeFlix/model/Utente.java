@@ -7,6 +7,7 @@ public class Utente {
     private String email;
     private String password;
     private String citta;
+    private String foto;
 
     public Utente() {
     }
@@ -57,6 +58,14 @@ public class Utente {
 
     public void setCitta(String citta) {
         this.citta = citta;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 
     @Override
