@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "Catalogo", urlPatterns = { "/catalogo" })
 public class Catalogo extends HttpServlet {
@@ -18,7 +19,12 @@ public class Catalogo extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("catalogo.jsp").forward(request, response);
+            
+        HttpSession session = request.getSession(false);
+        if (session != null && session.getAttribute("user") != null) 
+            request.getRequestDispatcher("catalogo.jsp").forward(request, response);
+        else 
+            response.sendRedirect("login");
     }
 
     @Override
