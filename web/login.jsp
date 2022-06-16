@@ -36,7 +36,7 @@
         </div> 
         
         <div class="registrazione">
-            <form action="registrazione" method="post">
+            <form action="registrazione" method="post" enctype="multipart/form-data">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" required placeholder="Username">
                 <label for="nome">Nome</label>
