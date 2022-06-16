@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <jsp:include page="header.jsp"/>
     <body>
         <header>
@@ -45,6 +45,8 @@
                 <input type="text" name="cognome" id="cognome" required placeholder="Cognome">
                 <label for="email">E-mail</label>
                 <input type="text" name="email" id="email" required placeholder="Email">
+                <label for="citta">Città</label>
+                <input type="text" name="citta" id="citta" required placeholder="citta">
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" required placeholder="Password">
                 <label for="confirmpsw">Conferma Password</label>
