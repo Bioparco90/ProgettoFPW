@@ -1,12 +1,16 @@
 package it.easbronz.fakeFlix.utils;
 
-import java.time.LocalDateTime;
-import java.time.Instant;
-import java.time.ZoneOffset;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+
+import javax.servlet.http.Part;
 
 import it.easbronz.fakeFlix.exceptions.InvalidParamException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
@@ -43,35 +47,24 @@ public class Utils {
         }
     }
 
-    public static String convertTime(long time) {
-        LocalDateTime localDt = LocalDateTime.ofInstant(
-                Instant.ofEpochMilli(time), ZoneOffset.UTC);
-        return localDt.toString();
+    private static String getSubmittedFileName(Part part) {
+        for (String cd : part.getHeader("content-disposition").split(";")) {
+            if (cd.trim().startsWith("filename")) {
+                String fileName = cd.substring(cd.indexOf('=') + 1).trim().replace("\"", "");
+                return fileName.substring(fileName.lastIndexOf('/') + 1).substring(fileName.lastIndexOf('\\') + 1); // MSIE
+                                                                                                                    // fix.
+            }
+        }
+        return null;
     }
 
-    public static boolean login(String user, String password)
-            throws InvalidParamException {
-
-        int index;
-
-        List<String> listaAutori = new ArrayList<>();
-        listaAutori.add("Giovanni Soli");
-        listaAutori.add("Jack Cabras");
-        listaAutori.add("Aldo Pelosi");
-
-        List<String> listaPassword = new ArrayList<>();
-        listaPassword.add("Giovanni Soli");
-        listaPassword.add("Jack Cabras");
-        listaPassword.add("Aldo Pelosi");
-
-        if (!listaAutori.contains(user))
-            throw new InvalidParamException("Username errato");
-        else {
-            index = listaAutori.indexOf(user);
-            if (!listaPassword.get(index).equals(password))
-                throw new InvalidParamException("Password errata");
+    public static String getPathImg(Part file, String entity)
+            throws IOException {
+        try (InputStream contenutoFile = file.getInputStream()) {
+            File daSalvare = new File("C:/Users/monni/Desktop/progettoFPW/web/img/" + entity + "/" + getSubmittedFileName(file));
+            Files.copy(contenutoFile, daSalvare.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            String url = "img/" + entity + "/" + getSubmittedFileName(file);
+            return url;
         }
-
-        return true;
     }
 }
