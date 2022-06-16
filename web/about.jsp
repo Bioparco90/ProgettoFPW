@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <jsp:include page="header.jsp"/>
     <body>
         <header>
@@ -25,7 +25,7 @@
             <div class="col-9 cols-12">
                 <img  class="about_img" title="Ceppitelli" src="img/ceppitelli.png">
                 <p>Mirko Contini<br>
-                Studente di informatica al secondo anno presso l'universit� di Cagliari, e dilpomato all'istituto Michele Giua,
+                Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
                 programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
                 </p>
             </div>
@@ -33,7 +33,7 @@
             <div class="col-9 cols-12">
                 <img class="about_img" title="Deiola" src="img/deiola.png">
                 <p>Marco Monni<br>
-                Studente di informatica al secondo anno presso l'universit� di Cagliari,
+                Studente di informatica al secondo anno presso l'università di Cagliari,
                 programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
                 </p>
             </div>
@@ -41,7 +41,7 @@
             <div class="col-9 cols-12">
                 <img  class="about_img" title="Lyko" src="img/lyko.png">
                 <p>Pietro Musiu<br>
-                Studente di informatica al secondo anno presso l'universit� di Cagliari, e dilpomato all'istituto Michele Giua,
+                Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
                 programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
                 </p>
             </div>
@@ -49,7 +49,7 @@
             <div class="col-9 cols-12">
                 <img class="about_img" title="Dalbert" src="img/dalbert.png">
                 <p>Stefano Rocca<br>
-                Studente di informatica al secondo anno presso l'universit� di Cagliari, e dilpomato all'istituto Michele Giua,
+                Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
                 programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
                 </p>
             </div>
