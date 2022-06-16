@@ -44,6 +44,7 @@ public class ProdottoFactory {
                 prodotto.setRegista(set.getString("regista"));
                 prodotto.setPathLocandina(set.getString("locandina"));
                 prodotto.setPrezzo(set.getFloat("prezzo"));
+                prodotto.setUsernameAggiunta(set.getString("username_aggiunta"));
 
                 prodotti.add(prodotto);
             }

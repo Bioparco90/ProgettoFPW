@@ -9,6 +9,7 @@ public class Prodotto {
     private String regista;
     private String pathLocandina;
     private float prezzo;
+    private String usernameAggiunta;
 
     public Prodotto() {
     }
@@ -67,6 +68,14 @@ public class Prodotto {
 
     public void setPrezzo(float prezzo) {
         this.prezzo = prezzo;
+    }
+
+    public String getUsernameAggiunta() {
+        return usernameAggiunta;
+    }
+
+    public void setUsernameAggiunta(String usernameAggiunta) {
+        this.usernameAggiunta = usernameAggiunta;
     }
 
     @Override
