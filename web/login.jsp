@@ -37,14 +37,16 @@
         
         <div class="registrazione">
             <form action="registrazione" method="post">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required placeholder="Username">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" required placeholder="Nome">
                 <label for="cognome">Cognome</label>
                 <input type="text" name="cognome" id="cognome" required placeholder="Cognome">
                 <label for="email">E-mail</label>
                 <input type="text" name="email" id="email" required placeholder="Email">
-                <label for="newpsw">Password</label>
-                <input type="password" name="newpsw" id="newpsw" required placeholder="Password">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required placeholder="Password">
                 <label for="confirmpsw">Conferma Password</label>
                 <input type="password" name="confirmpsw" id="confirmpsw" required placeholder="Password">
                 <input type="submit" value="Registrati">               
