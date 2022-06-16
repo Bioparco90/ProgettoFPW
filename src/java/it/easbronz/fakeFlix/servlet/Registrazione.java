@@ -17,7 +17,6 @@ import javax.servlet.http.Part;
 
 import it.easbronz.fakeFlix.db.DatabaseManager;
 import it.easbronz.fakeFlix.exceptions.InvalidParamException;
-import it.easbronz.fakeFlix.model.Immagine;
 import it.easbronz.fakeFlix.model.UtenteFactory;
 import it.easbronz.fakeFlix.utils.Utils;
 
@@ -53,7 +52,6 @@ public class Registrazione extends HttpServlet {
             Part file = request.getPart("file");
             String foto = Utils.getPathImg(file, "users");
 
-
             final int MIN_LENGTH = 3;
             final int USERNAME_PASSWORDMAX_LENGTH = 20;
             final int OTHER_MAX_LENGTH = 50;
@@ -85,7 +83,7 @@ public class Registrazione extends HttpServlet {
             response.sendRedirect("login");
         } catch (SQLException e) {
             Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
-        } catch (IOException e){
+        } catch (IOException e) {
             response.sendRedirect("login");
         } finally {
             try {
@@ -97,9 +95,6 @@ public class Registrazione extends HttpServlet {
             } catch (Exception e) {
             }
         }
-        
-        
-
     }
 
     @Override

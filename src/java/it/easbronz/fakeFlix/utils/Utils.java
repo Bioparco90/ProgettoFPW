@@ -4,18 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-
 import javax.servlet.http.Part;
-
 import it.easbronz.fakeFlix.exceptions.InvalidParamException;
 
-/**
- *
- * @author monni
- */
 public class Utils {
 
     public static void checkNull(String name, String param) throws InvalidParamException {
@@ -61,7 +53,8 @@ public class Utils {
     public static String getPathImg(Part file, String entity)
             throws IOException {
         try (InputStream contenutoFile = file.getInputStream()) {
-            File daSalvare = new File("C:/Users/monni/Desktop/progettoFPW/web/img/" + entity + "/" + getSubmittedFileName(file));
+            File daSalvare = new File(
+                    "C:/Users/monni/Desktop/progettoFPW/web/img/" + entity + "/" + getSubmittedFileName(file));
             Files.copy(contenutoFile, daSalvare.toPath(), StandardCopyOption.REPLACE_EXISTING);
             String url = "img/" + entity + "/" + getSubmittedFileName(file);
             return url;
