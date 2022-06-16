@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.print.attribute.standard.MediaSize.Other;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -45,25 +46,28 @@ public class Registrazione extends HttpServlet {
             String cognome = request.getParameter("cognome");
             String email = request.getParameter("email");
             String password = request.getParameter("password");
+            String citta = request.getParameter("citta");
 
             final int MIN_LENGTH = 3;
             final int USERNAME_PASSWORDMAX_LENGTH = 20;
-            final int NAME_SURNAME_MAIL_MAX_LENGTH = 50;
+            final int OTHER_MAX_LENGTH = 50;
 
             Utils.checkString("Username", username, MIN_LENGTH, USERNAME_PASSWORDMAX_LENGTH);
-            Utils.checkString("Nome", nome, MIN_LENGTH, NAME_SURNAME_MAIL_MAX_LENGTH);
-            Utils.checkString("Cognome", cognome, MIN_LENGTH, NAME_SURNAME_MAIL_MAX_LENGTH);
-            Utils.checkString("Email", email, MIN_LENGTH, NAME_SURNAME_MAIL_MAX_LENGTH);
-            Utils.checkString("Password", password, MIN_LENGTH, NAME_SURNAME_MAIL_MAX_LENGTH);
+            Utils.checkString("Nome", nome, MIN_LENGTH, OTHER_MAX_LENGTH);
+            Utils.checkString("Cognome", cognome, MIN_LENGTH, OTHER_MAX_LENGTH);
+            Utils.checkString("Email", email, MIN_LENGTH, OTHER_MAX_LENGTH);
+            Utils.checkString("Password", password, MIN_LENGTH, OTHER_MAX_LENGTH);
+            Utils.checkString("Città", citta, MIN_LENGTH, OTHER_MAX_LENGTH);
 
             conn = DatabaseManager.getInstance().getDbConnection();
-            String query = "INSERT INTO utente VALUES (?, ?, ?, ?, ?)";
+            String query = "INSERT INTO utente VALUES (?, ?, ?, ?, ?, ?)";
             stmt = conn.prepareStatement(query);
             stmt.setString(1, username);
             stmt.setString(2, password);
             stmt.setString(3, nome);
             stmt.setString(4, cognome);
             stmt.setString(5, email);
+            stmt.setString(6, citta);
             stmt.executeUpdate();
 
             response.sendRedirect("catalogo"); // RICORDARSI DI CAMBIARLO. SOLO PER DEBUG. REINDIRIZZARE A LOGIN O AD

@@ -6,6 +6,7 @@ public class Utente {
     private String cognome;
     private String email;
     private String password;
+    private String citta;
 
     public Utente() {
     }
@@ -48,6 +49,14 @@ public class Utente {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getCitta() {
+        return citta;
+    }
+
+    public void setCitta(String citta) {
+        this.citta = citta;
     }
 
     @Override
