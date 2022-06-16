@@ -47,6 +47,8 @@
                 <input type="text" name="email" id="email" required placeholder="Email">
                 <label for="citta">Città</label>
                 <input type="text" name="citta" id="citta" required placeholder="citta">
+                <label for="file">Foto:</label>
+                <input type="file" id="file" name="file" accept="image/*" required>
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" required placeholder="Password">
                 <label for="confirmpsw">Conferma Password</label>
