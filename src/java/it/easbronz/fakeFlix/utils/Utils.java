@@ -54,24 +54,13 @@ public class Utils {
         }
     }
 
-    private static String getSubmittedFileName(Part part) {
-        for (String cd : part.getHeader("content-disposition").split(";")) {
-            if (cd.trim().startsWith("filename")) {
-                String fileName = cd.substring(cd.indexOf('=') + 1).trim().replace("\"", "");
-                return fileName.substring(fileName.lastIndexOf('/') + 1).substring(fileName.lastIndexOf('\\') + 1); // MSIE
-                                                                                                                    // fix.
-            }
-        }
-        return null;
-    }
-
     public static String getPathImg(Part file, String entity)
             throws IOException {
         try (InputStream contenutoFile = file.getInputStream()) {
             File daSalvare = new File(
-                    "C:/Users/monni/Desktop/progettoFPW/web/img/" + entity + "/" + getSubmittedFileName(file));
+                    "C:/Users/monni/Desktop/progettoFPW/web/img/" + entity + "/" + file.getSubmittedFileName());
             Files.copy(contenutoFile, daSalvare.toPath(), StandardCopyOption.REPLACE_EXISTING);
-            String url = "img/" + entity + "/" + getSubmittedFileName(file);
+            String url = "img/" + entity + "/" + file.getSubmittedFileName();
             return url;
         }
     }
