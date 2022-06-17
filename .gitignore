@@ -35,3 +35,6 @@ nbdist/
 
 # visual studio code
 .vscode
+
+# file consentiti
+!postgresql-42.4.0.jar
