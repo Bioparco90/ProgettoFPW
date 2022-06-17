@@ -49,6 +49,7 @@ public class Registrazione extends HttpServlet {
             String email = request.getParameter("email");
             String password = request.getParameter("password");
             String citta = request.getParameter("citta");
+
             Part file = request.getPart("file");
             String foto = Utils.getPathImg(file, "users");
 
