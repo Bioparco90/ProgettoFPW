@@ -45,7 +45,7 @@ public class Utils {
         checkNull(name, param);
         try {
             float valore = Float.valueOf(param);
-            if (valore < 0)
+            if (valore <= 0)
                 throw new InvalidParamException("Il campo " + name +
                         " deve avere un valore maggiore di zero");
         } catch (NumberFormatException e) {
