@@ -10,7 +10,7 @@ import it.easbronz.fakeFlix.exceptions.InvalidParamException;
 
 public class Utils {
 
-    public static void checkNull(String name, String param) throws InvalidParamException {
+    public static<T> void checkNull(String name, T param) throws InvalidParamException {
         if (param == null)
             throw new InvalidParamException("Valore del campo " + name + " mancante");
     }
@@ -24,7 +24,7 @@ public class Utils {
                     max + " caratteri");
     }
 
-    public static void checkInteger(String name, String param, int min, int max)
+    public static void checkInteger(String name, int param, int min, int max)
             throws InvalidParamException {
 
         checkNull(name, param);
@@ -39,7 +39,7 @@ public class Utils {
         }
     }
 
-    public static void checkFloat(String name, String param)
+    public static void checkFloat(String name, float param)
             throws InvalidParamException {
 
         checkNull(name, param);
