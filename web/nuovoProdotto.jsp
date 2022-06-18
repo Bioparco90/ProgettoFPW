@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <jsp:include page="header.jsp"/>
   <body>
         <header>
@@ -20,10 +20,10 @@
         </nav>
       
       <div class="nuovoProdottoBox col-9">
-            <form action="nuovoProdotto" method="post" >
+            <form action="nuovoProdotto" method="post" enctype="multipart/form-data">
                 <div class="thumbnail">
-                    <label for ="thumbnail">Aggiungi foto</label>
-                    <input type="file" id="thumbnail">
+                    <label for ="locandina">Aggiungi foto</label>
+                    <input type="file" id="locandina" name="locandina">
                 </div>
                 
                 <div class="titolo">
@@ -32,19 +32,31 @@
                 </div>
                 
                 <div class="descrizione">
-                    <label for="descrizione">Descrizione</label>
-                    <input type="text" name="descrizione" id="descrizione" required placeholder="Descrizione">
+                    <label for="trama">Trama</label>
+                    <input type="text" name="trama" id="trama" required placeholder="Trama">
                 </div>
+
+                <label for="genere">Genere</label>
+                <input type="text" name="genere" id="genere" required placeholder="Genere">
+
+                <label for="durata">Durata</label>
+                <input type="text" name="durata" id="durata" required placeholder="Durata">
+
+                <label for="regista">Regista</label>
+                <input type="text" name="regista" id="regista" required placeholder="Regista">
+
+                <!-- <label for="trama">Descrizione</label>
+                <input type="text" name="trama" id="trama" required placeholder="Trama"> -->
                 
                 <div class="prezzo">
                     <label for="prezzo">Prezzo</label>
-                    <select name ="prezzo" id="prezzo">
-                        <option value="prezzo">Scegli</option>
-                        <option value="2">2.99?</option>
-                        <option value="3">3.99?</option>
-                        <option value="4">4.99?</option>
-                        <option value="5">5.99?</option>
-                    </select>
+                    <input type="text" name ="prezzo" id="prezzo">
+                        <!-- <option value="prezzo">Scegli</option>
+                        <option value="2">2.99</option>
+                        <option value="3">3.99</option>
+                        <option value="4">4.99</option>
+                        <option value="5">5.99</option>
+                    </select> -->
                     <input type="submit" value="Aggiungi">
                 </div>
                 
