@@ -24,7 +24,7 @@ public class ProdottoFactory {
 
     public List<Prodotto> getAllProdotti() {
         Connection conn = null;
-        PreparedStatement stmnt = null;
+        PreparedStatement stmt = null;
         ResultSet set = null;
         List<Prodotto> prodotti = new ArrayList<>();
 
@@ -32,8 +32,8 @@ public class ProdottoFactory {
             conn = DatabaseManager.getInstance().getDbConnection();
 
             String query = "SELECT * FROM prodotto";
-            stmnt = conn.prepareStatement(query);
-            set = stmnt.executeQuery();
+            stmt = conn.prepareStatement(query);
+            set = stmt.executeQuery();
 
             while (set.next()) {
                 Prodotto prodotto = new Prodotto();
@@ -59,7 +59,51 @@ public class ProdottoFactory {
             } catch (Exception e) {
             }
             try {
-                stmnt.close();
+                stmt.close();
+            } catch (Exception e) {
+            }
+            try {
+                conn.close();
+            } catch (Exception e) {
+            }
+        }
+        return null;
+    }
+
+    public Prodotto getProdotto(String offset) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet set = null;
+
+        Prodotto prodotto = new Prodotto();
+        try {
+            conn = DatabaseManager.getInstance().getDbConnection();
+            String query = "SELECT * FROM prodotto LIMIT 1 OFFSET ?";
+            stmt = conn.prepareStatement(query);
+            stmt.setInt(1, Integer.parseInt(offset));
+            set = stmt.executeQuery();
+            while (set.next()){
+                prodotto.setTitolo(set.getString("titolo"));
+                prodotto.setTrama(set.getString("trama"));
+                prodotto.setGenere(set.getString("genere"));
+                prodotto.setDurata(set.getInt("durata"));
+                prodotto.setRegista(set.getString("regista"));
+                prodotto.setPathLocandina(set.getString("locandina"));
+                prodotto.setPrezzo(set.getFloat("prezzo"));
+                prodotto.setUsernameAggiunta(set.getString("username_aggiunta"));
+            }
+            return prodotto;
+
+        }catch (SQLException e) {
+            Logger.getLogger(UtenteFactory.class.getName())
+                    .log(Level.SEVERE, null, e);
+        } finally {
+            try {
+                set.close();
+            } catch (Exception e) {
+            }
+            try {
+                stmt.close();
             } catch (Exception e) {
             }
             try {

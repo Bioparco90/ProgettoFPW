@@ -23,7 +23,7 @@ $("#nextProduct").click(() => {
         },
         dataType: "json",
         success: (data, state) => {
-            if (data.user === "") offset--;
+            if (data.movieTitle === "") offset--;
             else aggiornaProdotto(data);
         },
         error: (data, state) => { },
@@ -34,7 +34,7 @@ let aggiornaProdotto = (prodotto) => {
     $("#locandina").attr("src", `${prodotto.locandina}`);
     $("#movieTitle").text(prodotto.movieTitle);
     $("#trama").text(prodotto.trama);
-    $("#durata").html(`Durata: ${prodotto.durata}`);
+    $("#durata").html(`Durata: ${prodotto.durata} min.`);
     $("#genere").html(`Genere: ${prodotto.genere}`);
     $("#regista").html(`Regista: ${prodotto.regista}`);
     $("#prezzo").html(`Prezzo: € ${prodotto.prezzo}`);

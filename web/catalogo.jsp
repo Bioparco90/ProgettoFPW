@@ -46,5 +46,5 @@
                 <button id="nextProduct"> > </button>
             </div>
         </div>
-    
+        <script src="js/carousel.js"></script>
 <jsp:include page="footer.jsp"/> 
