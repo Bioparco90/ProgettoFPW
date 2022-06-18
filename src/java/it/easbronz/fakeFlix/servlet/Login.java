@@ -45,7 +45,7 @@ public class Login extends HttpServlet {
             if (utente != null) {
                 session.setAttribute("user", utente.getUsername());
                 session.setMaxInactiveInterval(900);
-                response.sendRedirect("catalogo");
+                response.sendRedirect("areaPersonale");
             } else
                 throw new InvalidParamException("Errore Login");
 

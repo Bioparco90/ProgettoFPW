@@ -22,7 +22,7 @@ public class ProdottoFactory {
         return instance;
     }
 
-    public List<Prodotto> getAllProdotti() {
+    public List<Prodotto> getAllProdotti(String username) {
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet set = null;
@@ -31,8 +31,9 @@ public class ProdottoFactory {
         try {
             conn = DatabaseManager.getInstance().getDbConnection();
 
-            String query = "SELECT * FROM prodotto";
+            String query = "SELECT * FROM prodotto WHERE username_aggiunta = ?";
             stmt = conn.prepareStatement(query);
+            stmt.setString(1, username);
             set = stmt.executeQuery();
 
             while (set.next()) {

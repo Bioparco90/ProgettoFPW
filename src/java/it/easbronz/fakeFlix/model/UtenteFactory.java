@@ -67,4 +67,50 @@ public class UtenteFactory {
         }
         return null;
     }
+
+    public Utente getUtenteByUsername(String username) {
+        Connection conn = null;
+        PreparedStatement stmnt = null;
+        ResultSet set = null;
+
+        try {
+            conn = DatabaseManager.getInstance().getDbConnection();
+
+            String query = "SELECT * FROM utente WHERE username = ?";
+            stmnt = conn.prepareStatement(query);
+            stmnt.setString(1, username);
+            set = stmnt.executeQuery();
+
+            if (set.next()) {
+                Utente utente = new Utente();
+                utente.setUsername(set.getString("username"));
+                utente.setNome(set.getString("nome"));
+                utente.setCognome(set.getString("cognome"));
+                utente.setEmail(set.getString("email"));
+                utente.setPassword(set.getString("password"));
+                utente.setCitta(set.getString("citta"));
+                utente.setFoto(set.getString("foto"));
+                return utente;
+            } else
+                return null;
+
+        } catch (SQLException e) {
+            Logger.getLogger(UtenteFactory.class.getName())
+                    .log(Level.SEVERE, null, e);
+        } finally {
+            try {
+                set.close();
+            } catch (Exception e) {
+            }
+            try {
+                stmnt.close();
+            } catch (Exception e) {
+            }
+            try {
+                conn.close();
+            } catch (Exception e) {
+            }
+        }
+        return null;
+    }
 }
