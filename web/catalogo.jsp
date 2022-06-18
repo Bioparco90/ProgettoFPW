@@ -25,6 +25,26 @@
             </ul>
         </nav>
      
-        <h2>Contenuto</h2>
+        <div>
+            <div class="col-1">
+                <button id="prevProduct"> < </button>
+            </div>
+            <div class="col-10">
+                <article class="card col-2">
+                    <img id="locandina" src="${prodotto.getPathLocandina()}" alt="locandina">
+                    <h2 id="movieTitle">${prodotto.getTitolo()}</h2>
+                    <p id="trama">${prodotto.getTrama()}</p>
+                    <p id="durata">Durata: ${prodotto.getDurata()} min.</p> 
+                    <p id="genere">Genere: ${prodotto.getGenere()}</p>
+                    <p id="regista">Regista: ${prodotto.getRegista()}</p>
+                    <p id="prezzo">Prezzo: € ${prodotto.getPrezzo()}</p>
+                    <p id="uploader">Aggiunto da: ${prodotto.getUsernameAggiunta()}</p>
+                    <input type="button"value="Acquista" class="myButton">
+                </article>   
+            </div>
+            <div class="col-1">
+                <button id="nextProduct"> > </button>
+            </div>
+        </div>
     
 <jsp:include page="footer.jsp"/> 
