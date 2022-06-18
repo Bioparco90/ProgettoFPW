@@ -32,8 +32,8 @@ $("#nextProduct").click(() => {
 
 let aggiornaProdotto = (prodotto) => {
     $("#locandina").attr("src", `${prodotto.locandina}`);
-    $("#movieTitle").text(prodotto.movieTitle);
-    $("#trama").text(prodotto.trama);
+    $("#movieTitle").html(`${prodotto.movieTitle}`);
+    $("#trama").html(`${prodotto.trama}`);
     $("#durata").html(`Durata: ${prodotto.durata} min.`);
     $("#genere").html(`Genere: ${prodotto.genere}`);
     $("#regista").html(`Regista: ${prodotto.regista}`);
