@@ -77,15 +77,20 @@ public class Registrazione extends HttpServlet {
             stmt.setString(7, foto);
             stmt.executeUpdate();
 
-            response.sendRedirect("catalogo"); // RICORDARSI DI CAMBIARLO. SOLO PER DEBUG. REINDIRIZZARE A LOGIN O AD
-                                               // INDEX
+            request.setAttribute("outputMessage", "Utente registrato con successo");
+            request.setAttribute("previousPage", "login");
+            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
 
         } catch (InvalidParamException e) {
-            response.sendRedirect("login");
+            request.setAttribute("outputMessage", e.getMessage());
+            request.setAttribute("previousPage", "login");
+            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         } catch (SQLException e) {
             Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
         } catch (IOException e) {
-            response.sendRedirect("login");
+            request.setAttribute("outputMessage", e.getMessage());
+            request.setAttribute("previousPage", "login");
+            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         } finally {
             try {
                 stmt.close();

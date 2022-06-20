@@ -47,11 +47,13 @@ public class Login extends HttpServlet {
                 session.setMaxInactiveInterval(900);
                 response.sendRedirect("areaPersonale");
             } else
-                throw new InvalidParamException("Errore Login");
+                throw new InvalidParamException("Username o Password errati");
 
         } catch (InvalidParamException e) {
             session.invalidate();
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.setAttribute("outputMessage", e.getMessage());
+            request.setAttribute("previousPage", "login");
+            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         }
     }
 
