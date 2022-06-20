@@ -26,6 +26,8 @@
         </ul>
     </nav>
 
+    <h1>Autenticazione effettuata. Benvenuto, ${user}</h1>
+
     <div id="infoUtente">
         <img src="${utente.getFoto()}" alt="immagine-utente">
         <p>Username: ${utente.getUsername()}</p>
