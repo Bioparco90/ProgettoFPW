@@ -85,7 +85,9 @@ public class NuovoProdotto extends HttpServlet {
             stmt.setString(8, uploader);
             stmt.executeUpdate();
 
-            response.sendRedirect("catalogo");
+            request.setAttribute("outputMessage", "Prodotto inserito con successo");
+            request.setAttribute("previousPage", "nuovoProdotto");
+            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         } catch (NumberFormatException e) {
             request.setAttribute("outputMessage", e.getMessage());
             request.setAttribute("previousPage", "nuovoProdotto");
