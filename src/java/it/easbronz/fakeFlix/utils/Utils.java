@@ -10,7 +10,7 @@ import it.easbronz.fakeFlix.exceptions.InvalidParamException;
 
 public class Utils {
 
-    public static<T> void checkNull(String name, T param) throws InvalidParamException {
+    public static <T> void checkNull(String name, T param) throws InvalidParamException {
         if (param == null)
             throw new InvalidParamException("Valore del campo " + name + " mancante");
     }
@@ -25,33 +25,21 @@ public class Utils {
     }
 
     public static void checkInteger(String name, int param, int min, int max)
-            throws InvalidParamException {
+            throws InvalidParamException, NumberFormatException {
 
         checkNull(name, param);
-        try {
-            int valore = Integer.valueOf(param);
-            if (valore < min || valore > max)
-                throw new InvalidParamException("Il campo " + name +
-                        " deve avere un valore compreso tra " + min + " e " + max);
-        } catch (NumberFormatException e) {
-            throw new InvalidParamException("Il campo " + name + " deve "
-                    + "contenere un numero intero");
-        }
+        if (param < min || param > max)
+            throw new InvalidParamException("Il campo " + name +
+                    " deve avere un valore compreso tra " + min + " e " + max);
     }
 
     public static void checkFloat(String name, float param)
-            throws InvalidParamException {
+            throws InvalidParamException, NumberFormatException {
 
         checkNull(name, param);
-        try {
-            float valore = Float.valueOf(param);
-            if (valore <= 0)
-                throw new InvalidParamException("Il campo " + name +
-                        " deve avere un valore maggiore di zero");
-        } catch (NumberFormatException e) {
-            throw new InvalidParamException("Il campo " + name + " deve "
-                    + "contenere un numero decimale");
-        }
+        if (param <= 0)
+            throw new InvalidParamException("Il campo " + name +
+                    " deve avere un valore maggiore di zero");
     }
 
     public static String getPathImg(Part file, String entity)
@@ -62,6 +50,24 @@ public class Utils {
             Files.copy(contenutoFile, daSalvare.toPath(), StandardCopyOption.REPLACE_EXISTING);
             String url = "img/" + entity + "/" + file.getSubmittedFileName();
             return url;
+        }
+    }
+
+    public static boolean isInteger(String name, String value) {
+        try {
+            Integer.valueOf(value);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    public static boolean isFloat(String name, String value) {
+        try {
+            Float.valueOf(value);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
         }
     }
 }

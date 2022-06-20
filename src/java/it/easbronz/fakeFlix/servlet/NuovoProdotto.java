@@ -47,9 +47,9 @@ public class NuovoProdotto extends HttpServlet {
             String titolo = request.getParameter("titolo");
             String trama = request.getParameter("trama");
             String genere = request.getParameter("genere");
-            int durata = Integer.valueOf(request.getParameter("durata"));
+            String durataPreCheck = request.getParameter("durata");
             String regista = request.getParameter("regista");
-            float prezzo = Float.valueOf(request.getParameter("prezzo"));
+            String prezzoPreCheck = request.getParameter("prezzo");
             String uploader = (String) session.getAttribute("user");
 
             Part file = request.getPart("locandina");
@@ -58,6 +58,14 @@ public class NuovoProdotto extends HttpServlet {
             Utils.checkString("Titolo", titolo, 1, 50);
             Utils.checkString("Trama", trama, 1, 200);
             Utils.checkString("Genere", genere, 1, 20);
+            if (!Utils.isInteger("Durata", durataPreCheck)){
+                throw new NumberFormatException("Il campo durata deve contenere un numero intero");
+            }
+            if (!Utils.isFloat("Prezzo", prezzoPreCheck)){
+                throw new NumberFormatException("Il campo prezzo deve contenere un numero decimale");
+            }
+            int durata = Integer.valueOf(durataPreCheck);
+            float prezzo = Float.valueOf(prezzoPreCheck);
             Utils.checkInteger("Durata", durata, 1, 500);
             Utils.checkString("Regista", regista, 1, 50);
             Utils.checkFloat("Prezzo", prezzo);
@@ -78,14 +86,20 @@ public class NuovoProdotto extends HttpServlet {
             stmt.executeUpdate();
 
             response.sendRedirect("catalogo");
-        } catch (IllegalStateException e) {
-            response.sendRedirect("login");
+        } catch (NumberFormatException e) {
+            request.setAttribute("outputMessage", e.getMessage());
+            request.setAttribute("previousPage", "nuovoProdotto");
+            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         } catch (InvalidParamException e) {
-            response.sendRedirect("login");
+            request.setAttribute("outputMessage", e.getMessage());
+            request.setAttribute("previousPage", "nuovoProdotto");
+            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         } catch (SQLException e) {
             Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
         } catch (IOException e) {
-            response.sendRedirect("login");
+            request.setAttribute("outputMessage", e.getMessage());
+            request.setAttribute("previousPage", "nuovoProdotto");
+            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         } finally {
             try {
                 stmt.close();
