@@ -26,12 +26,15 @@ public class AreaPersonale extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession(false);
-        String loggedUser = (String) session.getAttribute("user");
-        List<Prodotto> prodotti = ProdottoFactory.getInstance().getAllProdotti(loggedUser);
-        Utente utente = UtenteFactory.getInstance().getUtenteByUsername(loggedUser);
-        request.setAttribute("listaProdottiAggiunti", prodotti);
-        request.setAttribute("utente", utente);
-        request.getRequestDispatcher("areaPersonale.jsp").forward(request, response);
+        if (session != null && session.getAttribute("user") != null) {
+            String loggedUser = (String) session.getAttribute("user");
+            List<Prodotto> prodotti = ProdottoFactory.getInstance().getAllProdotti(loggedUser);
+            Utente utente = UtenteFactory.getInstance().getUtenteByUsername(loggedUser);
+            request.setAttribute("listaProdottiAggiunti", prodotti);
+            request.setAttribute("utente", utente);
+            request.getRequestDispatcher("areaPersonale.jsp").forward(request, response);
+        } else
+            response.sendRedirect("login");
     }
 
     @Override
