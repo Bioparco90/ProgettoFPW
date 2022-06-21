@@ -164,7 +164,7 @@ body{
  * con posizioni e quant'altro. */
 header{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #000000;
     align-items: center;
     margin:0;

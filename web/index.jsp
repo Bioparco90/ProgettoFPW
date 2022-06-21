@@ -4,7 +4,8 @@
         <header>
             <!-- Logo forse da cambiare per evitare questa fastisiosa ripetizione dovuta alle specifiche 
                 del progetto. Suggerirei un logo tipo il favicon che ho messo qualche settimana fa. -->
-            <a href="index"><img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="350" height="150"></a>
+            <img src="img/favicon.png" alt="logo-fakeflix">
+            <a href="index"><img title="fakeflix" alt="fakeflix" src="img/fakeFlix_logo.png" width="350" height="150"></a>
             <!-- <h1>FakeFlix</h1> -->
         </header>
        
