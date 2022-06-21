@@ -19,6 +19,7 @@ import it.easbronz.fakeFlix.db.DatabaseManager;
 import it.easbronz.fakeFlix.exceptions.InvalidParamException;
 import it.easbronz.fakeFlix.model.UtenteFactory;
 import it.easbronz.fakeFlix.utils.Utils;
+import org.postgresql.util.PSQLException;
 
 @WebServlet(name = "Registrazione", urlPatterns = { "/registrazione" })
 @MultipartConfig
@@ -83,6 +84,10 @@ public class Registrazione extends HttpServlet {
 
         } catch (InvalidParamException e) {
             request.setAttribute("outputMessage", e.getMessage());
+            request.setAttribute("previousPage", "login");
+            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
+        } catch (PSQLException e) {
+            request.setAttribute("outputMessage", "Nome utente già in uso");
             request.setAttribute("previousPage", "login");
             request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         } catch (SQLException e) {
