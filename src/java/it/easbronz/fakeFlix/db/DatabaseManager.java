@@ -25,7 +25,7 @@ public class DatabaseManager {
     }
 
     public Connection getDbConnection() {
-        String db = "jdbc:postgresql://localhost:5432/fakeflix";
+        String db = "jdbc:postgresql://localhost:5432/easbronz";
         String user = "postgres";
         String pass = "fondamenti";
 
