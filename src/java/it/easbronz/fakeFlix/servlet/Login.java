@@ -32,9 +32,9 @@ public class Login extends HttpServlet {
 
         try {
 
-            final int USER_MIN_LENGTH = 5;
+            final int USER_MIN_LENGTH = 3;
             final int USER_MAX_LENGTH = 20;
-            final int PASSWORD_MIN_LENGTH = 4;
+            final int PASSWORD_MIN_LENGTH = 5;
             final int PASSWORD_MAX_LENGTH = 50;
 
             Utils.checkString("User", user, USER_MIN_LENGTH, USER_MAX_LENGTH);
