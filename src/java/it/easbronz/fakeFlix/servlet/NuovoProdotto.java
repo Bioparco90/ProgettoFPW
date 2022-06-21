@@ -74,7 +74,7 @@ public class NuovoProdotto extends HttpServlet {
                 Utils.checkString("Locandina", locandina, 1, 200);
 
                 conn = DatabaseManager.getInstance().getDbConnection();
-                String query = "INSERT INTO prodotto VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                String query = "INSERT INTO prodotti VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                 stmt = conn.prepareStatement(query);
                 stmt.setString(1, titolo);
                 stmt.setString(2, trama);

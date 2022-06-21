@@ -28,7 +28,7 @@ public class UtenteFactory {
         try {
             conn = DatabaseManager.getInstance().getDbConnection();
 
-            String query = "SELECT * FROM utente WHERE username = ? AND password = ?";
+            String query = "SELECT * FROM utenti WHERE username = ? AND password = ?";
             stmnt = conn.prepareStatement(query);
             stmnt.setString(1, username);
             stmnt.setString(2, password);
@@ -76,7 +76,7 @@ public class UtenteFactory {
         try {
             conn = DatabaseManager.getInstance().getDbConnection();
 
-            String query = "SELECT * FROM utente WHERE username = ?";
+            String query = "SELECT * FROM utenti WHERE username = ?";
             stmnt = conn.prepareStatement(query);
             stmnt.setString(1, username);
             set = stmnt.executeQuery();

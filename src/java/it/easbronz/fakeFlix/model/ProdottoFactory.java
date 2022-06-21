@@ -31,7 +31,7 @@ public class ProdottoFactory {
         try {
             conn = DatabaseManager.getInstance().getDbConnection();
 
-            String query = "SELECT * FROM prodotto WHERE username_aggiunta = ?";
+            String query = "SELECT * FROM prodotti WHERE username_aggiunta = ?";
             stmt = conn.prepareStatement(query);
             stmt.setString(1, username);
             set = stmt.executeQuery();
@@ -79,7 +79,7 @@ public class ProdottoFactory {
         Prodotto prodotto = new Prodotto();
         try {
             conn = DatabaseManager.getInstance().getDbConnection();
-            String query = "SELECT * FROM prodotto LIMIT 1 OFFSET ?";
+            String query = "SELECT * FROM prodotti LIMIT 1 OFFSET ?";
             stmt = conn.prepareStatement(query);
             stmt.setInt(1, Integer.parseInt(offset));
             set = stmt.executeQuery();

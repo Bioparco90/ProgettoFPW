@@ -67,7 +67,7 @@ public class Registrazione extends HttpServlet {
             Utils.checkString("Foto", foto, 0, 200);
 
             conn = DatabaseManager.getInstance().getDbConnection();
-            String query = "INSERT INTO utente VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO utenti VALUES (?, ?, ?, ?, ?, ?, ?)";
             stmt = conn.prepareStatement(query);
             stmt.setString(1, username);
             stmt.setString(2, password);
