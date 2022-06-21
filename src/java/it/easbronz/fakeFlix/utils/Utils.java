@@ -24,13 +24,13 @@ public class Utils {
                     max + " caratteri");
     }
 
-    public static void checkInteger(String name, int param, int min, int max)
+    public static void checkInteger(String name, int param)
             throws InvalidParamException, NumberFormatException {
 
         checkNull(name, param);
-        if (param < min || param > max)
+        if (param <= 0)
             throw new InvalidParamException("Il campo " + name +
-                    " deve avere un valore compreso tra " + min + " e " + max);
+                    " deve avere un valore maggiore di zero");
     }
 
     public static void checkFloat(String name, float param)

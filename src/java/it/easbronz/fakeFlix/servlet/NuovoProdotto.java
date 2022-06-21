@@ -67,7 +67,7 @@ public class NuovoProdotto extends HttpServlet {
                 }
                 int durata = Integer.valueOf(durataPreCheck);
                 float prezzo = Float.valueOf(prezzoPreCheck);
-                Utils.checkInteger("Durata", durata, 1, 500);
+                Utils.checkInteger("Durata", durata);
                 Utils.checkString("Regista", regista, 1, 50);
                 Utils.checkFloat("Prezzo", prezzo);
                 Utils.checkString("Uploader", uploader, 3, 20);
