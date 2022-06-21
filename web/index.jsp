@@ -25,7 +25,7 @@
         </nav>
 
         <h2>Film in evidenza</h2>
-        <main class="col-12">
+        <main class="col-8">
             <article class="card col-2">
                 <img src="img/products/pulp-fiction1.jpg" alt="locandina">
                 <h2 id="movieTitle">Pulp Fiction</h2>
@@ -36,21 +36,12 @@
                 <p>Prezzo: $ 9,99</p>
                 <input type="button"value="Acquista" class="myButton">
             </article>
-            <article class="card col-2">
-                <img src="img/products/pulp-fiction1.jpg" alt="locandina">
-                <h2 id="movieTitle">Pulp Fiction</h2>
-                <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
-                <p>Durata: 190'</p> 
-                <p>Genere: Cult</p>
-                <p> Rating: * * * * *</p>
-                <p>Prezzo: $ 9,99</p>
-                <input type="button"value="Acquista" class="myButton">
-            </article>
-            
-            <article class="col-2">
+        </main>
+        
+        <aside class="col-4">
+            <article>
                 <img src="img/fakecola.gif" class="adv_img">
             </article>
-
-        </main>
+        </aside>
 
 <jsp:include page="footer.jsp"/> 
