@@ -1,9 +1,9 @@
 package it.easbronz.fakeFlix.servlet;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,11 +15,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import it.easbronz.fakeFlix.db.DatabaseManager;
+import org.postgresql.util.PSQLException;
+
 import it.easbronz.fakeFlix.exceptions.InvalidParamException;
+import it.easbronz.fakeFlix.model.Utente;
 import it.easbronz.fakeFlix.model.UtenteFactory;
 import it.easbronz.fakeFlix.utils.Utils;
-import org.postgresql.util.PSQLException;
 
 @WebServlet(name = "Registrazione", urlPatterns = { "/registrazione" })
 @MultipartConfig
@@ -32,16 +33,12 @@ public class Registrazione extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // processRequest(request, response);
-        // Probabilmente non ci servirà la doGet.
+        processRequest(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        Connection conn = null;
-        PreparedStatement stmt = null;
 
         try {
             String username = request.getParameter("username");
@@ -66,17 +63,17 @@ public class Registrazione extends HttpServlet {
             Utils.checkString("Città", citta, MIN_LENGTH, OTHER_MAX_LENGTH);
             Utils.checkString("Foto", foto, 0, 200);
 
-            conn = DatabaseManager.getInstance().getDbConnection();
-            String query = "INSERT INTO utenti VALUES (?, ?, ?, ?, ?, ?, ?)";
-            stmt = conn.prepareStatement(query);
-            stmt.setString(1, username);
-            stmt.setString(2, password);
-            stmt.setString(3, nome);
-            stmt.setString(4, cognome);
-            stmt.setString(5, email);
-            stmt.setString(6, citta);
-            stmt.setString(7, foto);
-            stmt.executeUpdate();
+            Map<String, String> utenteMap = new HashMap<>();
+            utenteMap.put("username", username);
+            utenteMap.put("nome", nome);
+            utenteMap.put("cognome", cognome);
+            utenteMap.put("email", email);
+            utenteMap.put("password", password);
+            utenteMap.put("citta", citta);
+            utenteMap.put("foto", foto);
+
+            Utente utente = UtenteFactory.getInstance().createUtente(utenteMap);
+            UtenteFactory.getInstance().insertUtente(utente);
 
             request.setAttribute("outputMessage", "Utente registrato con successo");
             request.setAttribute("previousPage", "login");
@@ -96,15 +93,6 @@ public class Registrazione extends HttpServlet {
             request.setAttribute("outputMessage", e.getMessage());
             request.setAttribute("previousPage", "login");
             request.getRequestDispatcher("outputPage.jsp").forward(request, response);
-        } finally {
-            try {
-                stmt.close();
-            } catch (Exception e) {
-            }
-            try {
-                conn.close();
-            } catch (Exception e) {
-            }
         }
     }
 
