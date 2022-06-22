@@ -1,8 +1,11 @@
 package it.easbronz.fakeFlix.servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -13,9 +16,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
+import org.postgresql.util.PSQLException;
+
 import it.easbronz.fakeFlix.exceptions.InvalidParamException;
 import it.easbronz.fakeFlix.model.Prodotto;
 import it.easbronz.fakeFlix.model.ProdottoFactory;
+import it.easbronz.fakeFlix.model.UtenteFactory;
 import it.easbronz.fakeFlix.utils.Utils;
 
 @WebServlet(name = "NuovoProdotto", urlPatterns = { "/nuovoProdotto" })
@@ -94,6 +100,12 @@ public class NuovoProdotto extends HttpServlet {
             request.setAttribute("outputMessage", e.getMessage());
             request.setAttribute("previousPage", "nuovoProdotto");
             request.getRequestDispatcher("outputPage.jsp").forward(request, response);
+        } catch (PSQLException e) {
+            request.setAttribute("outputMessage", "Film già presente in catalogo");
+            request.setAttribute("previousPage", "nuovoProdotto");
+            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
+        } catch(SQLException e) {
+            Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
         } catch (IOException e) {
             request.setAttribute("outputMessage", e.getMessage());
             request.setAttribute("previousPage", "nuovoProdotto");
