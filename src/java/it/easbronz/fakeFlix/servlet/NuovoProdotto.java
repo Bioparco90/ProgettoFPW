@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,8 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
-import it.easbronz.fakeFlix.db.DatabaseManager;
 import it.easbronz.fakeFlix.exceptions.InvalidParamException;
+import it.easbronz.fakeFlix.model.Prodotto;
+import it.easbronz.fakeFlix.model.ProdottoFactory;
 import it.easbronz.fakeFlix.model.UtenteFactory;
 import it.easbronz.fakeFlix.utils.Utils;
 
@@ -73,18 +76,18 @@ public class NuovoProdotto extends HttpServlet {
                 Utils.checkString("Uploader", uploader, 3, 20);
                 Utils.checkString("Locandina", locandina, 1, 200);
 
-                conn = DatabaseManager.getInstance().getDbConnection();
-                String query = "INSERT INTO prodotti VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-                stmt = conn.prepareStatement(query);
-                stmt.setString(1, titolo);
-                stmt.setString(2, trama);
-                stmt.setString(3, genere);
-                stmt.setInt(4, durata);
-                stmt.setString(5, regista);
-                stmt.setString(6, locandina);
-                stmt.setFloat(7, prezzo);
-                stmt.setString(8, uploader);
-                stmt.executeUpdate();
+                Map<String, Object> prodottoMap = new HashMap<>();
+                prodottoMap.put("titolo", titolo);
+                prodottoMap.put("trama", trama);
+                prodottoMap.put("genere", genere);
+                prodottoMap.put("durata", durata);
+                prodottoMap.put("regista", regista);
+                prodottoMap.put("locandina", locandina);
+                prodottoMap.put("prezzo", prezzo);
+                prodottoMap.put("uploader", uploader);
+
+                Prodotto prodotto = ProdottoFactory.getInstance().createProdotto(prodottoMap);
+                ProdottoFactory.getInstance().insertProdotto(prodotto);
 
                 request.setAttribute("outputMessage", "Prodotto inserito con successo");
                 request.setAttribute("previousPage", "nuovoProdotto");
