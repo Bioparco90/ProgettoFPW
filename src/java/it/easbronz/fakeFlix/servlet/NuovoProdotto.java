@@ -1,13 +1,8 @@
 package it.easbronz.fakeFlix.servlet;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -21,7 +16,6 @@ import javax.servlet.http.Part;
 import it.easbronz.fakeFlix.exceptions.InvalidParamException;
 import it.easbronz.fakeFlix.model.Prodotto;
 import it.easbronz.fakeFlix.model.ProdottoFactory;
-import it.easbronz.fakeFlix.model.UtenteFactory;
 import it.easbronz.fakeFlix.utils.Utils;
 
 @WebServlet(name = "NuovoProdotto", urlPatterns = { "/nuovoProdotto" })

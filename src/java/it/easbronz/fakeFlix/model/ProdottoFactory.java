@@ -121,7 +121,7 @@ public class ProdottoFactory {
 
         Connection conn = null;
         PreparedStatement stmt = null;
-        try{
+        try {
             conn = DatabaseManager.getInstance().getDbConnection();
             String query = "INSERT INTO prodotti VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             stmt = conn.prepareStatement(query);
@@ -134,7 +134,7 @@ public class ProdottoFactory {
             stmt.setFloat(7, prodotto.getPrezzo());
             stmt.setString(8, prodotto.getUsernameAggiunta());
             stmt.executeUpdate();
-        } catch (SQLException e){
+        } catch (SQLException e) {
             Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             try {
