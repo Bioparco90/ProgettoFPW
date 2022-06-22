@@ -117,24 +117,35 @@ public class ProdottoFactory {
         return null;
     }
 
-    public void insertProdotto(Prodotto prodotto)
-            throws SQLException {
+    public void insertProdotto(Prodotto prodotto) {
 
         Connection conn = null;
         PreparedStatement stmt = null;
-
-        conn = DatabaseManager.getInstance().getDbConnection();
-        String query = "INSERT INTO prodotti VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-        stmt = conn.prepareStatement(query);
-        stmt.setString(1, prodotto.getTitolo());
-        stmt.setString(2, prodotto.getTrama());
-        stmt.setString(3, prodotto.getGenere());
-        stmt.setInt(4, prodotto.getDurata());
-        stmt.setString(5, prodotto.getRegista());
-        stmt.setString(6, prodotto.getPathLocandina());
-        stmt.setFloat(7, prodotto.getPrezzo());
-        stmt.setString(8, prodotto.getUsernameAggiunta());
-        stmt.executeUpdate();
+        try{
+            conn = DatabaseManager.getInstance().getDbConnection();
+            String query = "INSERT INTO prodotti VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            stmt = conn.prepareStatement(query);
+            stmt.setString(1, prodotto.getTitolo());
+            stmt.setString(2, prodotto.getTrama());
+            stmt.setString(3, prodotto.getGenere());
+            stmt.setInt(4, prodotto.getDurata());
+            stmt.setString(5, prodotto.getRegista());
+            stmt.setString(6, prodotto.getPathLocandina());
+            stmt.setFloat(7, prodotto.getPrezzo());
+            stmt.setString(8, prodotto.getUsernameAggiunta());
+            stmt.executeUpdate();
+        } catch (SQLException e){
+            Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+            try {
+                stmt.close();
+            } catch (Exception e) {
+            }
+            try {
+                conn.close();
+            } catch (Exception e) {
+            }
+        }
     }
 
     public Prodotto createProdotto(Map<String, Object> prodottoMap) {

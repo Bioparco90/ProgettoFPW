@@ -42,8 +42,6 @@ public class NuovoProdotto extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        Connection conn = null;
-        PreparedStatement stmt = null;
         HttpSession session = request.getSession(false);
 
         try {
@@ -102,21 +100,10 @@ public class NuovoProdotto extends HttpServlet {
             request.setAttribute("outputMessage", e.getMessage());
             request.setAttribute("previousPage", "nuovoProdotto");
             request.getRequestDispatcher("outputPage.jsp").forward(request, response);
-        } catch (SQLException e) {
-            Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
         } catch (IOException e) {
             request.setAttribute("outputMessage", e.getMessage());
             request.setAttribute("previousPage", "nuovoProdotto");
             request.getRequestDispatcher("outputPage.jsp").forward(request, response);
-        } finally {
-            try {
-                stmt.close();
-            } catch (Exception e) {
-            }
-            try {
-                conn.close();
-            } catch (Exception e) {
-            }
         }
     }
 
