@@ -1,4 +1,3 @@
-
 package it.easbronz.fakeFlix.model;
 
 public class Prodotto {
