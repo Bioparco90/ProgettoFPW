@@ -25,10 +25,7 @@
             </ul>
         </nav>
      
-        <div>
-            <div class="col-1">
-                <button id="prevProduct"> < </button>
-            </div>
+        <div class="carosello">
             <div class="col-10">
                 <article class="card col-2">
                     <img id="locandina" src="${prodotto.getPathLocandina()}" alt="locandina">
@@ -40,10 +37,11 @@
                     <p id="prezzo">Prezzo: € ${prodotto.getPrezzo()}</p>
                     <p id="uploader">Aggiunto da: ${prodotto.getUsernameAggiunta()}</p>
                     <input type="button"value="Acquista" class="myButton">
+                    <div >
+                        <button id="prevProduct" class="carosuelButton"> < </button>
+                        <button id="nextProduct" class="carosuelButton"> > </button>
+                    </div>
                 </article>   
-            </div>
-            <div class="col-1">
-                <button id="nextProduct"> > </button>
             </div>
         </div>
         <script src="js/carousel.js"></script>

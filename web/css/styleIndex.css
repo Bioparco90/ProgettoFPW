@@ -32,18 +32,20 @@
     }
     
     .card{
-        /* width:40%; */
-        /* min-width: max-content; */
         min-width: 576px;
+        margin-left: 10%;
     }
     
     .card > img {
         float: left;
-        /* border-radius: 10px 10px 10px 10px; */
         margin-right: 0.3em;
         max-height: 20em;
     }
 
+    .carosuelButton{
+        margin-bottom:5%;
+        margi
+    }
 
     .about_img{
         float:left;
@@ -115,7 +117,6 @@
     .card > img {
         border-radius: 10px 10px 10px 10px;
         margin-right: 0.3em;
-        /* width:100%; */
         max-width: fit-content;
         max-height: 20em;
 
@@ -158,6 +159,8 @@ body{
 }
 
 
+
+/*----------------HEADER------------------*/
 /* L'utilizzo della flexbox ci permette di allineare senza sforzo gli elementi. Vi consiglio di buttarci un 
  * occhio su w3school. 
  * align-items: center allinea il centro degli elementi sulla stessa riga senza che ci stressiamo
@@ -171,10 +174,13 @@ header{
     padding:0;
 }
 
+#logo{
+    float:center;
+}
+
 .active{
     font-style: italic;
     font-weight: bold;
-    
 }
 
 nav{
@@ -198,7 +204,7 @@ nav > ul {
 
 nav > ul a {
     text-decoration: none;
-    color: white; /* provvisorio */
+    color: white; 
     font-weight: bold;
 }
 
@@ -206,6 +212,11 @@ nav > ul a:hover{
     color: black; /* provvisorio */
 }
 
+
+
+
+
+/*-------------------BODY-------------------------*/
 #movieTitle{
     color:gold;
 }
@@ -214,62 +225,20 @@ nav > ul a:hover{
     border-radius: 10px 10px 10px 10px;
     background-color: #950101;
     text-align: center;
-    /* margin: 0.5em;*/
-    /* min-width: 576px; */
     color: white;
     margin-bottom:10%;
-    /* margin: auto; */
-    /* max-width: 300px; */
+    margin-top:10%;
+    align-content: center;
 }
 
 .card > p {
-    /* text-align: justify; */
     margin-right: 0.3em;
-    color:
-    white;
-    /* margin: auto; */
+    color:white;
     margin: 1rem 1rem;
 }
 
-footer{
-    display:flex;
-    text-align:center;
-    background-color:#950101;
-    align-content:center;
-    bottom:0;
-}
-
-.names li{
-    list-style-type:none;
-    float:left;
-    padding:0 10px;
-    padding-bottom:1%;
-}
-
-.names ul{
-    padding:0;
-    list-style:none;
-    text-align:center;
-    line-height:1.6;
-    margin-bottom:0;
-}
-
-.names a{
-    color:white;
-    text-decoration:none;
-    font-weight: bold;
-}
-
-.names{
-    margin:0 auto;
-    width:100%;
-    overflow-x: hidden;
-}
-
-.contacts{
-    margin:0 auto;
-    position:relative;
-    left:15%;
+.carosuelButton{
+    margin-top:5%;
 }
 
 input.myButton{
@@ -293,10 +262,15 @@ input.myButton:hover {
     background-color:#f24437;
 }
 input.myButton:active { 
-    /* position:relative; */
     top:1px;
     right:50px;
 }
+
+
+.carosello{
+    margin
+}
+
 
 input.loginButton{
     box-shadow: 3px 4px 0px 0px #8a2a21;
@@ -380,4 +354,48 @@ input.loginButton:hover {
 
 .invisible{
     visibility: hidden;
+}
+
+
+
+/*-------------------FOOTER---------------------*/
+footer{
+    display:flex;
+    text-align:center;
+    background-color:#950101;
+    align-content:center;
+    bottom:0;
+}
+
+.names li{
+    list-style-type:none;
+    float:left;
+    padding:0 10px;
+    padding-bottom:1%;
+}
+
+.names ul{
+    padding:0;
+    list-style:none;
+    text-align:center;
+    line-height:1.6;
+    margin-bottom:0;
+}
+
+.names a{
+    color:white;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+.names{
+    margin:0 auto;
+    width:100%;
+    overflow-x: hidden;
+}
+
+.contacts{
+    margin:0 auto;
+    position:relative;
+    left:15%;
 }
