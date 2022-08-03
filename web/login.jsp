@@ -35,7 +35,7 @@
             </form>
         </div> 
         
-        <div class="registrazione">
+        <div class="registrazione login">
             <form action="registrazione" method="post" enctype="multipart/form-data">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" required placeholder="Username">
