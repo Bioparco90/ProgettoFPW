@@ -25,23 +25,26 @@
             </ul>
         </nav>
 
-        <h2>Film in evidenza</h2>
+        <h2>L'attività</h2>
         <main class="col-8">
-            <article class="card col-2">
-                <img src="img/products/pulp-fiction1.jpg" alt="locandina">
-                <h2 id="movieTitle">Pulp Fiction</h2>
-                <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
-                <p>Durata: 190'</p> 
-                <p>Genere: Cult</p>
-                <p> Rating: * * * * *</p>
-                <p>Prezzo: $ 9,99</p>
-                <input type="button"value="Acquista" class="myButton">
+            <article>
+                 <p>
+                     FakeFlix è un servizio di noleggio che ti consente di guardare film e serie TV sul tuo dispositivo.<br>
+
+                     Il Catalogo FakeFlix mette a disposizione una vasta scelta di serie TV e film acquistabili dopo aver creato il tuo account personale.<br>
+
+                     Per creare l'account è sufficiente spostarsi sulla pagina di Login e inserire i tuoi dati nel form di registrazione. <br>
+
+                     Per qualsiasi problema non esitare a contattare il nostro team di assistenza al cliente al numero 070-690-420. <br>
+
+                    -Team Easbronz 
+                </p>
             </article>
         </main>
         
         <aside class="col-4">
             <article>
-                <img src="img/fakecola.gif" class="adv_img">
+                
             </article>
         </aside>
 
