@@ -25,7 +25,7 @@
             </ul>
         </nav>
 
-        <h2>L'attività</h2>
+        <h2>L'ATTIVITA'</h2>
         <main class="col-8">
             <article>
                  <p>
@@ -44,7 +44,7 @@
         
         <aside class="col-4">
             
-            <article class="card col-12">
+            <article class="evidenza col-12">
                 <div class="contenutocard">
                      <img src="img/products/pulp-fiction1.jpg" alt="locandina" id="locandina">
                 </div>

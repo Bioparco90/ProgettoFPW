@@ -25,8 +25,8 @@
             </ul>
         </nav>
      
-        <div class="carosello">
-            <div class="col-10">
+            <h2>CATALOGO</h2>
+            <main class="col-8">
                 <article class="card col-2">
                     <img id="locandina" src="${prodotto.getPathLocandina()}" alt="locandina">
                     <h2 id="movieTitle">${prodotto.getTitolo()}</h2>
@@ -42,7 +42,30 @@
                         <button id="nextProduct" class="carosuelButton"> > </button>
                     </div>
                 </article>   
-            </div>
-        </div>
+            </main>
+
+                    
+          <aside class="col-4">
+            
+            <article class="evidenza col-12">
+                <div class="contenutocard">
+                     <img src="img/products/pulp-fiction1.jpg" alt="locandina" id="locandina">
+                </div>
+                
+                <div class="contenutocard">
+                    <h2 id="movieTitle">Pulp Fiction</h2>
+                    <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
+                    <input type="button"value="Acquista" class="myButton">
+                </div>
+                
+            </article>
+            
+            <article class="sponsors">
+                <a href="https://www.birraichnusa.it/"><img src="img/Logo_Ichnusa.png" class="col-6"></a>
+            
+                <a href="https://unica.it/unica/"><img src="img/Logo_uni.png" class="col-6"> </a>    
+            </article>
+            
+        </aside>           
         <script src="js/carousel.js"></script>
 <jsp:include page="footer.jsp"/> 

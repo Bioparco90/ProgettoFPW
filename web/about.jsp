@@ -21,8 +21,8 @@
 
 
         <h2>ABOUT US</h2><!<!-- creazione di 4 div di equa dimensione, uno per ogni componente del gruppo -->
-        <div class="about col-9 cols-12 aboutSection">
-            <div class="col-9 cols-12">
+        <main class= "col-8 about">
+            <div class="col-12">
                 <img  class="about_img" title="Ceppitelli" src="img/users/ceppitelli.png">
                 <p>Mirko Contini<br>
                 Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
@@ -30,7 +30,7 @@
                 </p>
             </div>
             
-            <div class="col-9 cols-12">
+            <div class="col-12">
                 <img class="about_img" title="Deiola" src="img/users/deiola.png">
                 <p>Marco Monni<br>
                 Studente di informatica al secondo anno presso l'università di Cagliari,
@@ -38,7 +38,7 @@
                 </p>
             </div>
             
-            <div class="col-9 cols-12">
+            <div class="col-12">
                 <img  class="about_img" title="Lyko" src="img/users/lyko.png">
                 <p>Pietro Musiu<br>
                 Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
@@ -46,12 +46,35 @@
                 </p>
             </div>
             
-            <div class="col-9 cols-12">
+            <div class="col-12">
                 <img class="about_img" title="Dalbert" src="img/users/dalbert.png">
                 <p>Stefano Rocca<br>
                 Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
                 programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
                 </p>
             </div>
-        </div>
+        </main>
+        
+         <aside class="col-4">
+            
+            <article class="evidenza col-12">
+                <div class="contenutocard">
+                     <img src="img/products/pulp-fiction1.jpg" alt="locandina" id="locandina">
+                </div>
+                
+                <div class="contenutocard">
+                    <h2 id="movieTitle">Pulp Fiction</h2>
+                    <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
+                    <input type="button"value="Acquista" class="myButton">
+                </div>
+                
+            </article>
+            
+            <article class="sponsors">
+                <a href="https://www.birraichnusa.it/"><img src="img/Logo_Ichnusa.png" class="col-6"></a>
+            
+                <a href="https://unica.it/unica/"><img src="img/Logo_uni.png" class="col-6"> </a>    
+            </article>
+            
+        </aside>
 <jsp:include page="footer.jsp"/>
