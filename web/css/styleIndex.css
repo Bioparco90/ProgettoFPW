@@ -385,6 +385,7 @@ input.loginButton:hover {
   margin-top: 30px;
 }
 
+
 .textbox{
   background-color: #47000F;
   border-radius: 12px;
@@ -428,11 +429,68 @@ input.loginButton:hover {
 }
 
 .registrazione{
-    /* display:none; /*Temporanemanete lo nascondo perchè mi disturba*/
-    float:right;
-    overflow: hidden;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   float:right;
+   margin-top:5%;
 }
 
+.registrazione form{
+  background-color:#950101;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 20px;
+  width: 500px;
+}
+
+.regTitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.usernamereg{
+    margin-top: 30px;
+
+}
+.nome {
+  margin-top: 30px;
+  
+}
+
+.cognome {
+  margin-top: 30px;
+ 
+}
+
+.citta {
+  margin-top: 30px;
+  margin-left:10px;
+}
+
+.email {
+  margin-top: 30px;
+}
+
+.file {
+  margin-top: 30px;
+  margin-left:10px;
+}
+
+.regpassword {
+  margin-top: 30px;
+  margin-left:10px;
+}
+
+.confirmpsw {
+  margin-top: 30px;
+  margin-left:10px;
+}
 .about{
     display: flex;
     flex-direction: column;
@@ -440,7 +498,6 @@ input.loginButton:hover {
     margin-top:20px;
     margin-bottom:50px;  
 }
-
 
 .nuovoProdottoBox{
    box-shadow: 3px 4px 0px 0px #8a2a21;
