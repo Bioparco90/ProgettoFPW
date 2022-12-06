@@ -19,23 +19,24 @@
             </ul>
         </nav>
         
-        <div class="login col-9">
+        <div class="login col-6">
             <form action="login" method="post">
-                <div id="username">
-                    <label for="user">Username</label>
-                    <input type="text" name="user" id="user" required placeholder="Username">
+                <div class="loginTitle">Inserisci le tue credenziali</div>
+                <div class="input username">
+                    <input type="text" name="user" id="user" class="textbox" required placeholder="Username">
                 </div>
                 
-                <div id="password">
-                    <label for="psw">Password</label>
-                    <input type="password" name="psw" id="psw" required placeholder="Password">
-                    <input type="submit" value="Accedi">
-                    <p>Non hai ancora un account? Registrati qui sotto</p>
+                <div class="input password">
+                    <input type="password" name="psw" id="psw" class="textbox" required placeholder="Password">
                 </div>
+                <div>
+                    <input type="submit" class="submit" value="Accedi">       
+                </div>
+                <p>Non hai ancora un account? Registrati qui affianco</p>
             </form>
         </div> 
         
-        <div class="registrazione login">
+        <div class="registrazione login col-6">
             <form action="registrazione" method="post" enctype="multipart/form-data">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" required placeholder="Username">

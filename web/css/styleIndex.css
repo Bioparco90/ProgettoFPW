@@ -72,7 +72,6 @@
     
     .login{
         width:20%;
-        margin-left: 40%;
         margin-top:5%;
         margin-bottom:5%;
     }
@@ -339,30 +338,99 @@ input.loginButton:hover {
     background-color:#f24437;
 }
 
+/*------------FORM LOGIN--------------*/
 .login{
-   box-shadow: 3px 4px 0px 0px #8a2a21;
-   padding:20px;
-   height: auto;
-   background-color: white;
-   color:red;
-   border-radius: 10px 10px 10px 10px;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-left:10%;
 }
-
 
 .login form{
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   height:25%;
+  background-color:#950101;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 20px;
+  width: 320px;
 }
 
-.login input{
-    margin:20px;
+.loginTitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.login p {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.input{
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.username{
+  margin-top: 40px;
+}
+
+.password {
+  margin-top: 30px;
+}
+
+.textbox{
+  background-color: #47000F;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: white;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+
+.submit {
+  background-color:#c62d1f;
+  border-radius: 12px;
+  border:1px solid #d02718;	
+  box-sizing: border-box;
+  color:#ffffff;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 3px 4px 0px 0px #8a2a21;
+  background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  display:inline-block;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #810e05;
+}
+
+ .submit:hover {
+    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+    background-color:#f24437;
+}
+.submit:active { 
+    top:1px;
+    right:50px;
 }
 
 .registrazione{
     /* display:none; /*Temporanemanete lo nascondo perchè mi disturba*/
+    float:right;
+    overflow: hidden;
 }
 
 .about{
