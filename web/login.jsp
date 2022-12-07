@@ -19,7 +19,7 @@
             </ul>
         </nav>
         
-        <main class="col-12">
+        <main class=" main col-12">
             <div class="login col-6">
             <form action="login" method="post">
                 <div class="loginTitle">Inserisci le tue credenziali</div>
@@ -40,7 +40,8 @@
         <div class="registrazione col-6">
             <form action="registrazione" method="post" enctype="multipart/form-data">
                 <div class="regTitle">Registrati</div>
-                <div class="col-6">
+                <div class="container">
+                    <div class="col-6 sinistra">
                     <div class="input usernamereg">
                     <input type="text" name="username" id="username" class="textbox" required placeholder="Username">
                 </div>
@@ -55,7 +56,7 @@
                 </div>
                 </div>
                 
-                <div class="col-6">
+                <div class="col-6 destra">
                    <div class="input citta">
                         <input type="text" name="citta" id="citta" class="textbox" required placeholder="Citta">  
                     </div>
@@ -68,10 +69,11 @@
                     
                     <div class="input thumbnail">
                          <label for="file" class="file">Scegli immagine</label>
-                        <input type="file" id="file" name="file"  accept="image/*" required>
+                        <input type="file" id="file" name="file"  accept="image/*" required placeholder="Scegli immagine">
                     </div>
-                </div>                
-                <div>
+                </div>
+                </div>
+             <div>
                    <input type="submit" class="submit" value="Registrati">  
                 </div>
                               

@@ -28,7 +28,8 @@
       <main class="col-12 nuovoProdottoBox">         
             <form action="nuovoProdotto" method="post" enctype="multipart/form-data">
                 <div class="nuovoProdottoTitle">Compila i campi</div>
-                 <div class="col-6">
+                <div class="container">
+                   <div class="col-6">
                       <div class="input titolo">
                         <input type="text" name="titolo" id="titolo" class="textbox" required placeholder="Titolo">
                       </div>
@@ -64,7 +65,9 @@
                            <option value="5">5.99</option>
                     </select> 
                     </div>
+                </div> 
                 </div>
+                 
                                 
                 <div class="input thumbnail col-12">
                     <label for="locandina" class="file">Scegli immagine</label>

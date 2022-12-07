@@ -73,19 +73,36 @@
         width:20%;
         margin-top:5%;
         margin-bottom:5%;
+        margin-left:10%;
     }
     
-    .nuovoProdottoBox{
-        margin:0;
-        margin-left: 20%;
-        margin-top:5%;
-        margin-bottom:5%;
-        width:30%;
+    .container{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap:20px;
     }
     
+    .registrazione form{
+        height:500px;
+        width:500px;
+    }
+   
+    .nuovoProdottoBox form{
+        height:420px;
+        width:400px;
+    }
+    
+  
     input.loginButton{
         margin-right:10%;
         float: right;
+    }
+    
+    .thumbnail{
+        display:flex;
+        justify-content: center;
+        
     }
     
     .adv_img
@@ -106,15 +123,13 @@
     nav{
         display: flex;
         flex-direction: row;
-        align-content: center;
         align-items: center;
         text-align: center;
         width: 100%;
+        justify-content: center;
     }
+
     
-    nav ul{
-        margin-left: 25%;
-    }
     nav li:last-child{
         border-right:0px solid #111111;
     }
@@ -160,21 +175,38 @@
     }
  
     .login{
-        width:60%;
-        margin-left:20%;
+        justify-content: center;
+        align-items: center;
+        margin-top:30px;
     }
     
-    .nuovoProdottoBox{
-        margin:0;
-        margin-left: 20%;
-        margin-top:5%;
-        margin-bottom:5%;
-        width:60%;
+    .main{
+        display:flex;
+        flex-direction: column;
+    }
+    
+    .registrazione{
+        justify-content: center;
+        align-items: center;
+        margin-top:30px;
+    }
+    
+    .registrazione form{        
+        height:750px;
+        width:320px;
+        margin-bottom:30px;
+    }
+    
+    .nuovoProdottoBox form{
+        height:650px;
+        margin-bottom:30px;
     }
     
     input.loginButton{
         margin-right:0;
     }
+    
+  
     
     
 }
@@ -344,7 +376,6 @@ input.loginButton:hover {
    display:flex;
    flex-direction: column;
    justify-content: center;
-   margin-left:10%;
 }
 
 .login form{
@@ -430,15 +461,14 @@ input.loginButton:hover {
    justify-content: center;
    float:right;
    margin-top:5%;
+   
 }
 
 .registrazione form{
   background-color:#950101;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 500px;
   padding: 20px;
-  width: 500px;
 }
 
 .regTitle {
@@ -454,21 +484,6 @@ input.loginButton:hover {
     margin-top:20px;
 }
 
-.citta {
-  margin-left:10px;
-}
-
-.file {
-  margin-left:10px;
-}
-
-.regpassword {
-  margin-left:10px;
-}
-
-.confirmpsw {
-  margin-left:10px;
-}
 .about{
     display: flex;
     flex-direction: column;
@@ -482,16 +497,15 @@ input.loginButton:hover {
    display:flex;
    flex-direction: column;
    justify-content: center;
-   margin-left:35%;
+   align-items: center;
+   padding:40px;
 }
 
 .nuovoProdottoBox form{
   background-color:#950101;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 400px;
   padding: 20px;
-  width: 400px;
 }
 
 .nuovoProdottoTitle {
@@ -510,18 +524,6 @@ input.loginButton:hover {
     margin-top:20px;
 }
 
-.durata{
-    margin-left:10px;
-}
-
-.regista{
-    margin-left:10px;
-}
-
-.prezzo{
-    margin-left:10px;
-}
-
   input[type="file"] {
     display: none;
 }
@@ -537,10 +539,9 @@ input.loginButton:hover {
     height: 65%;
     outline: 0;
     padding: 4px 20px 0;
-    margin-left:25%;
 }
 .registrazione .file{
-    margin-left:10px;
+
     height:50px;
     width:230px;
     padding-top:15px;
