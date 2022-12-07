@@ -31,6 +31,7 @@
         float:right;
     }
     
+    /*------------CARD VARIE-------------*/
      .evidenza{
         min-width: 200px;
         height:200px;
@@ -63,9 +64,7 @@
         width: 10%;
         height: 10%;
     }
-    
-   
-    
+          
     .Section p {
         overflow: auto;
     }
@@ -213,6 +212,7 @@ header{
     font-weight: bold;
 }
 
+/*-----------------------------------NAVBAR------------------------*/
 nav{
     border-radius: 10px 10px 10px 10px; 
     box-shadow: 0 0 10px rgba(0,0,0,.2);
@@ -251,6 +251,7 @@ nav > ul a:hover{
     color:gold;
 }
 
+/*--------------------------CARD VARIE---------------------*/
 .evidenza{
     display:flex;
     border-radius: 10px 10px 10px 10px;
@@ -285,6 +286,7 @@ nav > ul a:hover{
     margin-top:5%;
 }
 
+/*----------------------BOTTONI-----------------*/
 input.myButton{
     box-shadow: 3px 4px 0px 0px #8a2a21;
     background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
@@ -310,14 +312,6 @@ input.myButton:active {
     right:50px;
 }
 
-
-.contenutocard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-}
-
 input.loginButton{
     box-shadow: 3px 4px 0px 0px #8a2a21;
     background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
@@ -336,6 +330,13 @@ input.loginButton{
 input.loginButton:hover {
     background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
     background-color:#f24437;
+}
+
+.contenutocard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
 /*------------FORM LOGIN--------------*/
@@ -377,14 +378,9 @@ input.loginButton:hover {
   width: 100%;
 }
 
-.username{
-  margin-top: 40px;
+.login .input{
+    margin-top:30px;
 }
-
-.password {
-  margin-top: 30px;
-}
-
 
 .textbox{
   background-color: #47000F;
@@ -398,7 +394,6 @@ input.loginButton:hover {
   padding: 4px 20px 0;
   width: 100%;
 }
-
 
 .submit {
   background-color:#c62d1f;
@@ -428,6 +423,7 @@ input.loginButton:hover {
     right:50px;
 }
 
+/*--------------------FORM REGISTRAZIONE------------------*/
 .registrazione{
    display:flex;
    flex-direction: column;
@@ -454,41 +450,23 @@ input.loginButton:hover {
   text-align: center;
 }
 
-.usernamereg{
-    margin-top: 30px;
-
-}
-.nome {
-  margin-top: 30px;
-  
-}
-
-.cognome {
-  margin-top: 30px;
- 
+.registrazione .input{
+    margin-top:20px;
 }
 
 .citta {
-  margin-top: 30px;
   margin-left:10px;
 }
 
-.email {
-  margin-top: 30px;
-}
-
 .file {
-  margin-top: 30px;
   margin-left:10px;
 }
 
 .regpassword {
-  margin-top: 30px;
   margin-left:10px;
 }
 
 .confirmpsw {
-  margin-top: 30px;
   margin-left:10px;
 }
 .about{
@@ -499,35 +477,68 @@ input.loginButton:hover {
     margin-bottom:50px;  
 }
 
+/*---------------------------------FORM NUOVO PRODOTTO--------------------*/
 .nuovoProdottoBox{
-   box-shadow: 3px 4px 0px 0px #8a2a21;
-   padding:20px;
-   height: auto;
-   background-color: white;
-   color:red;
-   border-radius: 10px 10px 10px 10px;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-left:35%;
 }
 
 .nuovoProdottoBox form{
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   height:25%;
+  background-color:#950101;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 400px;
+  padding: 20px;
+  width: 400px;
 }
 
-.nuovoProdottoBox input{
-    margin:20px;
+.nuovoProdottoTitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
 }
 
-.nuovoProdottoBox label{
-        float:left;
+.nuovoProdottoBox .submit{
+    margin-top:0px;
 }
 
-.invisible{
-    visibility: hidden;
+.nuovoProdottoBox .input{
+    margin-top:20px;
 }
 
+.durata{
+    margin-left:10px;
+}
+
+.regista{
+    margin-left:10px;
+}
+
+.prezzo{
+    margin-left:10px;
+}
+
+  input[type="file"] {
+    display: none;
+}
+.file {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #47000F;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 65%;
+    outline: 0;
+    padding: 4px 20px 0;
+    margin-left:25%;
+}
 
 
 /*-------------------FOOTER---------------------*/

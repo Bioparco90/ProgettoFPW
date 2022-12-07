@@ -59,15 +59,16 @@
                    <div class="input citta">
                         <input type="text" name="citta" id="citta" class="textbox" required placeholder="Citta">  
                     </div>
-                    <div class="input file">
-                        <input type="file" id="file" name="file"  accept="image/*" required>
-                    </div>
                     <div class="input regpassword">
                         <input type="password" name="password" id="password" class="textbox" required placeholder="Password"> 
                     </div>
                     <div class="input confirmpsw">
                         <input type="password" name="confirmpsw" id="confirmpsw"  class="textbox" required placeholder="Conferma password">
                     </div> 
+                    
+                    <div class="input file">
+                        <input type="file" id="file" name="file"  accept="image/*" required>
+                    </div>
                 </div>                
                 <div>
                    <input type="submit" class="submit" value="Registrati">  

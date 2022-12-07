@@ -25,48 +25,55 @@
             </ul>
         </nav>
       
-      <div class="nuovoProdottoBox col-9">
+      <main class="col-12 nuovoProdottoBox">         
             <form action="nuovoProdotto" method="post" enctype="multipart/form-data">
-                <div class="thumbnail">
-                    <label for ="locandina">Aggiungi foto</label>
-                    <input type="file" id="locandina" name="locandina">
+                <div class="nuovoProdottoTitle">Compila i campi</div>
+                 <div class="col-6">
+                      <div class="input titolo">
+                        <input type="text" name="titolo" id="titolo" class="textbox" required placeholder="Titolo">
+                      </div>
+                
+                    <div class="input descrizione">
+                        <input type="text" name="trama" id="trama" class="textbox" required placeholder="Trama">
+                    </div>
+                     
+                    <div class="input genere">
+                        <input type="text" name="genere" id="genere" class="textbox" required placeholder="Genere"> 
+                    </div>
                 </div>
                 
-                <div class="titolo">
-                    <label for="titolo">Titolo</label>
-                    <input type="text" name="titolo" id="titolo" required placeholder="Titolo">
-                </div>
+                <div class="col-6">
+                    <div class="input durata">
+                        <input type="text" name="durata" id="durata" class="textbox" required placeholder="Durata">
+                    </div>
                 
-                <div class="descrizione">
-                    <label for="trama">Trama</label>
-                    <input type="text" name="trama" id="trama" required placeholder="Trama">
-                </div>
-
-                <label for="genere">Genere</label>
-                <input type="text" name="genere" id="genere" required placeholder="Genere">
-
-                <label for="durata">Durata</label>
-                <input type="text" name="durata" id="durata" required placeholder="Durata">
-
-                <label for="regista">Regista</label>
-                <input type="text" name="regista" id="regista" required placeholder="Regista">
+                    <div class="input regista">
+                        <input type="text" name="regista" id="regista" class="textbox" required placeholder="Regista">
+                    </div>
+                
 
                 <!-- <label for="trama">Descrizione</label>
                 <input type="text" name="trama" id="trama" required placeholder="Trama"> -->
                 
-                <div class="prezzo">
-                    <label for="prezzo">Prezzo</label>
-                    <input type="text" name ="prezzo" id="prezzo">
-                        <!-- <option value="prezzo">Scegli</option>
-                        <option value="2">2.99</option>
-                        <option value="3">3.99</option>
-                        <option value="4">4.99</option>
-                        <option value="5">5.99</option>
-                    </select> -->
-                    <input type="submit" value="Aggiungi">
+                    <div class="input prezzo">
+                        <select name ="prezzo" class="textbox" id="prezzo">
+                           <option value="prezzo">Prezzo</option>
+                           <option value="2">2.99</option>
+                           <option value="3">3.99</option>
+                           <option value="4">4.99</option>
+                           <option value="5">5.99</option>
+                    </select> 
+                    </div>
+                </div>
+                                
+                <div class="input thumbnail col-12">
+                    <label for="locandina" class="file">Scegli immagine</label>
+                    <input type="file" id="locandina" name="locandina">
                 </div>
                 
-            
+                <div class="col-12">
+                    <input type="submit" class="submit" value="Aggiungi">
+                </div>    
             </form>
-      </div>
+      </main>
 <jsp:include page="footer.jsp"/> 
