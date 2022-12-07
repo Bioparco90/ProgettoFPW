@@ -66,7 +66,8 @@
                         <input type="password" name="confirmpsw" id="confirmpsw"  class="textbox" required placeholder="Conferma password">
                     </div> 
                     
-                    <div class="input file">
+                    <div class="input thumbnail">
+                         <label for="file" class="file">Scegli immagine</label>
                         <input type="file" id="file" name="file"  accept="image/*" required>
                     </div>
                 </div>                
