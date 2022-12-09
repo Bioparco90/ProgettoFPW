@@ -69,12 +69,6 @@
         overflow: auto;
     }
     
-    .login{
-        width:20%;
-        margin-top:5%;
-        margin-bottom:5%;
-        margin-left:10%;
-    }
     
     .container{
         display:flex;
@@ -86,6 +80,10 @@
     .registrazione form{
         height:500px;
         width:500px;
+    }
+    
+    .main{
+        padding:40px;
     }
    
     .nuovoProdottoBox form{
@@ -183,6 +181,7 @@
     .main{
         display:flex;
         flex-direction: column;
+        padding:30px;
     }
     
     .registrazione{
@@ -204,10 +203,30 @@
     
     input.loginButton{
         margin-right:0;
+    } 
+}
+
+@media only screen and (max-width: 1040px){
+    
+    .login{
+        justify-content: center;
+        align-items: center;
+ 
     }
     
-  
+    .main{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        padding:30px;
+    }
     
+    .registrazione{
+        justify-content: center;
+        align-items: center;
+        margin-top:30px;
+    }
     
 }
 /*----------------------------------------------------------------------*/
@@ -459,8 +478,7 @@ input.loginButton:hover {
    display:flex;
    flex-direction: column;
    justify-content: center;
-   float:right;
-   margin-top:5%;
+
    
 }
 
