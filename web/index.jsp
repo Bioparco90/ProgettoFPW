@@ -23,8 +23,9 @@
                 
             </ul>
         </nav>
-
-        <h2>L'ATTIVITA'</h2>
+        
+        <div class="col-12 contenuto">
+            <h2>L'ATTIVITA'</h2>
         <main class="col-8">
             <article>
                  <p>
@@ -39,6 +40,10 @@
                     -Team Easbronz 
                 </p>
             </article>
+            
+            <div>
+                <img src="img/logo.gif" class="gifLogo">
+            </div>
         </main>
         
         <aside class="col-4">
@@ -57,11 +62,14 @@
             </article>
             
             <article class="sponsors">
-                <a href="https://www.birraichnusa.it/"><img src="img/Logo_Ichnusa.png" class="col-6"></a>
+                
+                <a href="https://www.adidas.it/"><img src="img/Logo_Adidas.png" class="col-6"></a>
             
-                <a href="https://unica.it/unica/"><img src="img/Logo_uni.png" class="col-6"> </a>    
+                <a href="https://unica.it/unica/"><img src="img/Logo_uni_1.png" class="col-6"> </a>    
             </article>
             
         </aside>
+        </div>
+        
 
 <jsp:include page="footer.jsp"/> 

@@ -8,6 +8,7 @@
 <jsp:include page="header.jsp"/>
     <body>
         <header>
+            <img src="img/favicon.png" alt="logo-fakeflix">
             <a href="index"><img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="350" height="150"></a>
         </header>
        
@@ -25,6 +26,7 @@
             </ul>
         </nav>
      
+        <div class="col-12 contenuto">
             <h2>CATALOGO</h2>
             <main class="col-8">
                 <article class="card col-2">
@@ -60,12 +62,14 @@
                 
             </article>
             
-            <article class="sponsors">
-                <a href="https://www.birraichnusa.it/"><img src="img/Logo_Ichnusa.png" class="col-6"></a>
+            <article class="sponsors col-12">
+                <a href="https://www.adidas.it/"><img src="img/Logo_Adidas.png" class="col-6 ichnusa"></a>
             
-                <a href="https://unica.it/unica/"><img src="img/Logo_uni.png" class="col-6"> </a>    
+                <a href="https://unica.it/unica/"><img src="img/Logo_uni_1.png" class="col-6"> </a>    
             </article>
             
-        </aside>           
+        </aside>       
+        </div>
+                
         <script src="js/carousel.js"></script>
 <jsp:include page="footer.jsp"/> 

@@ -109,6 +109,21 @@
         width: 80%;
         height: 80%;
     }
+    
+    .evidenza{
+    display:flex;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #950101;
+    text-align: center;
+    color: white;
+    align-content: space-between;
+}
+
+    .evidenza > p {
+    margin-right: 0.3em;
+    color:white;
+    margin: 1rem 1rem;
+}
 }
 
 /*For smartphone*/
@@ -138,6 +153,11 @@
         margin: auto;
         display:flex;
         flex-direction: column;
+        background-color: #950101;
+        border-radius: 10px 10px 10px 10px;
+        text-align: center;
+        color: white;
+        align-content: space-between;
     }
     
     .evidenza > img {
@@ -161,6 +181,14 @@
         max-height: 20em;
 
     }
+    
+    .sponsors{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    
     
     .about_img{
         float:top;
@@ -204,9 +232,11 @@
     input.loginButton{
         margin-right:0;
     } 
-}
+    
+    }
 
-@media only screen and (max-width: 1040px){
+
+@media only screen and (min-width:576px) and (max-width:1040px){
     
     .login{
         justify-content: center;
@@ -228,6 +258,33 @@
         margin-top:30px;
     }
     
+    
+   .contenuto{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    
+    .evidenza{
+        max-height:100%;
+        width: auto;
+        
+    }
+    
+    aside{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sponsors  img{
+        width: 100%;
+        height: 100%;
+    }
+    
+
 }
 /*----------------------------------------------------------------------*/
 
@@ -250,13 +307,11 @@ header{
     flex-direction: row;
     background-color: #000000;
     align-items: center;
+    justify-content: center;
     margin:0;
     padding:0;
 }
 
-#logo{
-    float:center;
-}
 
 .active{
     font-style: italic;
@@ -303,20 +358,7 @@ nav > ul a:hover{
 }
 
 /*--------------------------CARD VARIE---------------------*/
-.evidenza{
-    display:flex;
-    border-radius: 10px 10px 10px 10px;
-    background-color: #950101;
-    text-align: center;
-    color: white;
-    align-content: space-between;
-}
 
-.evidenza > p {
-    margin-right: 0.3em;
-    color:white;
-    margin: 1rem 1rem;
-}
 
 .card{
     border-radius: 10px 10px 10px 10px;
@@ -336,6 +378,7 @@ nav > ul a:hover{
 .carosuelButton{
     margin-top:5%;
 }
+
 
 /*----------------------BOTTONI-----------------*/
 input.myButton{
@@ -563,6 +606,15 @@ input.loginButton:hover {
     height:50px;
     width:230px;
     padding-top:15px;
+}
+
+.contenuto > h2{
+    text-align: center
+}
+
+.gifLogo{
+    max-width: 100%;
+    height: auto;
 }
 
 

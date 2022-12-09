@@ -8,6 +8,7 @@
 <jsp:include page="header.jsp"/>
   <body>
         <header>
+          <img src="img/favicon.png" alt="logo-fakeflix">
           <a href="index"><img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="350" height="150"></a>
         </header>
        
