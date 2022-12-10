@@ -36,7 +36,7 @@
                       </div>
                 
                     <div class="input descrizione">
-                        <input type="text" name="trama" id="trama" class="textbox" required placeholder="Trama">
+                        <input type="text" name="trama" id="trama" class="textbox" required placeholder="Descrizione">
                     </div>
                      
                     <div class="input genere">
