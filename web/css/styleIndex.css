@@ -22,14 +22,30 @@
         float: left;
     }
     
-    nav{
+    
+   nav{
         display: flex;
         flex-direction: column;
     }
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    
     nav li:last-child{
         border-right:0px solid #111111;
         float:right;
     }
+    
+    header{
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+    align-items: center;
+    margin:0;
+    padding:0;
+}
     
     /*------------CARD VARIE-------------*/
      .evidenza{
@@ -140,6 +156,25 @@
         text-align: center;
         width: 100%;
         justify-content: center;
+    }
+    
+    footer{
+       display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        justify-content: center; 
+    }
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        background-color: #000000;
+        align-items: center;
+        margin:0;
+        padding:0;
+        
     }
 
     
@@ -302,15 +337,6 @@ body{
  * occhio su w3school. 
  * align-items: center allinea il centro degli elementi sulla stessa riga senza che ci stressiamo
  * con posizioni e quant'altro. */
-header{
-    display: flex;
-    flex-direction: row;
-    background-color: #000000;
-    align-items: center;
-    justify-content: center;
-    margin:0;
-    padding:0;
-}
 
 
 .active{
