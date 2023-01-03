@@ -66,7 +66,9 @@
         </main>
         
         <aside class="col-4">
-            
+            <div>
+                <input type="button" value="dark & Light" id="toggle">
+            </div>
             <article class="evidenza col-12">
                 <div class="contenutocard">
                      <img src="img/products/pulp-fiction1.jpg" alt="locandina" id="locandina">

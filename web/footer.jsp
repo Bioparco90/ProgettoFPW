@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+
+<script src="js/dark-mode-handler.js"></script>
 <footer class="footer names col-12">
         <ul>
             <li class="col-2"><a href="about.jsp">Mirko Contini</a></li>
