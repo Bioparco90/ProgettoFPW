@@ -18,9 +18,16 @@
                 <li class="col-2"><a href="about">About</a></li>
                 <li class="col-2"><a href="catalogo">Catalogo</a></li>  
                 <li class="active col-2"><a href="nuovoProdotto">Nuovo prodotto</a></li> 
+                
                 <li class="col-2">
-                    <a href="login">
-                        <input type="button" value="Login" class="loginButton">
+                    <a href="areaPersonale">
+                        <input type="button" value="Profilo" class="loginButton">
+                    </a>
+                </li>
+                
+                <li class="col-2">
+                    <a href="logout">
+                        <input type="button" value="Logout" class="loginButton">
                     </a>
                 </li>
             </ul>

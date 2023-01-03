@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="header.jsp"/>
     <body>
         <header>
@@ -12,11 +13,29 @@
                 <li class="active col-2"><a href="about">About</a></li>
                 <li class="col-2"><a href="catalogo">Catalogo</a></li>
                 <li class="col-2"><a href="nuovoProdotto">Nuovo prodotto</a></li> 
-                <li class="col-2">
-                    <a href="login">
-                        <input type="button" value="Login" class="loginButton">
-                    </a>
-                </li>
+                
+                <c:if test="${not empty user}">
+                    
+                    <li class="col-2">
+                        <a href="areaPersonale">
+                            <input type="button" value="Profilo" class="loginButton">
+                        </a>
+                    </li>
+                    
+                    <li class="col-2">
+                        <a href="logout">
+                            <input type="button" value="Logout" class="loginButton">
+                        </a>
+                    </li>
+                </c:if>
+                   
+                <c:if test="${empty user}">
+                    <li class="col-2">
+                        <a href="login">
+                            <input type="button" value="Login" class="loginButton">
+                        </a>
+                    </li>    
+                </c:if>
             </ul>
         </nav>
 
