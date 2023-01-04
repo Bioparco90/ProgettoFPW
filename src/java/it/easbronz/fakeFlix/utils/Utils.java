@@ -42,11 +42,13 @@ public class Utils {
                     " deve avere un valore maggiore di zero");
     }
 
-    public static String getPathImg(Part file, String entity)
+    public static String getPathImg(Part file, String entity, String rootPath)
             throws IOException {
         try (InputStream contenutoFile = file.getInputStream()) {
+            /*File daSalvare = new File(
+                    "C:/Users/monni/Desktop/progettoFPW/web/img/" + entity + "/" + file.getSubmittedFileName());*/
             File daSalvare = new File(
-                    "C:/Users/monni/Desktop/progettoFPW/web/img/" + entity + "/" + file.getSubmittedFileName());
+                    rootPath + entity + "/" + file.getSubmittedFileName());
             Files.copy(contenutoFile, daSalvare.toPath(), StandardCopyOption.REPLACE_EXISTING);
             String url = "img/" + entity + "/" + file.getSubmittedFileName();
             return url;

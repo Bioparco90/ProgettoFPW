@@ -39,6 +39,10 @@ public class Registrazione extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        String rootPath = getServletContext().getRealPath("/") + "img/";
+        rootPath = rootPath.replace("build\\", "");
+        rootPath = rootPath.replaceAll("\\\\", "/");
 
         try {
             String username = request.getParameter("username");
@@ -49,7 +53,7 @@ public class Registrazione extends HttpServlet {
             String citta = request.getParameter("citta");
 
             Part file = request.getPart("file");
-            String foto = Utils.getPathImg(file, "users");
+            String foto = Utils.getPathImg(file, "users", rootPath);
 
             final int MIN_LENGTH = 3;
             final int USERNAME_PASSWORDMAX_LENGTH = 20;
@@ -79,7 +83,7 @@ public class Registrazione extends HttpServlet {
             request.setAttribute("previousPage", "login");
             request.getRequestDispatcher("outputPage.jsp").forward(request, response);
 
-        } catch (InvalidParamException e) {
+        } catch (InvalidParamException | IOException e) {
             request.setAttribute("outputMessage", e.getMessage());
             request.setAttribute("previousPage", "login");
             request.getRequestDispatcher("outputPage.jsp").forward(request, response);
@@ -89,10 +93,6 @@ public class Registrazione extends HttpServlet {
             request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         } catch (SQLException e) {
             Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
-        } catch (IOException e) {
-            request.setAttribute("outputMessage", e.getMessage());
-            request.setAttribute("previousPage", "login");
-            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         }
     }
 

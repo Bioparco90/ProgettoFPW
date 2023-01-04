@@ -44,6 +44,11 @@ public class NuovoProdotto extends HttpServlet {
 
         HttpSession session = request.getSession(false);
 
+        String rootPath = getServletContext().getRealPath("/") + "img/";
+        rootPath = rootPath.replace("build\\", "");
+        rootPath = rootPath.replaceAll("\\\\", "/");
+        // System.out.println("This is the root path: " + rootPath);
+        
         try {
             if (session != null && session.getAttribute("user") != null) {
                 String titolo = request.getParameter("titolo");
@@ -55,7 +60,7 @@ public class NuovoProdotto extends HttpServlet {
                 String uploader = (String) session.getAttribute("user");
 
                 Part file = request.getPart("locandina");
-                String locandina = Utils.getPathImg(file, "products");
+                String locandina = Utils.getPathImg(file, "products", rootPath);
 
                 Utils.checkString("Titolo", titolo, 1, 50);
                 Utils.checkString("Trama", trama, 1, 200);
@@ -92,11 +97,7 @@ public class NuovoProdotto extends HttpServlet {
                 request.getRequestDispatcher("outputPage.jsp").forward(request, response);
             } else
                 response.sendRedirect("login");
-        } catch (NumberFormatException e) {
-            request.setAttribute("outputMessage", e.getMessage());
-            request.setAttribute("previousPage", "nuovoProdotto");
-            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
-        } catch (InvalidParamException e) {
+        } catch (NumberFormatException | InvalidParamException | IOException e) {
             request.setAttribute("outputMessage", e.getMessage());
             request.setAttribute("previousPage", "nuovoProdotto");
             request.getRequestDispatcher("outputPage.jsp").forward(request, response);
@@ -106,10 +107,6 @@ public class NuovoProdotto extends HttpServlet {
             request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         } catch(SQLException e) {
             Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
-        } catch (IOException e) {
-            request.setAttribute("outputMessage", e.getMessage());
-            request.setAttribute("previousPage", "nuovoProdotto");
-            request.getRequestDispatcher("outputPage.jsp").forward(request, response);
         }
     }
 
