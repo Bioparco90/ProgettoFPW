@@ -66,8 +66,16 @@
         </main>
         
         <aside class="col-4">
+            <!-- ---------- Dark mode switcher ---------- -->
             <div>
                 <input type="button" value="dark & Light" id="toggle">
+            </div>
+
+            <!-- ---------- Font size switcher ---------- -->
+            <div>
+                <button id="decrease-size"> A- </button>
+                <button id="default-size"> A </button>
+                <button id="increase-size"> A+ </button>
             </div>
             <article class="evidenza col-12">
                 <div class="contenutocard">
