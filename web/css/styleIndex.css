@@ -642,6 +642,7 @@ footer {
   background-color: #950101;
   align-content: center;
   bottom: 0;
+  position: fixed;
 }
 
 .names li {
