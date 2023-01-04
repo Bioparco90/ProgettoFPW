@@ -1,3 +1,5 @@
+let fontSize = 16;
+
 // $(document).ready(() => {
 //     fontSize = localStorage.getItem('fontSize');
 //     if (fontSize) {
