@@ -58,14 +58,15 @@ public class Registrazione extends HttpServlet {
             String foto = Utils.getPathImg(file, "users", rootPath);
 
             final int MIN_LENGTH = 3;
-            final int USERNAME_PASSWORDMAX_LENGTH = 20;
+            final int PASSWORD_MIN_LENGTH = 5;
+            final int USERNAME_PASSWORD_MAX_LENGTH = 20;
             final int OTHER_MAX_LENGTH = 50;
 
-            Utils.checkString("Username", username, MIN_LENGTH, USERNAME_PASSWORDMAX_LENGTH);
+            Utils.checkString("Username", username, MIN_LENGTH, USERNAME_PASSWORD_MAX_LENGTH);
             Utils.checkString("Nome", nome, MIN_LENGTH, OTHER_MAX_LENGTH);
             Utils.checkString("Cognome", cognome, MIN_LENGTH, OTHER_MAX_LENGTH);
             Utils.checkString("Email", email, MIN_LENGTH, OTHER_MAX_LENGTH);
-            Utils.checkString("Password", password, MIN_LENGTH, OTHER_MAX_LENGTH);
+            Utils.checkString("Password", password, PASSWORD_MIN_LENGTH, USERNAME_PASSWORD_MAX_LENGTH);
             Utils.checkString("Città", citta, MIN_LENGTH, OTHER_MAX_LENGTH);
             Utils.checkString("Foto", foto, 0, 200);
 
