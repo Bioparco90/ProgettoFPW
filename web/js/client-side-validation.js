@@ -5,7 +5,7 @@ let countHandler = (id, maxLength) => {
 
 // -------------------------- LOGIN -------------------------- //
 $("#user").on("input", () => countHandler("user", 20));
-$("#psw").on("input", () => countHandler("psw", 20));
+$("#psw").on("input", () => countHandler("psw", 50));
 
 $("#loginForm").submit(function (event) {
     // Previene l'invio del modulo
