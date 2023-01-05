@@ -20,13 +20,13 @@ $("#loginForm").submit(function (event) {
     $("#passwordError").hide();
 
     // Verifica se l'utente ha inserito dati della corretta lunghezza
-    if (username.length < 3 || username.length > 20) {
+    if (username.length < 3) {
         $("#usernameError")
-            .text("L'username deve essere compreso tra i 3 e i 20 caratteri")
+            .text("L'username deve avere un minimo di 3 caratteri")
             .show();
-    } else if (password.length < 5 || password.length > 50) {
+    } else if (password.length < 5) {
         $("#passwordError")
-            .text("La password deve essere compresa tra i 5 e i 50 caratteri")
+            .text("La password deve avere un minimo di 5 caratteri")
             .show();
     } else {
         // Se i campi di input sono validi, invia il modulo
