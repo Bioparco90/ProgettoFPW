@@ -505,7 +505,7 @@ input.loginButton:hover {
   font-size: 18px;
   /* height: 100%; */
   outline: 0;
-  padding: 4px 20px 0;
+  padding: 4px 20px;
   width: 100%;
 }
 
@@ -604,9 +604,9 @@ input.loginButton:hover {
   margin-top: 20px;
 }
 
-/* input[type="file"] {
+input[type="file"] {
   display: none;
-} */
+}
 
 .file {
   display: inline-block;
@@ -705,4 +705,11 @@ aside {
 
 .error {
   color: black;
+}
+
+#fileBtn {
+  text-align: start;
+  font-size: 17px;
+  height: fit-content;
+  cursor: pointer;
 }

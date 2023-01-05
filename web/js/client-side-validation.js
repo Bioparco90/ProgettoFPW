@@ -38,4 +38,6 @@ $("#loginForm").submit(function (event) {
 });
 
 // -------------------------- REGISTRAZIONE -------------------------- //
-
+$("#fileBtn").click(() => {
+    $("#file").click();
+})

@@ -74,7 +74,8 @@
                     
                     <div class="input thumbnail">
                          <!-- <label for="file" class="file">Scegli immagine</label> -->
-                        <input type="file" id="file" name="file"  accept="image/*" required placeholder="Scegli immagine">
+                        <input type="file" id="file" name="file"  accept="image/*" required placeholder="Scegli immagine profilo">
+                        <button id="fileBtn" class="textbox">Scegli immagine profilo</button>
                     </div>
                 </div>
                 </div>
