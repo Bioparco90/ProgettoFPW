@@ -10,21 +10,21 @@ let fontSize = 16;
 $('#decrease-size').click(() => {
 	const smallFontSize = 14;
 	fontSize = smallFontSize;
-	$('body').css('font-size', fontSize + 'px');
+	$('main').css('font-size', fontSize + 'px');
 	// localStorage.setItem('fontSize', fontSize);
 });
 
 $('#default-size').click(() => {
 	const defaultFontSize = 16;
 	fontSize = defaultFontSize;
-	$('body').css('font-size', fontSize + 'px');
+	$('main').css('font-size', fontSize + 'px');
 	// localStorage.setItem('fontSize', fontSize);
 });
 
 $('#increase-size').click(() => {
 	const bigFontSize = 18;
 	fontSize = bigFontSize;
-	$('body').css('font-size', fontSize + 'px');
+	$('main').css('font-size', fontSize + 'px');
 	// localStorage.setItem('fontSize', fontSize);
 });
 
