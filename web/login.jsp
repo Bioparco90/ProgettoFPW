@@ -42,7 +42,7 @@
             placeholder="Username"
             maxlength="20"
           />
-          <div id="usernameCounter" class="counter"></div>
+          <div id="userCounter" class="counter"></div>
           <div id="usernameError" class="error"></div>
         </div>
 
@@ -56,7 +56,7 @@
             placeholder="Password"
             maxlength="50"
           />
-          <div id="passwordCounter" class="counter"></div>
+          <div id="pswCounter" class="counter"></div>
           <div id="passwordError" class="error"></div>
         </div>
         <div>
