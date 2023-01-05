@@ -1,11 +1,16 @@
+const minLength = 3;
+const passwordMinLength = 5;
+const userPasswordMaxLength = 20;
+const otherMaxLength = 50;
+
 let countHandler = (id, maxLength) => {
     let remaining = maxLength - $('#' + id).val().length;
     $('#' + id + 'Counter').text(remaining + ' caratteri rimanenti');
 }
 
 // -------------------------- LOGIN -------------------------- //
-$("#user").on("input", () => countHandler("user", 20));
-$("#psw").on("input", () => countHandler("psw", 50));
+$("#user").on("input", () => countHandler("user", userPasswordMaxLength));
+$("#psw").on("input", () => countHandler("psw", userPasswordMaxLength));
 
 $("#loginForm").submit(function (event) {
     // Previene l'invio del modulo
@@ -20,11 +25,11 @@ $("#loginForm").submit(function (event) {
     $("#passwordError").hide();
 
     // Verifica se l'utente ha inserito dati della corretta lunghezza
-    if (username.length < 3) {
+    if (username.length < minLength) {
         $("#usernameError")
             .text("L'username deve avere un minimo di 3 caratteri")
             .show();
-    } else if (password.length < 5) {
+    } else if (password.length < passwordMinLength) {
         $("#passwordError")
             .text("La password deve avere un minimo di 5 caratteri")
             .show();
@@ -38,6 +43,20 @@ $("#loginForm").submit(function (event) {
 $("#fileBtn").click(() => {
     $("#file").click();
 })
+
+$("#username").on("input", () => countHandler("username", userPasswordMaxLength));
+$("#nome").on("input", () => countHandler("nome", otherMaxLength));
+$("#cognome").on("input", () => countHandler("cognome", otherMaxLength));
+$("#email").on("input", () => countHandler("email", otherMaxLength));
+$("#citta").on("input", () => countHandler("citta", otherMaxLength));
+$("#password").on("input", () => countHandler("password", userPasswordMaxLength));
+$("#confirmpsw").on("input", () => countHandler("confirmpsw", userPasswordMaxLength));
+
+/**
+ * inserire qui i controlli relativi alla submit, alla validazione email (barbara, 
+ * altrimenti devo copiare una regexp improbabile e che non saprei spiegare) e al confronto tra password. 
+ * Seguire struttura form login o valutare la creazione di funzioni apposite.
+ */
 
 
 

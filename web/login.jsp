@@ -54,7 +54,7 @@
             class="textbox"
             required
             placeholder="Password"
-            maxlength="50"
+            maxlength="20"
           />
           <div id="pswCounter" class="counter"></div>
           <div id="passwordError" class="error"></div>
@@ -79,8 +79,12 @@
                 class="textbox"
                 required
                 placeholder="Username"
+                maxlength="20"
               />
+              <div id="usernameCounter" class="counter"></div>
+              <div id="usernameRegError" class="error"></div>
             </div>
+
             <div class="input nome">
               <input
                 type="text"
@@ -89,8 +93,12 @@
                 class="textbox"
                 required
                 placeholder="Nome"
+                maxlength="50"
               />
+              <div id="nomeCounter" class="counter"></div>
+              <div id="nomeError" class="error"></div>
             </div>
+
             <div class="input cognome">
               <input
                 type="text"
@@ -99,17 +107,24 @@
                 class="textbox"
                 required
                 placeholder="Cognome"
+                maxlength="50"
               />
+              <div id="cognomeCounter" class="counter"></div>
+              <div id="cognomeError" class="error"></div>
             </div>
+
             <div class="input email">
               <input
-                type="text"
+                type="email"
                 name="email"
                 id="email"
                 class="textbox"
                 required
                 placeholder="Email"
+                maxlength="50"
               />
+              <div id="emailCounter" class="counter"></div>
+              <div id="emailError" class="error"></div>
             </div>
           </div>
 
@@ -122,8 +137,12 @@
                 class="textbox"
                 required
                 placeholder="Citta"
+                maxlength="50"
               />
+              <div id="cittaCounter" class="counter"></div>
+              <div id="cittaError" class="error"></div>
             </div>
+
             <div class="input regpassword">
               <input
                 type="password"
@@ -132,8 +151,12 @@
                 class="textbox"
                 required
                 placeholder="Password"
+                maxlength="20"
               />
+              <div id="passwordCounter" class="counter"></div>
+              <div id="passwordError" class="error"></div>
             </div>
+
             <div class="input confirmpsw">
               <input
                 type="password"
@@ -142,7 +165,10 @@
                 class="textbox"
                 required
                 placeholder="Conferma password"
+                maxlength="20"
               />
+              <div id="confirmpswCounter" class="counter"></div>
+              <div id="confirmpswError" class="error"></div>
             </div>
 
             <div class="input thumbnail">
