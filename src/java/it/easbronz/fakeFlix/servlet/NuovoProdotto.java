@@ -43,10 +43,12 @@ public class NuovoProdotto extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession(false);
-
+        
+        String osName = System.getProperty("os.name").toLowerCase();
         String rootPath = getServletContext().getRealPath("/") + "img/";
-        rootPath = rootPath.replace("build\\", "");
-        rootPath = rootPath.replaceAll("\\\\", "/");
+        // rootPath = rootPath.replace("build\\", "");
+        if (osName.contains("windows"))
+            rootPath = rootPath.replaceAll("\\\\", "/");
         // System.out.println("This is the root path: " + rootPath);
         
         try {

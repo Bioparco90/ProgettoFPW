@@ -40,9 +40,11 @@ public class Registrazione extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        String osName = System.getProperty("os.name").toLowerCase();
         String rootPath = getServletContext().getRealPath("/") + "img/";
-        rootPath = rootPath.replace("build\\", "");
-        rootPath = rootPath.replaceAll("\\\\", "/");
+        // rootPath = rootPath.replace("build\\", "");
+        if(osName.contains("windows"))
+            rootPath = rootPath.replaceAll("\\\\", "/");
 
         try {
             String username = request.getParameter("username");
