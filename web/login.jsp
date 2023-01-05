@@ -22,14 +22,18 @@
         
         <main class=" main col-12">
             <div class="login col-6">
-            <form action="login" method="post">
+            <form id="loginForm" action="login" method="post">
                 <div class="loginTitle">Inserisci le tue credenziali</div>
                 <div class="input username">
-                    <input type="text" name="user" id="user" class="textbox" required placeholder="Username">
+                    <input type="text" name="user" id="user" class="textbox" required placeholder="Username" maxlength="20">
+                    <div id="usernameCounter" class="counter"></div>
+                    <div id="usernameError" class="error"></div>
                 </div>
                 
                 <div class="input password">
-                    <input type="password" name="psw" id="psw" class="textbox" required placeholder="Password">
+                    <input type="password" name="psw" id="psw" class="textbox" required placeholder="Password" maxlength="50">
+                    <div id="passwordCounter" class="counter"></div>
+                    <div id="passwordError" class="error"></div>
                 </div>
                 <div>
                     <input type="submit" class="submit" value="Accedi">       
@@ -69,7 +73,7 @@
                     </div> 
                     
                     <div class="input thumbnail">
-                         <label for="file" class="file">Scegli immagine</label>
+                         <!-- <label for="file" class="file">Scegli immagine</label> -->
                         <input type="file" id="file" name="file"  accept="image/*" required placeholder="Scegli immagine">
                     </div>
                 </div>

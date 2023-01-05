@@ -12,6 +12,7 @@
 
 <script src="js/dark-mode-handler.js"></script>
 <script src="js/font-size-handler.js"></script>
+<script src="js/client-side-validation.js"></script>
 
 </body>
 </html>
