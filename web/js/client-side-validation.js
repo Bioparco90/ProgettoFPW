@@ -1,14 +1,11 @@
-// -------------------------- LOGIN -------------------------- //
+let countHandler = (id, maxLength) => {
+    let remaining = maxLength - $('#' + id).val().length;
+    $('#' + id + 'Counter').text(remaining + ' caratteri rimanenti');
+}
 
-// Aggiorna il contatore dei caratteri rimanenti ad ogni input dell'utente
-$("#user").on("input", function () {
-    let remaining = 20 - $("#user").val().length;
-    $("#usernameCounter").text(remaining + " caratteri rimanenti");
-});
-$("#psw").on("input", () => {
-    let remaining = 50 - $("#psw").val().length;
-    $("#passwordCounter").text(remaining + " caratteri rimanenti");
-});
+// -------------------------- LOGIN -------------------------- //
+$("#user").on("input", () => countHandler("user", 20));
+$("#psw").on("input", () => countHandler("psw", 20));
 
 $("#loginForm").submit(function (event) {
     // Previene l'invio del modulo
@@ -41,3 +38,16 @@ $("#loginForm").submit(function (event) {
 $("#fileBtn").click(() => {
     $("#file").click();
 })
+
+
+
+// -------------------------- APPUNTI -------------------------- //
+// Aggiorna il contatore dei caratteri rimanenti ad ogni input dell'utente
+// $("#user").on("input", function () {
+//     let remaining = 20 - $("#user").val().length;
+//     $("#usernameCounter").text(remaining + " caratteri rimanenti");
+// });
+// $("#psw").on("input", () => {
+//     let remaining = 50 - $("#psw").val().length;
+//     $("#passwordCounter").text(remaining + " caratteri rimanenti");
+// });
