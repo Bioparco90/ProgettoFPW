@@ -332,6 +332,9 @@ body {
   margin: 0;
   font-family: sans-serif; /* provvisorio */
   /* color: white; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /*----------------HEADER------------------*/
@@ -466,7 +469,7 @@ input.loginButton:hover {
   border-radius: 20px;
   box-sizing: border-box;
   padding: 20px;
-  height:fit-content;
+  height: fit-content;
   width: 320px;
 }
 
@@ -586,8 +589,8 @@ input.loginButton:hover {
   border-radius: 20px;
   box-sizing: border-box;
   padding: 20px;
-  margin-top:20px;
-  margin-bottom:20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .nuovoProdottoTitle {
@@ -644,8 +647,9 @@ footer {
   text-align: center;
   background-color: #950101;
   align-content: center;
-  bottom: 0;
-  position: absolute;
+  /* bottom: 0;
+  position: absolute; */
+  margin-top: auto;
 }
 
 .names li {
@@ -670,7 +674,7 @@ footer {
 }
 
 .names {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: 100%;
   overflow-x: hidden;
 }
@@ -693,7 +697,7 @@ footer {
 
 aside {
   padding-right: 20px;
-  padding-bottom:100px;
+  padding-bottom: 100px;
 }
 
 .dark-mode {
