@@ -67,12 +67,12 @@
         
         <aside class="col-4">
             <!-- ---------- Dark mode switcher ---------- -->
-            <div>
-                <input type="button" value="dark & Light" id="toggle">
+            <div class="js">
+                <button id="toggle"> dark & Light </button>
             </div>
 
             <!-- ---------- Font size switcher ---------- -->
-            <div>
+            <div class="js">
                 <button id="decrease-size"> A- </button>
                 <button id="default-size"> A </button>
                 <button id="increase-size"> A+ </button>
