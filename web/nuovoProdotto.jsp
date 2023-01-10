@@ -136,8 +136,9 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 
       <div class="input thumbnail col-12">
         <label for="locandina" class="file">Scegli immagine</label>
-        <input type="file" id="locandina" name="locandina" required/>
+        <input type="file" id="locandina" name="locandina"/>
       </div>
+      <div id="fileError" class="error"></div>
 
       <div class="col-12">
         <input type="submit" class="submit" value="Aggiungi" />

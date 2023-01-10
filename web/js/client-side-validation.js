@@ -159,6 +159,10 @@ $("#nuovoProdottoForm").submit(function (event) {
 		$("#prezzoError")
 			.text(`Il campo prezzo deve essere un numero positivo`)
 			.show();
+	} else if ($("#locandina").val().length == 0) {
+		$("#fileError")
+			.text("Inserisci un'immagine per il profilo")
+			.show();
 	} else {
 		this.submit()
 	}
