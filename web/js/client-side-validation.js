@@ -95,7 +95,7 @@ $("#registrationForm").submit(function (event) {
 			.text(`La citta' deve avere un minimo di ${minLength} caratteri`)
 			.show();
 	} else if (password.length < passwordMinLength) {
-		$("#passwordError")
+		$("#passwordRegError")
 			.text(`La password deve avere un minimo di ${passwordMinLength} caratteri`)
 			.show();
 	} else if (confirmPassword !== password) {

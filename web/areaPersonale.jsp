@@ -52,4 +52,6 @@
             </article>
         </div>
     </c:forEach>
+
+<jsp:include page="footer.jsp"/>
 </body>
