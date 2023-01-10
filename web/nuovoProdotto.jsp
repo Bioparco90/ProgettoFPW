@@ -41,7 +41,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
   </nav>
 
   <main class="col-12 nuovoProdottoBox">
-    <form action="nuovoProdotto" method="post" enctype="multipart/form-data">
+    <form action="nuovoProdotto" method="post" enctype="multipart/form-data" id="nuovoProdottoForm">
       <div class="nuovoProdottoTitle">Compila i campi</div>
       <div class="container">
         <div class="col-6">
@@ -53,7 +53,10 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               class="textbox"
               required
               placeholder="Titolo"
+              maxlength="50"
             />
+            <div id="titoloCounter" class="counter"></div>
+            <div id="titoloError" class="error"></div>
           </div>
 
           <div class="input descrizione">
@@ -64,7 +67,10 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               class="textbox"
               required
               placeholder="Descrizione"
+              maxlength="200"
             />
+            <div id="tramaCounter" class="counter"></div>
+            <div id="tramaError" class="error"></div>
           </div>
 
           <div class="input genere">
@@ -75,7 +81,10 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               class="textbox"
               required
               placeholder="Genere"
+              maxlength="20"
             />
+            <div id="genereCounter" class="counter"></div>
+            <div id="genereError" class="error"></div>
           </div>
         </div>
 
@@ -89,6 +98,8 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               required
               placeholder="Durata"
             />
+            <div id="durataCounter" class="counter"></div>
+            <div id="durataError" class="error"></div>
           </div>
 
           <div class="input regista">
@@ -99,7 +110,10 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               class="textbox"
               required
               placeholder="Regista"
+              maxlength="50"
             />
+            <div id="registaCounter" class="counter"></div>
+            <div id="registaError" class="error"></div>
           </div>
 
           <!-- <label for="trama">Descrizione</label>
@@ -114,13 +128,15 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               <option value="5">5.99</option>
             </select> -->
             <input type="number" name="prezzo" id="prezzo" class="textbox" step="0.01">
+            <div id="prezzoCounter" class="counter"></div>
+            <div id="prezzoError" class="error"></div>
           </div>
         </div>
       </div>
 
       <div class="input thumbnail col-12">
         <label for="locandina" class="file">Scegli immagine</label>
-        <input type="file" id="locandina" name="locandina" />
+        <input type="file" id="locandina" name="locandina" required/>
       </div>
 
       <div class="col-12">

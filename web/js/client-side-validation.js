@@ -1,7 +1,10 @@
 const minLength = 3;
+const nuovoProdottoMinLength = 1;
 const passwordMinLength = 5;
 const userPasswordMaxLength = 20;
 const otherMaxLength = 50;
+const locandinaTramaMaxLength = 200;
+const genereMaxLength = 20;
 
 let countHandler = (id, maxLength) => {
 	let remaining = maxLength - $(`#${id}`).val().length;
@@ -102,5 +105,57 @@ $("#registrationForm").submit(function (event) {
 	} else {
 		// Se i campi di input sono validi, invia il modulo
 		this.submit();
+	}
+})
+
+// -------------------------- NUOVO PRODOTTO -------------------------- //
+$("#titolo").on("input", () => countHandler("titolo", otherMaxLength));
+$("#trama").on("input", () => countHandler("trama", locandinaTramaMaxLength));
+$("#genere").on("input", () => countHandler("genere", genereMaxLength));
+$("#regista").on("input", () => countHandler("regista", otherMaxLength));
+
+$("#nuovoProdottoForm").submit(function (event) {
+	event.preventDefault();
+
+	let titolo = $("#titolo").val();
+	let trama = $("#trama").val();
+	let genere = $("#genere").val();
+	let durata = $("#durata").val();
+	let regista = $("#regista").val();
+	let prezzo = $("#prezzo").val();
+
+	$("#titoloError").hide();
+	$("#tramaError").hide();
+	$("#genereError").hide();
+	$("#durataError").hide();
+	$("#registaError").hide();
+	$("#prezzoError").hide();
+
+	if (titolo.length < nuovoProdottoMinLength) {
+		$("#titoloError")
+			.text(`Il campo titolo deve avere almeno ${nuovoProdottoMinLength} caratteri`)
+			.show();
+	} else if (trama.length < nuovoProdottoMinLength) {
+		$("#tramaError")
+			.text(`Il campo trama deve avere almeno ${nuovoProdottoMinLength} caratteri`)
+			.show();
+	} else if (genere.length < nuovoProdottoMinLength) {
+		$("#genereError")
+			.text(`Il campo genere deve avere almeno ${nuovoProdottoMinLength} caratteri`)
+			.show();
+	} else if (durata <= 0) {
+		$("#durataError")
+			.text(`Il campo durata deve essere un numero positivo`)
+			.show();
+	} else if (regista.length < nuovoProdottoMinLength) {
+		$("#registaError")
+			.text(`Il campo regista deve avere almeno ${nuovoProdottoMinLength} caratteri`)
+			.show();
+	} else if (prezzo <= 0) {
+		$("#prezzoError")
+			.text(`Il campo prezzo deve essere un numero positivo`)
+			.show();
+	} else {
+		this.submit()
 	}
 })
