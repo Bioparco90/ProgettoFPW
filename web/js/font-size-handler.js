@@ -7,22 +7,22 @@ let fontSize = 16;
 //     }
 // });
 
-$('#decrease-size').click(() => {
-	const smallFontSize = 14;
+$('#normal-size').click(() => {
+	const smallFontSize = 16;
 	fontSize = smallFontSize;
 	$('main').css('font-size', fontSize + 'px');
 	// localStorage.setItem('fontSize', fontSize);
 });
 
-$('#default-size').click(() => {
-	const defaultFontSize = 16;
+$('#bigger-size').click(() => {
+	const defaultFontSize = 18;
 	fontSize = defaultFontSize;
 	$('main').css('font-size', fontSize + 'px');
 	// localStorage.setItem('fontSize', fontSize);
 });
 
-$('#increase-size').click(() => {
-	const bigFontSize = 18;
+$('#biggest-size').click(() => {
+	const bigFontSize = 20;
 	fontSize = bigFontSize;
 	$('main').css('font-size', fontSize + 'px');
 	// localStorage.setItem('fontSize', fontSize);

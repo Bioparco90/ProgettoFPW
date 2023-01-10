@@ -73,9 +73,9 @@
 
             <!-- ---------- Font size switcher ---------- -->
             <div class="js">
-                <button id="decrease-size"> A- </button>
-                <button id="default-size"> A </button>
-                <button id="increase-size"> A+ </button>
+                <button id="normal-size"> A </button>
+                <button id="bigger-size"> A+ </button>
+                <button id="biggest-size"> A++ </button>
             </div>
             <article class="evidenza col-12">
                 <div class="contenutocard">
