@@ -161,7 +161,7 @@ $("#nuovoProdottoForm").submit(function (event) {
 			.show();
 	} else if ($("#locandina").val().length == 0) {
 		$("#fileError")
-			.text("Inserisci un'immagine per il profilo")
+			.text("Inserisci la locandina")
 			.show();
 	} else {
 		this.submit()
