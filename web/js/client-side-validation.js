@@ -4,8 +4,8 @@ const userPasswordMaxLength = 20;
 const otherMaxLength = 50;
 
 let countHandler = (id, maxLength) => {
-    let remaining = maxLength - $('#' + id).val().length;
-    $('#' + id + 'Counter').text(remaining + ' caratteri rimanenti');
+    let remaining = maxLength - $(`#${id}`).val().length;
+    $(`#${id}Counter`).text(`${remaining} caratteri rimanenti`);
 }
 
 // -------------------------- LOGIN -------------------------- //
