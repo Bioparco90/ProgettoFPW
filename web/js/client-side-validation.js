@@ -102,6 +102,10 @@ $("#registrationForm").submit(function (event) {
 		$("#confirmpswError")
 			.text("Le password non corrispondono")
 			.show();
+	} else if ($("#file").val().length == 0) {
+		$("#fileError")
+			.text("Inserisci un'immagine per il profilo")
+			.show();
 	} else {
 		// Se i campi di input sono validi, invia il modulo
 		this.submit();

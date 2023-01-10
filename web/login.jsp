@@ -183,13 +183,14 @@
                 id="file"
                 name="file"
                 accept="image/*"
-                required
                 placeholder="Scegli immagine profilo"
               />
+
               <button type="button" id="fileBtn" class="textbox">
                 Scegli immagine profilo
               </button>
             </div>
+            <div id="fileError" class="error"></div>
           </div>
         </div>
         <div>
