@@ -106,13 +106,14 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                 <input type="text" name="trama" id="trama" required placeholder="Trama"> -->
 
           <div class="input prezzo">
-            <select name="prezzo" class="textbox" id="prezzo">
+            <!-- <select name="prezzo" class="textbox" id="prezzo">
               <option value="prezzo">Prezzo</option>
               <option value="2">2.99</option>
               <option value="3">3.99</option>
               <option value="4">4.99</option>
               <option value="5">5.99</option>
-            </select>
+            </select> -->
+            <input type="number" name="prezzo" id="prezzo" class="textbox" step="0.01">
           </div>
         </div>
       </div>
