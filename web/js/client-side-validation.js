@@ -52,12 +52,6 @@ $("#citta").on("input", () => countHandler("citta", otherMaxLength));
 $("#password").on("input", () => countHandler("password", userPasswordMaxLength));
 $("#confirmpsw").on("input", () => countHandler("confirmpsw", userPasswordMaxLength));
 
-/**
- * inserire qui i controlli relativi alla submit, alla validazione email (barbara, 
- * altrimenti devo copiare una regexp improbabile e che non saprei spiegare) e al confronto tra password. 
- * Seguire struttura form login o valutare la creazione di funzioni apposite.
- */
-
 $("#registrationForm").submit(function (event) {
 	event.preventDefault();
 
@@ -110,15 +104,3 @@ $("#registrationForm").submit(function (event) {
 		this.submit();
 	}
 })
-
-
-// -------------------------- APPUNTI -------------------------- //
-// Aggiorna il contatore dei caratteri rimanenti ad ogni input dell'utente
-// $("#user").on("input", function () {
-//     let remaining = 20 - $("#user").val().length;
-//     $("#usernameCounter").text(remaining + " caratteri rimanenti");
-// });
-// $("#psw").on("input", () => {
-//     let remaining = 50 - $("#psw").val().length;
-//     $("#passwordCounter").text(remaining + " caratteri rimanenti");
-// });
