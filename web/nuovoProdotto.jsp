@@ -127,7 +127,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               <option value="4">4.99</option>
               <option value="5">5.99</option>
             </select> -->
-            <input type="number" name="prezzo" id="prezzo" class="textbox" step="0.01">
+            <input type="number" name="prezzo" id="prezzo" class="textbox" step="0.01" placeholder="Prezzo" required>
             <div id="prezzoCounter" class="counter"></div>
             <div id="prezzoError" class="error"></div>
           </div>
