@@ -67,7 +67,12 @@
     </div>
 
     <div class="registrazione col-6">
-      <form action="registrazione" method="post" enctype="multipart/form-data">
+      <form
+        id="registrationForm"
+        action="registrazione"
+        method="post"
+        enctype="multipart/form-data"
+      >
         <div class="regTitle">Registrati</div>
         <div class="container">
           <div class="col-6 sinistra">
@@ -154,7 +159,7 @@
                 maxlength="20"
               />
               <div id="passwordCounter" class="counter"></div>
-              <div id="passwordError" class="error"></div>
+              <div id="passwordRegError" class="error"></div>
             </div>
 
             <div class="input confirmpsw">
@@ -178,7 +183,6 @@
                 id="file"
                 name="file"
                 accept="image/*"
-                required
                 placeholder="Scegli immagine profilo"
               />
               <button id="fileBtn" class="textbox">

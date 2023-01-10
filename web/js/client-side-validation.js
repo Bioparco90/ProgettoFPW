@@ -4,8 +4,8 @@ const userPasswordMaxLength = 20;
 const otherMaxLength = 50;
 
 let countHandler = (id, maxLength) => {
-    let remaining = maxLength - $(`#${id}`).val().length;
-    $(`#${id}Counter`).text(`${remaining} caratteri rimanenti`);
+	let remaining = maxLength - $(`#${id}`).val().length;
+	$(`#${id}Counter`).text(`${remaining} caratteri rimanenti`);
 }
 
 // -------------------------- LOGIN -------------------------- //
@@ -13,35 +13,35 @@ $("#user").on("input", () => countHandler("user", userPasswordMaxLength));
 $("#psw").on("input", () => countHandler("psw", userPasswordMaxLength));
 
 $("#loginForm").submit(function (event) {
-    // Previene l'invio del modulo
-    event.preventDefault();
+	// Previene l'invio del modulo
+	event.preventDefault();
 
-    // Ottiene i valori dei campi di input
-    let username = $("#user").val();
-    let password = $("#psw").val();
+	// Ottiene i valori dei campi di input
+	let username = $("#user").val();
+	let password = $("#psw").val();
 
-    // Nasconde i messaggi di errore, in prima istanza non ci servono
-    $("#usernameError").hide();
-    $("#passwordError").hide();
+	// Nasconde i messaggi di errore, in prima istanza non ci servono
+	$("#usernameError").hide();
+	$("#passwordError").hide();
 
-    // Verifica se l'utente ha inserito dati della corretta lunghezza
-    if (username.length < minLength) {
-        $("#usernameError")
-            .text("L'username deve avere un minimo di 3 caratteri")
-            .show();
-    } else if (password.length < passwordMinLength) {
-        $("#passwordError")
-            .text("La password deve avere un minimo di 5 caratteri")
-            .show();
-    } else {
-        // Se i campi di input sono validi, invia il modulo
-        this.submit();
-    }
+	// Verifica se l'utente ha inserito dati della corretta lunghezza
+	if (username.length < minLength) {
+		$("#usernameError")
+			.text(`L'username deve avere un minimo di ${minLength} caratteri`)
+			.show();
+	} else if (password.length < passwordMinLength) {
+		$("#passwordError")
+			.text(`La password deve avere un minimo di ${passwordMinLength} caratteri`)
+			.show();
+	} else {
+		// Se i campi di input sono validi, invia il modulo
+		this.submit();
+	}
 });
 
 // -------------------------- REGISTRAZIONE -------------------------- //
 $("#fileBtn").click(() => {
-    $("#file").click();
+	$("#file").click();
 })
 
 $("#username").on("input", () => countHandler("username", userPasswordMaxLength));
@@ -58,6 +58,58 @@ $("#confirmpsw").on("input", () => countHandler("confirmpsw", userPasswordMaxLen
  * Seguire struttura form login o valutare la creazione di funzioni apposite.
  */
 
+$("#registrationForm").submit(function (event) {
+	event.preventDefault();
+
+	let username = $("#username").val();
+	let nome = $("#nome").val();
+	let cognome = $("#cognome").val();
+	let email = $("#email").val();
+	let citta = $("#citta").val();
+	let password = $("#password").val();
+	let confirmPassword = $("#confirmpsw").val();
+
+	$("#usernameRegError").hide();
+	$("#nomeError").hide();
+	$("#cognomeError").hide();
+	$("#emailError").hide();
+	$("#cittaError").hide();
+	$("#passwordRegError").hide();
+	$("#confirmpswError").hide();
+
+	if (username.length < minLength) {
+		$("#usernameRegError")
+			.text(`L'username deve avere un minimo di ${minLength} caratteri`)
+			.show();
+	} else if (nome.length < minLength) {
+		$("#nomeError")
+			.text(`Il nome deve avere un minimo di ${minLength} caratteri`)
+			.show();
+	} else if (cognome.length < minLength) {
+		$("#cognomeError")
+			.text(`Il cognome deve avere un minimo di ${minLength} caratteri`)
+			.show();
+	} else if (email.length < minLength) {
+		$("#emailError")
+			.text(`La mail deve avere un minimo di ${minLength} caratteri`)
+			.show();
+	} else if (citta.length < minLength) {
+		$("#cittaError")
+			.text(`La citta' deve avere un minimo di ${minLength} caratteri`)
+			.show();
+	} else if (password.length < passwordMinLength) {
+		$("#passwordError")
+			.text(`La password deve avere un minimo di ${passwordMinLength} caratteri`)
+			.show();
+	} else if (confirmPassword !== password) {
+		$("#confirmpswError")
+			.text("Le password non corrispondono")
+			.show();
+	} else {
+		// Se i campi di input sono validi, invia il modulo
+		this.submit();
+	}
+})
 
 
 // -------------------------- APPUNTI -------------------------- //
