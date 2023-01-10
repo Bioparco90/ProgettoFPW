@@ -61,7 +61,7 @@
             </article>
             
             <div>
-                <img src="img/logo.gif" class="gifLogo">
+                <img src="img/logo.png" class="gifLogo">
             </div>
         </main>
         
