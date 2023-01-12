@@ -55,7 +55,17 @@
 
                     
           <aside class="col-4">
-            
+            <!-- ---------- Dark mode switcher ---------- -->
+            <div class="js">
+                <button id="toggle"> dark & Light </button>
+            </div>
+
+            <!-- ---------- Font size switcher ---------- -->
+            <div class="js">
+                <button id="normal-size"> A </button>
+                <button id="bigger-size"> A+ </button>
+                <button id="biggest-size"> A++ </button>
+            </div>
             <article class="evidenza col-12">
                 <div class="contenutocard">
                      <img src="img/products/pulp-fiction1.jpg" alt="locandina" id="locandina">
@@ -69,13 +79,14 @@
                 
             </article>
             
-            <article class="sponsors col-12">
-                <a href="https://www.adidas.it/"><img src="img/Logo_Adidas.png" class="col-6 ichnusa"></a>
+            <article class="sponsors">
+                
+                <a href="https://www.adidas.it/"><img src="img/Logo_Adidas.png" class="col-6"></a>
             
                 <a href="https://unica.it/unica/"><img src="img/Logo_uni_1.png" class="col-6"> </a>    
             </article>
             
-        </aside>       
+        </aside>      
         </div>
                 
         <script src="js/carousel.js"></script>

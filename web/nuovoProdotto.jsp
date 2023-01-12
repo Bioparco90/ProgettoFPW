@@ -40,7 +40,8 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     </ul>
   </nav>
 
-  <main class="col-12 nuovoProdottoBox">
+    <div class="contenuto col-12">
+        <main class="col-8 nuovoProdottoBox">
     <form action="nuovoProdotto" method="post" enctype="multipart/form-data" id="nuovoProdottoForm">
       <div class="nuovoProdottoTitle">Compila i campi</div>
       <div class="container">
@@ -143,7 +144,43 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       <div class="col-12">
         <input type="submit" class="submit" value="Aggiungi" />
       </div>
-    </form>
+    </form> 
   </main>
+        
+    <aside class="col-4 aside">
+            <!-- ---------- Dark mode switcher ---------- -->
+            <div class="js">
+                <button id="toggle"> dark & Light </button>
+            </div>
+
+            <!-- ---------- Font size switcher ---------- -->
+            <div class="js">
+                <button id="normal-size"> A </button>
+                <button id="bigger-size"> A+ </button>
+                <button id="biggest-size"> A++ </button>
+            </div>
+            <article class="evidenza col-12">
+                <div class="contenutocard">
+                     <img src="img/products/pulp-fiction1.jpg" alt="locandina" id="locandina">
+                </div>
+                
+                <div class="contenutocard">
+                    <h2 id="movieTitle">Pulp Fiction</h2>
+                    <p>Una misteriosa valigetta al centro delle vicende di un cast stellare</p>
+                    <input type="button"value="Acquista" class="myButton">
+                </div>
+                
+            </article>
+            
+            <article class="sponsors">
+                
+                <a href="https://www.adidas.it/"><img src="img/Logo_Adidas.png" class="col-6"></a>
+            
+                <a href="https://unica.it/unica/"><img src="img/Logo_uni_1.png" class="col-6"> </a>    
+            </article>
+            
+        </aside>
+    </div>
+  
   <jsp:include page="footer.jsp" />
 </body>
