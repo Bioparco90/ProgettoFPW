@@ -1,6 +1,7 @@
 package it.easbronz.fakeFlix.model;
 
 public class Utente {
+
     private String username;
     private String nome;
     private String cognome;
@@ -78,18 +79,23 @@ public class Utente {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+        if (obj == null) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+        if (getClass() != obj.getClass()) {
             return false;
+        }
         Utente other = (Utente) obj;
         if (username == null) {
-            if (other.username != null)
+            if (other.username != null) {
                 return false;
-        } else if (!username.equals(other.username))
+            }
+        } else if (!username.equals(other.username)) {
             return false;
+        }
         return true;
     }
 }

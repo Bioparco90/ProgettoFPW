@@ -22,7 +22,7 @@ import it.easbronz.fakeFlix.model.Utente;
 import it.easbronz.fakeFlix.model.UtenteFactory;
 import it.easbronz.fakeFlix.utils.Utils;
 
-@WebServlet(name = "Registrazione", urlPatterns = { "/registrazione" })
+@WebServlet(name = "Registrazione", urlPatterns = {"/registrazione"})
 @MultipartConfig
 public class Registrazione extends HttpServlet {
 
@@ -39,12 +39,19 @@ public class Registrazione extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
+        /* 
+        Le righe che seguono si occupano del rilevamento dinamico del sistema 
+        operativo e della root path del progetto, in modo da non dover modificare
+        la stringa nel metodo di salvataggio delle immagini. In ambiente Windows
+        i backslash vengono rimpiazzati con slash.        
+         */
         String osName = System.getProperty("os.name").toLowerCase();
         String rootPath = getServletContext().getRealPath("/") + "img/";
         // rootPath = rootPath.replace("build\\", "");
-        if(osName.contains("windows"))
+        if (osName.contains("windows")) {
             rootPath = rootPath.replaceAll("\\\\", "/");
+        }
 
         try {
             String username = request.getParameter("username");

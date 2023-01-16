@@ -24,7 +24,7 @@ import it.easbronz.fakeFlix.model.ProdottoFactory;
 import it.easbronz.fakeFlix.model.UtenteFactory;
 import it.easbronz.fakeFlix.utils.Utils;
 
-@WebServlet(name = "NuovoProdotto", urlPatterns = { "/nuovoProdotto" })
+@WebServlet(name = "NuovoProdotto", urlPatterns = {"/nuovoProdotto"})
 @MultipartConfig
 public class NuovoProdotto extends HttpServlet {
 
@@ -43,14 +43,21 @@ public class NuovoProdotto extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession(false);
-        
+
+        /* 
+        Le righe che seguono si occupano del rilevamento dinamico del sistema 
+        operativo e della root path del progetto, in modo da non dover modificare
+        la stringa nel metodo di salvataggio delle immagini. In ambiente Windows
+        i backslash vengono rimpiazzati con slash.        
+         */
         String osName = System.getProperty("os.name").toLowerCase();
         String rootPath = getServletContext().getRealPath("/") + "img/";
         // rootPath = rootPath.replace("build\\", "");
-        if (osName.contains("windows"))
+        if (osName.contains("windows")) {
             rootPath = rootPath.replaceAll("\\\\", "/");
+        }
         // System.out.println("This is the root path: " + rootPath);
-        
+
         try {
             if (session != null && session.getAttribute("user") != null) {
                 String titolo = request.getParameter("titolo");
@@ -97,8 +104,9 @@ public class NuovoProdotto extends HttpServlet {
                 request.setAttribute("outputMessage", "Prodotto inserito con successo");
                 request.setAttribute("previousPage", "nuovoProdotto");
                 request.getRequestDispatcher("outputPage.jsp").forward(request, response);
-            } else
+            } else {
                 response.sendRedirect("login");
+            }
         } catch (NumberFormatException | InvalidParamException | IOException e) {
             request.setAttribute("outputMessage", e.getMessage());
             request.setAttribute("previousPage", "nuovoProdotto");
@@ -107,7 +115,7 @@ public class NuovoProdotto extends HttpServlet {
             request.setAttribute("outputMessage", "Film già presente in catalogo");
             request.setAttribute("previousPage", "nuovoProdotto");
             request.getRequestDispatcher("outputPage.jsp").forward(request, response);
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
         }
     }

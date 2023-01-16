@@ -1,6 +1,7 @@
 package it.easbronz.fakeFlix.model;
 
 public class Prodotto {
+
     private String titolo;
     private String trama;
     private String genere;
@@ -87,18 +88,23 @@ public class Prodotto {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+        if (obj == null) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+        if (getClass() != obj.getClass()) {
             return false;
+        }
         Prodotto other = (Prodotto) obj;
         if (titolo == null) {
-            if (other.titolo != null)
+            if (other.titolo != null) {
                 return false;
-        } else if (!titolo.equals(other.titolo))
+            }
+        } else if (!titolo.equals(other.titolo)) {
             return false;
+        }
         return true;
     }
 }

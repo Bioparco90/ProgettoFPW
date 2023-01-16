@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import it.easbronz.fakeFlix.model.Prodotto;
 import it.easbronz.fakeFlix.model.ProdottoFactory;
 
-@WebServlet(name = "Catalogo", urlPatterns = { "/catalogo" })
+@WebServlet(name = "Catalogo", urlPatterns = {"/catalogo"})
 public class Catalogo extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -40,8 +40,9 @@ public class Catalogo extends HttpServlet {
                 request.setAttribute("prodotto", prodotto);
                 request.getRequestDispatcher("catalogo.jsp").forward(request, response);
             }
-        } else
+        } else {
             response.sendRedirect("login");
+        }
     }
 
     @Override

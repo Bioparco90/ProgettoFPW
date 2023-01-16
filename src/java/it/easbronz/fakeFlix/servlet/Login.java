@@ -14,7 +14,7 @@ import it.easbronz.fakeFlix.model.Utente;
 import it.easbronz.fakeFlix.model.UtenteFactory;
 import it.easbronz.fakeFlix.utils.Utils;
 
-@WebServlet(name = "Login", urlPatterns = { "/login" })
+@WebServlet(name = "Login", urlPatterns = {"/login"})
 public class Login extends HttpServlet {
 
     @Override
@@ -46,8 +46,9 @@ public class Login extends HttpServlet {
                 session.setAttribute("user", utente.getUsername());
                 session.setMaxInactiveInterval(900);
                 response.sendRedirect("areaPersonale");
-            } else
+            } else {
                 throw new InvalidParamException("Username o Password errati");
+            }
 
         } catch (InvalidParamException e) {
             session.invalidate();

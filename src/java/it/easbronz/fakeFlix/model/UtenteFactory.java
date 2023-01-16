@@ -13,14 +13,16 @@ import org.postgresql.util.PSQLException;
 import it.easbronz.fakeFlix.db.DatabaseManager;
 
 public class UtenteFactory {
+
     private static UtenteFactory instance;
 
     private UtenteFactory() {
     }
 
     public static UtenteFactory getInstance() {
-        if (instance == null)
+        if (instance == null) {
             instance = new UtenteFactory();
+        }
         return instance;
     }
 
@@ -49,8 +51,9 @@ public class UtenteFactory {
                 utente.setCitta(set.getString("citta"));
                 utente.setFoto(set.getString("foto"));
                 return utente;
-            } else
+            } else {
                 return null;
+            }
 
         } catch (SQLException e) {
             Logger.getLogger(UtenteFactory.class.getName())
@@ -95,8 +98,9 @@ public class UtenteFactory {
                 utente.setCitta(set.getString("citta"));
                 utente.setFoto(set.getString("foto"));
                 return utente;
-            } else
+            } else {
                 return null;
+            }
 
         } catch (SQLException e) {
             Logger.getLogger(UtenteFactory.class.getName())

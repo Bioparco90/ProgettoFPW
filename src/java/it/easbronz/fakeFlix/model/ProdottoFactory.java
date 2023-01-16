@@ -15,14 +15,16 @@ import org.postgresql.util.PSQLException;
 import it.easbronz.fakeFlix.db.DatabaseManager;
 
 public class ProdottoFactory {
+
     private static ProdottoFactory instance;
 
     private ProdottoFactory() {
     }
 
     public static ProdottoFactory getInstance() {
-        if (instance == null)
+        if (instance == null) {
             instance = new ProdottoFactory();
+        }
         return instance;
     }
 

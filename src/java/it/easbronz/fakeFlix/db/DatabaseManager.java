@@ -7,6 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DatabaseManager {
+
     private static DatabaseManager instance;
 
     private DatabaseManager() {
@@ -19,8 +20,9 @@ public class DatabaseManager {
     }
 
     public static DatabaseManager getInstance() {
-        if (instance == null)
+        if (instance == null) {
             instance = new DatabaseManager();
+        }
         return instance;
     }
 

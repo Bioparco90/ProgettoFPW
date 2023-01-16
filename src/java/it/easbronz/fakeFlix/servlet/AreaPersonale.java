@@ -19,7 +19,7 @@ import it.easbronz.fakeFlix.model.ProdottoFactory;
 import it.easbronz.fakeFlix.model.Utente;
 import it.easbronz.fakeFlix.model.UtenteFactory;
 
-@WebServlet(name = "AreaPersonale", urlPatterns = { "/areaPersonale" })
+@WebServlet(name = "AreaPersonale", urlPatterns = {"/areaPersonale"})
 public class AreaPersonale extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -33,8 +33,9 @@ public class AreaPersonale extends HttpServlet {
             request.setAttribute("listaProdottiAggiunti", prodotti);
             request.setAttribute("utente", utente);
             request.getRequestDispatcher("areaPersonale.jsp").forward(request, response);
-        } else
+        } else {
             response.sendRedirect("login");
+        }
     }
 
     @Override
