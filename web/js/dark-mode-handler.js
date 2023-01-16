@@ -5,12 +5,12 @@ const isDarkMode = localStorage.getItem('dark-mode');
 // aggiungi la classe "dark-mode" al body per abilitare la modalità scura.
 // In prima istanza, non essendoci ancora una preferenza, il sito partirà in light mode.
 if (isDarkMode === 'true') {
-	$('body').addClass('dark-mode');
+    $('body').addClass('dark-mode');
 }
 
 // Al click del tasto apposito, avviene il passaggio da una modalità all'altra.
 // Infine viene salvata la nuova preferenza in cache.
 $('#toggle').click(() => {
-	$('body').toggleClass('dark-mode');
-	localStorage.setItem('dark-mode', $('body').hasClass('dark-mode'));
+    $('body').toggleClass('dark-mode');
+    localStorage.setItem('dark-mode', $('body').hasClass('dark-mode'));
 });

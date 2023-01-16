@@ -1,6 +1,7 @@
 let offset = 0;
 $("#prevProduct").click(() => {
-    if (offset > 0) offset--;
+    if (offset > 0)
+        offset--;
     $.ajax({
         url: "catalogo",
         data: {
@@ -10,7 +11,8 @@ $("#prevProduct").click(() => {
         success: (data, state) => {
             aggiornaProdotto(data);
         },
-        error: (data, state) => { },
+        error: (data, state) => {
+        },
     });
 });
 
@@ -23,10 +25,13 @@ $("#nextProduct").click(() => {
         },
         dataType: "json",
         success: (data, state) => {
-            if (data.movieTitle === "") offset--;
-            else aggiornaProdotto(data);
+            if (data.movieTitle === "")
+                offset--;
+            else
+                aggiornaProdotto(data);
         },
-        error: (data, state) => { },
+        error: (data, state) => {
+        },
     });
 });
 
