@@ -66,9 +66,9 @@
             
             <article class="sponsors">
                 
-                <a href="https://www.adidas.it/"><img src="img/Logo_Adidas.png" class="col-6"></a>
+                <a href="https://www.adidas.it/"><img src="img/Logo_Adidas.png" alt="sponsor Adidas" class="col-6"></a>
             
-                <a href="https://unica.it/unica/"><img src="img/Logo_uni_1.png" class="col-6"> </a>    
+                <a href="https://unica.it/unica/"><img src="img/Logo_uni_1.png" alt="sponsor Unica" class="col-6"> </a>    
             </article>
             
         </aside>

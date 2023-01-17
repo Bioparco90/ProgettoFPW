@@ -3,11 +3,8 @@
 <jsp:include page="header.jsp"/>
     <body>
         <header>
-            <!-- Logo forse da cambiare per evitare questa fastisiosa ripetizione dovuta alle specifiche 
-                del progetto. Suggerirei un logo tipo il favicon che ho messo qualche settimana fa. -->
             <img src="img/favicon.png" alt="logo-fakeflix">
-            <a href="index"><img title="fakeflix" alt="fakeflix" src="img/fakeFlix_logo.png" width="350" height="150"></a>
-            <!-- <h1>FakeFlix</h1> -->
+            <a href="index"><img title="Logo" alt="Logo del sito" src="img/fakeFlix_logo.png" width="350" height="150"></a>
         </header>
        
         <nav class="col-12">
@@ -61,7 +58,7 @@
             </article>
             
             <div>
-                <img src="img/logo.png" class="gifLogo">
+                <img src="img/logo.png" alt="Gif fakeflix" class="gifLogo">
             </div>
         </main>
         
@@ -92,9 +89,9 @@
             
             <article class="sponsors">
                 
-                <a href="https://www.adidas.it/"><img src="img/Logo_Adidas.png" class="col-6"></a>
+                <a href="https://www.adidas.it/"><img src="img/Logo_Adidas.png" alt="sponsor Adidas" class="col-6"></a>
             
-                <a href="https://unica.it/unica/"><img src="img/Logo_uni_1.png" class="col-6"> </a>    
+                <a href="https://unica.it/unica/"><img src="img/Logo_uni_1.png" alt="sponsor Unica" class="col-6"> </a>    
             </article>
             
         </aside>

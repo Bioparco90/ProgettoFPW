@@ -65,7 +65,6 @@
   header {
     display: flex;
     flex-direction: row;
-    /* background-color: #000000; */
     align-items: center;
     margin: 0;
     padding: 0;
@@ -101,7 +100,7 @@
     margin-right: 0.3em;
     max-height: 20em;
   }
-
+/*---------------------------------*/
   .carosuelButton {
     margin-bottom: 5%;
   }
@@ -201,7 +200,6 @@
   header {
     display: flex;
     flex-direction: column;
-    /* background-color: #000000; */
     align-items: center;
     margin: 0;
     padding: 0;
@@ -218,6 +216,7 @@
     border-right: 0px solid #111111;
   }
 
+  /*-----------------CARD----------------*/
   .evidenza {
     width: 100%;
     max-width: 80%;
@@ -251,6 +250,7 @@
     max-height: 20em;
   }
 
+  /*---------------------------------*/
   .sponsors {
     display: flex;
     justify-content: center;
@@ -267,17 +267,18 @@
   input.myButton {
     margin-bottom: 20px;
   }
-
-  .login {
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-
+  
   .main {
     display: flex;
     flex-direction: column;
     padding: 30px;
+  }
+
+  /*-----------------FORM VARI-------------------*/
+  .login {
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
   }
 
   .registrazione {
@@ -300,7 +301,7 @@
   input.loginButton {
     margin-right: 0;
   }
-  
+  /*-------------------------------------------*/
   .info{
       display:flex;
       flex-direction:column;
@@ -310,6 +311,7 @@
   
 }
 
+/*For tablet:*/
 @media only screen and (min-width: 576px) and (max-width: 1040px) {
   .login {
     justify-content: center;
@@ -362,6 +364,7 @@
   }
 }
 
+/* Login breakpoint */
 @media only screen and (max-width: 1420px){
     
   .login {
@@ -410,21 +413,16 @@
 }
 /*----------------------------------------------------------------------*/
 
+/*----------------------REGOLE GENERALI------------------*/
 body {
-  /* background-color: #000000; */
   margin: 0;
-  font-family: sans-serif; /* provvisorio */
-  /* color: white; */
+  font-family: sans-serif; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 /*----------------HEADER------------------*/
-/* L'utilizzo della flexbox ci permette di allineare senza sforzo gli elementi. Vi consiglio di buttarci un 
- * occhio su w3school. 
- * align-items: center allinea il centro degli elementi sulla stessa riga senza che ci stressiamo
- * con posizioni e quant'altro. */
 
 .active {
   font-style: italic;
@@ -458,7 +456,7 @@ nav > ul a {
 }
 
 nav > ul a:hover {
-  color: black; /* provvisorio */
+  color: black; 
 }
 
 /*---------------------BOTTONI JS----------------------*/
@@ -752,8 +750,6 @@ footer {
   text-align: center;
   background-color: #950101;
   align-content: center;
-  /* bottom: 0;
-  position: absolute; */
   margin-top: auto;
 }
 
@@ -779,7 +775,6 @@ footer {
 }
 
 .names {
-  /* margin: 0 auto; */
   width: 100%;
   overflow-x: hidden;
 }
@@ -805,8 +800,8 @@ aside {
   padding-bottom: 100px;
 }
 
+/*------------------------------JAVASCRIPT---------------------*/
 .dark-mode {
-  /* Add your dark mode styles here */
   background-color: #242020;
   color: white;
 }
@@ -818,10 +813,6 @@ aside {
 .error {
   color: black;
 }
-
-/* .counter, .error {
-  font-size: 14px;
-} */
 
 #fileBtn {
   text-align: start;

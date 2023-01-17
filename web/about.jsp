@@ -40,10 +40,10 @@
         </nav>
 
         <div class="col-12 contenuto">
-             <h2>ABOUT US</h2><!<!-- creazione di 4 div di equa dimensione, uno per ogni componente del gruppo -->
+             <h2>ABOUT US</h2>
         <main class= "col-8 about">
             <div class="col-12">
-                <img  class="about_img" title="Ceppitelli" src="img/users/ceppitelli.png">
+                <img  class="about_img" title="Ceppitelli" alt="foto Mirko Contini" src="img/users/ceppitelli.png">
                 <p>Mirko Contini<br>
                 Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
                 programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
@@ -51,7 +51,7 @@
             </div>
             
             <div class="col-12">
-                <img class="about_img" title="Deiola" src="img/users/deiola.png">
+                <img class="about_img" title="Deiola" alt="foto Marco Monni" src="img/users/deiola.png">
                 <p>Marco Monni<br>
                 Studente di informatica al secondo anno presso l'università di Cagliari,
                 programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
@@ -59,7 +59,7 @@
             </div>
             
             <div class="col-12">
-                <img  class="about_img" title="Lyko" src="img/users/lyko.png">
+                <img  class="about_img" title="Lyko" alt="foto Pietro Musiu" src="img/users/lyko.png">
                 <p>Pietro Musiu<br>
                 Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
                 programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
@@ -67,7 +67,7 @@
             </div>
             
             <div class="col-12">
-                <img class="about_img" title="Dalbert" src="img/users/dalbert.png">
+                <img class="about_img" title="Dalbert" alt="foto Stefano Rocca" src="img/users/dalbert.png">
                 <p>Stefano Rocca<br>
                 Studente di informatica al secondo anno presso l'università di Cagliari, e dilpomato all'istituto Michele Giua,
                 programmatore che conosce vari linguaggi tra cui C, C++, C#, java, javascript.
@@ -102,9 +102,9 @@
             
             <article class="sponsors">
                 
-                <a href="https://www.adidas.it/"><img src="img/Logo_Adidas.png" class="col-6"></a>
+                <a href="https://www.adidas.it/"><img src="img/Logo_Adidas.png" alt="sponsor Adidas" class="col-6"></a>
             
-                <a href="https://unica.it/unica/"><img src="img/Logo_uni_1.png" class="col-6"> </a>    
+                <a href="https://unica.it/unica/"><img src="img/Logo_uni_1.png" alt="sponsor Unica" class="col-6"> </a>    
             </article>
             
         </aside>
